@@ -1,0 +1,31 @@
+.hero {
+	.hero-slider {
+		.hero-img {
+			margin-bottom: 31.6px;
+		}
+        .hero-content {
+            text-align: center;
+            .hero-title {
+                margin-bottom: 16px;
+                color: #C3000A;
+                font-size: 24px;
+                line-height: 36px;
+            }
+            .hero-description {
+                margin-bottom: 30.12px;
+                color: #373737;
+                font-size: 15px;
+                line-height: 22.5px;
+            }
+            .hero-cta {
+                border: 1px solid #C3000A;
+                color: #C3000A;
+                font-size: 15px;
+                background-color: #ffffff;
+                font-weight: 500;
+                padding: 6.5px 25.31px;
+                cursor: pointer;
+            }
+        }
+	}
+}

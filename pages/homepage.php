@@ -1,7 +1,5 @@
 <?php /* Template Name: Página Inicial */ ?>
 
 <?php get_header() ?>
-
-asdasdasdasasassaasasdgfdgdgasasasasass
-<p>uahsuasuahs</p>
+<?php get_template_part( 'template-parts/home/hero' ); ?>
 <?php get_footer() ?>
