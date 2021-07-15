@@ -1,4 +1,3 @@
 let slider = tns({
-    container: '.slider-engine',
-    autoplay: false
+    container: '.slider-engine'
 });
