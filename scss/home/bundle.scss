@@ -1,6 +1,10 @@
 // Page
 @import './home.scss';
 
+// Slider
+@import '../lib/tiny-slider.scss';
+
+
 // Components
 @import './hero.scss';
 @import './self-service.scss';
@@ -8,6 +12,3 @@
 @import './services.scss';
 @import './help.scss';
 @import './map.scss';
-
-//slider
-@import './slider.scss';
