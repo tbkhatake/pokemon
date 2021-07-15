@@ -16,7 +16,7 @@ export const styles = () =>
 		.pipe(dest("css"));
 
 export const scripts = () => {
-	return src(["js/common/header.js", "js/home/tiny-slider.js", "js/home/hero.js"])
+	return src(["js/common/header.js", "js/lib/tiny-slider.js", "js/home/hero.js"])
 		.pipe(uglify())
 		.pipe(concat("bundle.js"))
 		.pipe(dest("./dist/"));
