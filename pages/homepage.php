@@ -2,5 +2,5 @@
 
 <?php get_header() ?>
 
-asdasdasd
+<?php get_template_part( 'template-parts/self-service' ); ?>
 <?php get_footer() ?>
