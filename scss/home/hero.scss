@@ -1,8 +1,7 @@
 .hero {
 	margin-bottom: 64px;
 	position: relative;
-	overflow: hidden;
-
+	
 	.graph-upper-hero {
 		display: none;
 		position: absolute;
@@ -17,7 +16,32 @@
 		z-index: -1;
 	}
 	.hero-slider {
-
+		.tns-outer {
+			.tns-controls {
+				display: none;
+			}
+			.tns-nav {
+				position: absolute;
+				z-index: 1;
+				bottom: -38px;
+				left: 50%;
+				transform: translateX(-50%);
+			}
+			.tns-nav > button {
+				width: 14px;
+				height: 14px;
+				padding: 0;
+				border-radius: 50%;
+				background: #37373799;
+				border: 0;
+			}
+			.tns-nav > button.tns-nav-active {
+				background: #c3000a;
+			}
+			.tns-nav > button:not(:last-child) {
+				margin-right: 10px;
+			}
+		}
 		.slide-wrapper {
 			display: flex;
 			flex-direction: column;
@@ -30,12 +54,6 @@
 			.hero-img-desk {
 				display: none;
 			}
-			.left-arrow {
-				display: none;
-			}
-			.right-arrow {
-				display: none;
-			}
 			.hero-content {
 				text-align: center;
 				.hero-title {
@@ -45,7 +63,7 @@
 					line-height: 36px;
 				}
 				.hero-description {
-					margin-bottom: 30.12px;
+					margin-bottom: 30px;
 					color: #373737;
 					font-size: 15px;
 					line-height: 22.5px;
@@ -60,7 +78,6 @@
 					text-decoration: none;
 				}
 			}
-            
 		}
 	}
 }
@@ -76,6 +93,38 @@
 			pointer-events: none;
 		}
 		.hero-slider {
+			.tns-outer {
+				position: relative;
+				.tns-controls {
+					display: block;
+					position: absolute;
+					z-index: 1;
+					top: 50%;
+					transform: translateY(-50%);
+					width: 100%;
+					button:nth-of-type(1) {
+						background-image: url(../../assets/arrow-left.svg);
+						width: 23px;
+						height: 34px;
+						background-color: transparent;
+						color: transparent;
+						border: 0;
+						position: absolute;
+						left: -40px;
+					}
+					button:nth-of-type(2) {
+						background-image: url(../../assets/arrow-right.svg);
+						width: 23px;
+						height: 34px;
+						background-color: transparent;
+						color: transparent;
+						border: 0;
+						position: absolute;
+						right: 10px;
+					}
+				}
+			}
+
 			.slide-wrapper {
 				display: block;
 				position: relative;
@@ -89,28 +138,13 @@
 					display: block;
 					width: 100%;
 				}
-				.left-arrow {
-					display: block;
-					position: absolute;
-					top: 50%;
-					left: -50px;
-					transform: translateY(-50%);
-					cursor: pointer;
-				}
-				.right-arrow {
-					display: block;
-					position: absolute;
-					top: 50%;
-					transform: translateY(-50%);
-					right: 20px;
-					cursor: pointer;
-				}
 				.hero-content {
 					width: 25%;
 					position: absolute;
 					text-align: left;
-					bottom: 40px;
-					left: -20px;
+					bottom: 20px;
+					left: 0px;
+
 					.hero-title {
 						margin-bottom: 24px;
 						font-size: 36px;

@@ -18,11 +18,9 @@
                                 <img alt="<?= $image_hero_mob['alt'] ?>" 
                                         src="<?= $image_hero_mob['url'];?>"
                                         class="hero-img-mob">
-                                <svg class="left-arrow" xmlns="http://www.w3.org/2000/svg" width="21.1" height="33.5" viewBox="0 0 21 34"><path fill="rgba(55,55,55,.75)" stroke="#fff" stroke-width=".8" d="M21 29L8 17 21 4l-4-3L1 17l16 16z"/></svg>
                                 <img alt="<?= $image_hero_desk['alt'] ?>" 
                                         src="<?= $image_hero_desk['url'];?>"
                                         class="hero-img-desk">
-                                <svg class="right-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="32.4" viewBox="0 0 20 32"><path fill="rgba(255,255,255,.75)" d="M0 4l12 12L0 29l4 3 16-16L4 0z"/></svg>
                                 <div class="hero-content">
                                     <p class="hero-title"><?= $title_hero; ?> </p>
                                     <p class="hero-description"><?= $description_hero; ?> </p>
