@@ -54,3 +54,29 @@ function raccoon_custom_post_type() {
 }
 
 add_action( 'init', 'raccoon_custom_post_type', 0 );
+
+function raccoon_create_state_taxonomy () {
+
+	$args = array(
+		'label' => 'Estados',
+		'labels' => array(
+			'name' => 'Estado',
+			'singular_name' => 'Estado',
+			'menu_name' => 'Estados',
+			'all_items' => 'Todos os Estados',
+			'edit_item' =>  'Editar Estado',
+			'view_item' => 'Ver Estado',
+			'update_item' => 'Atualizar',
+			'add_new_item' => 'Adicionar Estado',
+			'search_items' => 'Buscar Estado',
+			'not_found' => 'Nenhuma Estado Encontrado'
+		),
+		'hierarchical' => true,
+		'show_in_rest' => true
+	);
+
+	register_taxonomy( 'state', array('city'), $args );
+
+}
+
+add_action( 'init' , 'raccoon_create_state_taxonomy' , 0 );
