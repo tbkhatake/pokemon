@@ -43,6 +43,13 @@
 				font-weight: 500;
 			}
 		}
+		.box-wrapper:hover {
+			background-color: #C3000A;
+			color: #ffffff;
+			.box-icon {
+				filter: grayscale(100%) invert(1);
+			}
+		}
 	}
 }
 @media (min-width: 1200px) {

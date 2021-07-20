@@ -52,10 +52,11 @@
     src: url('../../fonts/klavika-bold-italic.otf');
 }
 
-html, input, select, textarea {
+html, input, select, textarea, a {
     font-family: 'Klavika', sans-serif;
     font-size: 15px;
     font-weight: 500;
+    text-decoration: none;
 }
 
 

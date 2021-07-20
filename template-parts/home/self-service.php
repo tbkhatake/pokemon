@@ -14,7 +14,7 @@ $ssTitle = get_field('titulo_autoatendimento');
                         $info = get_sub_field('info_autoatendimento');
                     ?>
                    <a class="button-link" href="<?= $buttonLink; ?>"> <button type="button" class="box-wrapper">
-                        <img class="box-icon" src="<?= $icon['url']; ?>" alt="<?= $icon['alt']; ?>">
+                        <img class="box-icon" src="<?= $icon; ?>" alt="<?= $icon['alt']; ?>">
                         <p class="box-info"><?= $info; ?></p>
                     </button></a>
                 <?php endwhile; ?>
