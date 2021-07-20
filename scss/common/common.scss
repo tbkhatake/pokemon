@@ -60,22 +60,29 @@ html, input, select, textarea {
 
 
 // Container
+:root {
+    --container-size: 32px;
+}
+
+@media (min-width: 768px) {
+	:root {
+		--container-size: 48px;
+	}
+}
+
+@media (min-width: 1200px) {
+	:root {
+		--container-size: 64px;
+	}
+}
+
+@media (min-width: 1366px) {
+	:root {
+		--container-size: calc((100% - 1238px) / 2);
+	}
+}
+
 .container {
-    margin-left: 32px;
-    margin-right: 32px;
-
-    @media(min-width: 768px) {
-        margin-left: 48px;
-        margin-right: 48px;
-    }
-
-    @media(min-width: 1200px) {
-        margin-left: 64px;
-        margin-right: 64px;
-    }
-
-    @media(min-width: 1440px) {
-        margin-left: calc((100% - 1238) / 2);
-        margin-right: calc((100% - 1238) / 2);
-    }
+    margin-right: var(--container-size);
+	margin-left: var(--container-size);
 }
