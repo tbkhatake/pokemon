@@ -2,5 +2,6 @@
 
 <?php get_header() ?>
 
-asdasdasd
+<?php get_template_part( 'template-parts/home/map' ); ?>
+
 <?php get_footer() ?>
