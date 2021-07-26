@@ -1,0 +1,23 @@
+.know-super-desktop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    .section-title {
+        text-align: center;
+        width: 160px;
+		font-size: 24px;
+		line-height: 2.25rem;
+		font-weight: 300;
+		text-decoration: underline 2px #c3000a;
+        text-underline-position: under;
+		display: inline-block;
+		margin-bottom: 40px;
+	}
+
+    .slide-wraper{
+        margin-left: 32px;
+        margin-right: 32px;
+    }
+}
