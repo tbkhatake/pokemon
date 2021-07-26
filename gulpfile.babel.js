@@ -1,4 +1,4 @@
-import { src, dest, watch, series } from "gulp";
+import { src, dest, watch, series, cache } from "gulp";
 import sass from "gulp-sass";
 import cleanCss from "gulp-clean-css";
 import prefix from "gulp-autoprefixer";
@@ -13,10 +13,10 @@ export const styles = () =>
 		.pipe(sass().on("error", sass.logError))
 		.pipe(prefix())
 		.pipe(cleanCss({ compatibility: "ie8" }))
-		.pipe(dest("./css/"));
+		.pipe(dest("css"));
 
 export const scripts = () => {
-	return src(["js/common/header.js", "js/home/hero.js"])
+	return src(["js/common/header.js", "js/lib/tiny-slider.js", "js/home/hero.js","js/know-super-desktop.js"])
 		.pipe(uglify())
 		.pipe(concat("bundle.js"))
 		.pipe(dest("./dist/"));
