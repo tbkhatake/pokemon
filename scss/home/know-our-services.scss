@@ -30,6 +30,11 @@
         .card-img{
             width: 100%;
             height: 340px;
+            object-fit: cover;
+        }
+
+        .card-desk-img{
+            display: none;
         }
 
         .card-wraper{
@@ -93,6 +98,11 @@
             align-self: flex-start;
             margin-bottom: 100px;
             .card-img{
+                display: none;
+            }
+
+            .card-desk-img{
+                display: block;
                 width: 900px;
                 height: 550px;
                 align-self: start;
@@ -141,7 +151,7 @@
 
         &-cards:nth-child(odd){
             align-self: flex-end;
-            .card-img{
+            .card-desk-img{
                 align-self: flex-end;
             }
             .card-wraper{

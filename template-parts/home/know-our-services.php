@@ -3,7 +3,8 @@
     <h2 class="section-title"><?php echo($section3['section3-title']); ?></h2>
     <?php foreach($section3['section3-cards'] as $card):?>
         <div class="know-our-services-cards">
-            <img class="card-img" src="<?=$card['cards-img']['url'];?>" alt="img1">
+            <img class="card-img" src="<?=$card['cards-img']['url'];?>" alt="imagem">
+            <img class="card-desk-img" src="<?=$card['cards-desk-img']['url'];?>" alt="imagem">
             <div class="card-wraper">
                 <h3 class="card-title"><?=$card['cards-title'];?></h3>
                 <span class="card-line"></span>
