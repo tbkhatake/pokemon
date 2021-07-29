@@ -22,6 +22,8 @@
 	"dependencies": {
 		"gitmoji-cli": "^4.1.0",
 		"global": "^4.4.0",
+		"slider": "^1.0.4",
+		"tiny": "0.0.10",
 		"tiny-slider": "^2.9.3"
 	}
 }

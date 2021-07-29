@@ -1,5 +1,6 @@
 .hero {
 	position: relative;
+	padding-top: 64px;
 	
 	.graph-upper-hero {
 		display: none;
@@ -83,6 +84,7 @@
 }
 @media (min-width: 1200px) {
 	.hero {
+		padding-top: 120px;
 		padding-bottom: 140px;
 		overflow: hidden;
 
