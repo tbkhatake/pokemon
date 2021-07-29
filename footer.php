@@ -1,14 +1,14 @@
 <?php wp_footer() ?>
     <?php
-        $socialTitle = get_field('titulo_redes_sociais');
-        $footerLogo = get_field('logo_footer')
+        $socialTitle = get_field('titulo_redes_sociais', 'options');
+        $footerLogo = get_field('logo_footer', 'options')
     ?>
     <footer class="footer-section">
         <div class="container">
             <div class="upper-footer">
                 <div class="footer-list">
-                    <?php if(have_rows('coluna_footer')): ?>
-                        <?php while(have_rows('coluna_footer')): the_row(); ?>
+                    <?php if(have_rows('coluna_footer', 'options')): ?>
+                        <?php while(have_rows('coluna_footer', 'options')): the_row(); ?>
                             <?php 
                                 $columnTitle = get_sub_field('titulo_coluna');
                             ?>
@@ -32,8 +32,8 @@
                 <div class="social-media">
                     <h4 class="list-title"><?= $socialTitle; ?></h4>
                     <div class="icons-wrapper">
-                        <?php if(have_rows('redes_sociais')): ?>
-                            <?php while(have_rows('redes_sociais')): the_row(); ?>
+                        <?php if(have_rows('redes_sociais', 'options')): ?>
+                            <?php while(have_rows('redes_sociais', 'options')): the_row(); ?>
                                 <?php 
                                     $socialIcon = get_sub_field('icone_rede_social');
                                     $socialLink = get_sub_field('link_rede_social');
@@ -48,11 +48,11 @@
                 <div class="footer-info">
                     <div class="bottom-footer-content">
                         <div class="footer-items">
-                            <?php if(have_rows('info_rodape')): ?>
-                                <?php while(have_rows('info_rodape')): the_row(); ?>
+                            <?php if(have_rows('info_rodape', 'options')): ?>
+                                <?php while(have_rows('info_rodape', 'options')): the_row(); ?>
                                     <?php 
                                         $itemInfo = get_sub_field('informacao_footer');
-                                        $itemLink = get_sub_field('linke_do_item');
+                                        $itemLink = get_sub_field('link_do_item');
                                     ?>  
                                     <a href="<?= $itemLink; ?>" class="info-item"><?= $itemInfo; ?></a>
                                 <?php endwhile; ?>

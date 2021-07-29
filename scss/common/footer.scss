@@ -1,6 +1,7 @@
 .footer-section {
 	font-family: 'Klavika', sans-serif;
 	width: 100%;
+	background-color: #FCFCFC;
 	.upper-footer {
 		display: flex;
 		flex-wrap: wrap;
@@ -43,6 +44,9 @@
 				margin-bottom: 24px;
 			}
 			.icons-wrapper {
+				.social-link {
+					text-decoration: none;
+				}
 				.social-link:not(:last-child) {
 					margin-right: 28px;
 				}
@@ -130,6 +134,7 @@
 			.footer-info {
 				.bottom-footer-content {
 					display: flex;
+					justify-content: space-between;
 					.footer-items {
 						text-align: left;
 						justify-content: unset;
