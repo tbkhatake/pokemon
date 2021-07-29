@@ -7,7 +7,7 @@
         <div class="container">
             <div class="upper-footer">
                 <div class="footer-list">
-                    <?php if(have_rows('coluna_footer')): ?>
+                    <?php if(have_rows('coluna_footer', 'options')): ?>
                         <?php while(have_rows('coluna_footer', 'options')): the_row(); ?>
                             <?php 
                                 $columnTitle = get_sub_field('titulo_coluna');
@@ -32,7 +32,7 @@
                 <div class="social-media">
                     <h4 class="list-title"><?= $socialTitle; ?></h4>
                     <div class="icons-wrapper">
-                        <?php if(have_rows('redes_sociais')): ?>
+                        <?php if(have_rows('redes_sociais', 'options')): ?>
                             <?php while(have_rows('redes_sociais', 'options')): the_row(); ?>
                                 <?php 
                                     $socialIcon = get_sub_field('icone_rede_social');
@@ -48,7 +48,7 @@
                 <div class="footer-info">
                     <div class="bottom-footer-content">
                         <div class="footer-items">
-                            <?php if(have_rows('info_rodape')): ?>
+                            <?php if(have_rows('info_rodape', 'options')): ?>
                                 <?php while(have_rows('info_rodape', 'options')): the_row(); ?>
                                     <?php 
                                         $itemInfo = get_sub_field('informacao_footer');

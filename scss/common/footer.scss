@@ -44,6 +44,9 @@
 				margin-bottom: 24px;
 			}
 			.icons-wrapper {
+				.social-link {
+					text-decoration: none;
+				}
 				.social-link:not(:last-child) {
 					margin-right: 28px;
 				}
@@ -131,6 +134,7 @@
 			.footer-info {
 				.bottom-footer-content {
 					display: flex;
+					justify-content: space-between;
 					.footer-items {
 						text-align: left;
 						justify-content: unset;
@@ -141,7 +145,6 @@
 					}
 					.footer-logo {
 						display: block;
-						margin-left: 62px;
                         width: 214px;
                         height: 32px;
 					}
