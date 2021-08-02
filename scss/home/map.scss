@@ -11,6 +11,13 @@
 		margin-bottom: 40px;
 	}
 	.map-wrapper {
+        position: relative;
+        select {
+            width: 142px;
+            height: 30px;
+            border: 1px solid #C3000A;
+            background-color: transparent;
+        }
 	}
 }
 @media (min-width: 1200px){
