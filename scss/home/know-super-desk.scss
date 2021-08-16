@@ -101,15 +101,6 @@
             font-size: 40px;
         }
 
-        .slide-card{
-            margin-left: 92px;
-            margin-right: 92px; 
-        }
-
-        #tns2 > .tns-item{//slide-card width
-            width: 750px;
-        }
-
         .slide-img{
             width:  100%;
             height: 535px;
@@ -145,9 +136,9 @@
             display: flex;
             position: absolute;
             bottom: -275px;
-            left: 115px;
+            left: 90px;
             justify-content: space-between;
-            width: 80%;
+            width: 85%;
             z-index: 1;
             &:focus {
                 outline: none;
@@ -181,30 +172,19 @@
             overflow: hidden;
             left: 0;
         }
-
-        #tns2{
-            width: auto;
-            left: 130px;
-        }
-
     }
 
     @media(min-width:1366px){
         margin-left: calc((100% - 1366px) / 2);
         margin-right: calc((100% - 1366px) / 2);
 
-
-        .slide-card{
-            margin-left: 105px;
-            margin-right: 105px;
-        }
-        .controls {
-            left: 205px;
-            width: 72.5%;
+        .slider-cont{
+            width: 1366px;
         }
         
-        #tns2{
-            left: 215px;
+        .controls {
+            left: 150px;
+            width: 78%;
         }
     }
 
