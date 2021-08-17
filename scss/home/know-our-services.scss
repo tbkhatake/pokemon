@@ -1,5 +1,5 @@
 .know-our-services{
-    padding-top: 64px;//margin-top:64px;
+    margin-top: 64px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,17 +80,22 @@
                 color: #C3000A;
                 text-decoration: none;
                 cursor: pointer;
+                &:hover{
+                    background-color: #C3000A;
+                    color: #F4F5F5;
+                }
             }
         }
     }
     @media(min-width: 1200px){
-        padding-top: 120px;//margin-top:160px;
+        margin-top:160px;
         margin-left: 64px;
         margin-right: 64px;
 
         .section-title{
             width: 100%;
             margin-bottom: 100px;
+            font-size: 40px;
         }
 
         &-cards{ 
@@ -143,11 +148,11 @@
                     padding: 12.5px 32px;
                     align-self: flex-start;
                     margin-top: 40px;
+                    border: 2px solid #C3000A;
                 }
             }
 
         }
-
 
         &-cards:nth-child(odd){
             align-self: flex-end;
@@ -163,8 +168,8 @@
         }
     }
     @media(min-width: 1440px){
-        margin-left: calc((100% - 1238) / 2);
-        margin-right: calc((100% - 1238) / 2);
+        margin-left: calc((100% - 1248px) / 2);
+        margin-right: calc((100% - 1248px) / 2);
     }
 }
 
@@ -179,7 +184,7 @@
      @media(min-width:1200px){
         width: 100%;
         height: 1600px;
-        top: 0;
+        top:1420px;
     
         .img{
             position: absolute;
@@ -190,7 +195,7 @@
             left: -184px;
         }
         .-bg2{
-            right: -155px;
+            right: -160px;
             bottom: 20px;
         }
     }

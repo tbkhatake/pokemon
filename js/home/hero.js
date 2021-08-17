@@ -1,3 +1,3 @@
 let slider = tns({
-    container: '.slider-engine'
+    container: '.slider-engine',
 });

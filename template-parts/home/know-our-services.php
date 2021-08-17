@@ -13,6 +13,7 @@
             </div>
         </div>
     <?php endforeach; ?>
+    
 </section>
 <div class="kos-graphism">
     <img class="img -bg1" src="<?=get_template_directory_uri()?>/images/fundo-kos1.svg">
