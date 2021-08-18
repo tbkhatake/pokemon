@@ -9,16 +9,18 @@
             <img class="controls-btn" src="<?=get_template_directory_uri()?>/images/right-arrow.svg" alt="right-arrow">
         </li>
     </ul>
-    <div class="slider-ksd">
-        <?php foreach($section5['section5-slides'] as $slide):?>
-                <div class="slide-card">
-                    <img class="slide-img" src="<?=$slide['slide-image']['url'];?>" alt="img1">
-                    <div class="slide-wraper">
-                        <h3 class="slide-title"><?=$slide['slide-title'];?></h3>
-                        <p class="slide-text"><?=$slide['slide-text'];?></p>
+    <div class="slider-cont">
+        <div class="slider-ksd">
+            <?php foreach($section5['section5-slides'] as $slide):?>
+                    <div class="slide-card">
+                        <img class="slide-img" src="<?=$slide['slide-image']['url'];?>" alt="img1">
+                        <div class="slide-wraper">
+                            <h3 class="slide-title"><?=$slide['slide-title'];?></h3>
+                            <p class="slide-text"><?=$slide['slide-text'];?></p>
+                        </div>
                     </div>
-                </div>
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
     <div class="kds-graphism">
         <img class="img -bg1" src="<?=get_template_directory_uri()?>/images/fundo-kds1.svg">
