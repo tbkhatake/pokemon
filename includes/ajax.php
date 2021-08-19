@@ -37,6 +37,7 @@ function raccoon_get_city_data() {
 
 add_action( 'wp_ajax_raccoon_get_city_data', 'raccoon_get_city_data' );
 add_action( 'wp_ajax_nopriv_raccoon_get_city_data', 'raccoon_get_city_data' );
+?>
 
 <?php
 

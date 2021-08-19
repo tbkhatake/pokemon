@@ -47,6 +47,7 @@ $city_query = new WP_Query($city_args);
                     <option value="<?= $city_code; ?>"><?= $city_name; ?></option>
                 <?php $index++; endwhile; ?>
             </select>
+            <img class="categories-arrow" src="<?=get_template_directory_uri()?>/images/down-arrow-mobile.svg" alt="seta para baixo">
             <style>
                 <?php while ($city_query->have_posts()): $city_query->the_post(); ?>
                         <?php
