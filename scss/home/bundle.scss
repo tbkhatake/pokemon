@@ -1,10 +1,16 @@
 // Page
 @import './home.scss';
 
+// Slider
+@import '../lib/tiny-slider.scss';
+
+
 // Components
 @import './hero.scss';
 @import './self-service.scss';
 @import './plans.scss';
-@import './services.scss';
+@import './hire-us.scss';
 @import './help.scss';
 @import './map.scss';
+@import './know-our-services.scss';
+@import './know-super-desk.scss';
