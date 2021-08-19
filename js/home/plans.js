@@ -1,6 +1,6 @@
 let plans_slider = tns({
     container: '.plans-slider',
-    "fixedWidth": 232,
+    "fixedWidth": 242,
     "center": true,
     "responsive": {
         "360": {
