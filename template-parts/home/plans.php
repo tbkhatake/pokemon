@@ -82,3 +82,6 @@
         </div>
     </div>
 </section>
+<div class="plans-graphism-container">
+    <img class="plans-graphism" src="<?=get_template_directory_uri()?>/images/fundo-plans.svg">
+</div>

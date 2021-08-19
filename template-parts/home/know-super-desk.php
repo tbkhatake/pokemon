@@ -22,8 +22,8 @@
             <?php endforeach; ?>
         </div>
     </div>
-    <div class="kds-graphism">
-        <img class="img -bg1" src="<?=get_template_directory_uri()?>/images/fundo-kds1.svg">
-    </div>
 </section>
+<div class="ksd-graphism-container">
+    <img class="ksd-graphism" src="<?=get_template_directory_uri()?>/images/fundo-ksd.svg">
+</div>
 

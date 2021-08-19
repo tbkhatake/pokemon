@@ -5,16 +5,10 @@
 	.graph-upper-hero {
 		display: none;
 		position: absolute;
-		top: -200px;
+		top: -100px;
 		left: -130px;
 	}
-	.graph-bottom-hero {
-		display: none;
-		position: absolute;
-		right: -250px;
-		bottom: 0px;
-		z-index: -1;
-	}
+	
 	.hero-slider {
 		.tns-outer {
 			.tns-controls {
@@ -82,20 +76,38 @@
 		}
 	}
 }
+.hero-graph-container{
+	display: none;
+	position: absolute;
+	bottom: -110px;
+	width: 100%;
+	height: 700px;
+	overflow: hidden;
+	
+	@media(min-width:1200px){
+		display: block;
+		pointer-events: none;
+		.graph-bottom-hero {
+			position: absolute;
+			right: -250px;
+			bottom: 0;
+			z-index: -1;
+			
+		}
+	}
+}
 @media (min-width: 1200px) {
+	
 	.hero {
 		padding-top: 120px;
-		padding-bottom: 140px;
+		padding-bottom: 35px;
 		overflow: hidden;
 
 		.graph-upper-hero {
 			display: block;
 			pointer-events: none;
 		}
-		.graph-bottom-hero {
-			display: block;
-			pointer-events: none;
-		}
+		
 		.hero-slider {
 			.tns-outer {
 				position: relative;
