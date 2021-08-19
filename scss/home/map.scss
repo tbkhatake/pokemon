@@ -15,6 +15,7 @@
 		text-underline-position: under;
 		display: inline-block;
 		margin-bottom: 40px;
+		max-width: 160px;
 	}
 	.map-content {
 		position: relative;
@@ -107,6 +108,7 @@
 			font-size: 40px;
 			line-height: 72px;
 			margin-bottom: 100px;
+			max-width: unset;
 		}
 		.map-content {
 			text-align: left;
