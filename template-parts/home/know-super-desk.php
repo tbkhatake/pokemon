@@ -25,5 +25,6 @@
 </section>
 <div class="ksd-graphism-container">
     <img class="ksd-graphism" src="<?=get_template_directory_uri()?>/images/fundo-ksd.svg">
+    <img class="ksd-graphism2" src="<?=get_template_directory_uri()?>/images/fundo-ksd2.svg">
 </div>
 

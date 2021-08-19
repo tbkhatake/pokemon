@@ -1,13 +1,14 @@
 .map-section {
 	width: 100%;
 	text-align: center;
-	padding: 100px 0;
+	margin-top:60px;
 	display: flex;
 	justify-content: center;
 	.graphism-wrapper {
 		display: none;
 	}
 	.map-title {
+		max-width: 160px;
 		font-size: 24px;
 		line-height: 36px;
 		font-weight: 300;
@@ -92,21 +93,23 @@
 }
 @media (min-width: 1200px) {
 	.map-section {
-		padding: 200px 0;
+		margin-top: -10px;
+		padding:180px 0;
 		position: relative;
 		overflow-x: hidden;
 		display: block;
 		.graphism-wrapper {
 			display: block;
 			position: absolute;
-			top: 350px;
-			right: -250px;
+			top: 385px;
+			right: -210px;
 			z-index: 1;
 		}
 		.map-title {
 			font-size: 40px;
 			line-height: 72px;
 			margin-bottom: 100px;
+			max-width: unset;
 		}
 		.map-content {
 			text-align: left;
