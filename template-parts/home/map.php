@@ -112,8 +112,7 @@ $city_query = new WP_Query($city_args);
                 let munId = event.target.id;
                 let munCode = munId.slice(4);
                 fetchCityData(munCode);
-                selectLocal.selectedIndex = cityElement.getAttribute(index);
-        
+                document.querySelector('#cities [value = "'+ munCode + '"]').selected = true;
             })
         })
     </script>

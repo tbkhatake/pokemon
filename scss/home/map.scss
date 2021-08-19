@@ -49,7 +49,7 @@
                     font-size: 15px;
 					padding: 7px 14px;
 					color: #c3000a;
-					border: 1px solid #c3000a;
+					border: 1px solid rgb(195, 0, 10);
 					cursor: pointer;
 					text-decoration: none;
 				}
@@ -60,6 +60,7 @@
 			svg {
 				width: 254px;
 				height: 157px;
+				filter: drop-shadow(3px 5px 2px rgba(195, 0, 10, 0.178));	
 			}
 			svg path {
 				stroke: #dbdcde;
