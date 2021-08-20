@@ -1,6 +1,7 @@
 let slider_ksd = tns({
     container: '.slider-ksd',
     "items": 1,
+    preventScrollOnTouch: 'auto',
     controlsContainer: "#customize-controls",
     "responsive": {
         "1200": {

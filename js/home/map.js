@@ -20,7 +20,7 @@ function cityHighlight (id) {
 
 function fetchCityData (cityCode) {
     cityHighlight(cityCode);
-    fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_city_data&city=' + cityCode)
+    fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_city_data&city=' + cityCode)
     .then(data => {
         let response = data.json();
         response.then(resp => {

@@ -4,6 +4,8 @@
 <head>
    	<meta charset="<?php bloginfo( 'charset' ) ?>" />
    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 	<?php wp_head() ?>
 </head>
 
@@ -24,7 +26,7 @@
 					<?php endforeach ?>
 				</div>
 				<form class="nav-cities" action="">
-					<select class="nav-select"  name="" id="">
+					<select class="nav-select" name="">
 						<option value="">Piracicaba, SP</option>
 					</select>
 					<img class="nav-image" src="<?=get_template_directory_uri()?>/images/down-arrow.svg" alt="seta para baixo">

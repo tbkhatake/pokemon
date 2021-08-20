@@ -4,7 +4,7 @@
 <h2 class="section-title"><?php echo($section2_title); ?></h2>
     <form class="categories" action="">
         <input type="hidden" name="pageid" id="pageid" value="<?= get_the_ID()?>">
-        <select class="categories-select" name="plans-categories" id="">
+        <select class="categories-select" name="plans-categories">
             <?php foreach($section2 as $category):?>
                 <option class="options" value="<?= $category['category-title']?>"><?= $category['category-title']?></option>
             <?php endforeach; ?>
@@ -13,8 +13,8 @@
     </form>
 
     <form class="categories-desk" action="">
-        <input type="hidden" name="pageid" id="pageid" value="<?= get_the_ID()?>">
-        <div class="categories-desk-select" name="plans-categories" id="">
+        <input type="hidden" name="pageid" value="<?= get_the_ID()?>">
+        <div class="categories-desk-select" name="plans-categories">
             <?php foreach($section2 as $category):?>
                 <p role="button" class="desk-options" plan="<?= $category['category-title']?>"><?= $category['category-title']?></p>
             <?php endforeach; ?>

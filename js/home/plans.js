@@ -2,10 +2,14 @@ let plans_slider = tns({
     container: '.plans-slider',
     "fixedWidth": 242,
     "center": true,
+    preventScrollOnTouch: 'auto',
     "responsive": {
         "360": {
-            "fixedWidth": 272
-        },        
+            "fixedWidth": 282
+        }, 
+        "400": {
+            "fixedWidth": 322
+        },       
         "1200":{
             "items": 4,
             "center": false,
@@ -51,7 +55,7 @@ plansDeskOptions.forEach(el => {
 
 function fetchPlansData(planType){
     let pageid = document.getElementById('pageid').value;
-    fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&pageid=' + pageid + '&plantype=' + planType) 
+    fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&pageid=' + pageid + '&plantype=' + planType) 
     .then(data => {
         let response = data.json();
         response.then(resp => {
@@ -154,12 +158,16 @@ function fetchPlansData(planType){
             })
             let plans_slider = tns({
                 container: '.plans-slider',
-                "fixedWidth": 244,
+                "fixedWidth": 242,
                 "center": true,
+                preventScrollOnTouch: 'auto',
                 "responsive": {
                     "360": {
-                        "fixedWidth": 284
-                    },        
+                        "fixedWidth": 282
+                    }, 
+                    "400": {
+                        "fixedWidth": 322
+                    },       
                     "1200":{
                         "items": 4,
                         "center": false,

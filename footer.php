@@ -37,8 +37,10 @@
                                 <?php 
                                     $socialIcon = get_sub_field('icone_rede_social');
                                     $socialLink = get_sub_field('link_rede_social');
-                                ?>  
-                               <a class="social-link" href="<?= $linkList; ?>"> <img class="social-icon" src="<?= $socialIcon; ?>" alt="<?= $socialIcon['alt']; ?>"> </a>
+                                ?>
+                            <div class="social-container">
+                               <a class="social-link" href="<?= $linkList; ?>"> <img class="social-icon" src="<?= $socialIcon; ?>" alt="<?= $socialIcon['alt']; ?>"></a>
+                            </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
                     </div>
