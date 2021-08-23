@@ -46,19 +46,28 @@ $city_query = new WP_Query($city_args);
                 <?php $index++; endwhile; ?>
             </select>
             <img class="categories-arrow" src="<?=get_template_directory_uri()?>/images/down-arrow-mobile.svg" alt="seta para baixo">
+            
             <style>
                 <?php while ($city_query->have_posts()): $city_query->the_post(); ?>
                         <?php
                             $city_code = get_field("city_code");
-                            $mun_style = '#'.'mun_'.$city_code.':hover';
+                            $mun_effect = '#'.'mun_'.$city_code.':hover';
+                            $mun_style = '#'.'mun_'.$city_code;
                             $style = $mun_style.'{
-                                fill: #c3000a;
+                                fill: #F9B700;
                                 cursor: pointer;
                             }';
+                            $effect = $mun_effect.'{
+                                fill: #c3000a;
+                                stroke: #f9b700 !important;
+                                stroke-width: 200px;
+                            }';
                             $map_selector = $map_selector . $style;
+                            $map_hover = $map_hover . $effect;
                         ?>
                 <?php endwhile; ?>
                 <?= $map_selector ?>
+                <?= $map_hover ?>
             </style>
             
             <?= $cities_ids; ?>
@@ -78,9 +87,9 @@ $city_query = new WP_Query($city_args);
            
             <div class="map-wrapper">
                 <style>
-                    #mun_<?= $first_city_code ?> {
-                        fill: #F9B700;
-                    }
+                        #mun_<?= $first_city_code ?> {
+                            fill: #c3000a;
+                        }
                 </style>
                 <?=
                     file_get_contents(get_template_directory_uri() . "/assets/map.svg");

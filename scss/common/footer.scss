@@ -2,6 +2,7 @@
 	font-family: 'Klavika', sans-serif;
 	width: 100%;
 	background-color: #FCFCFC;
+	padding-bottom: 40px;
 	.upper-footer {
 		display: flex;
 		flex-wrap: wrap;
@@ -11,7 +12,7 @@
 			display: flex;
 			margin-bottom: 32px;
 			flex-wrap: wrap;
-			grid-gap: 37px 24px;
+			grid-gap: 40px 50px;
 			justify-content: center;
 			.list-wrapper {
 				.list-title {
@@ -22,12 +23,23 @@
 				.list-group {
 					.list-item {
 						margin-bottom: 16px;
+						transition: 0.3s ease-out;
+						padding: 5px 5px;
+						color: #373737;
+						&:hover{
+							background-color: #c3000a;
+							transform: scale(1.1, 1.2);
+							color: white;
+						}
 					}
 					.list-link {
 						font-size: 15px;
 						font-weight: 300;
 						text-decoration: none;
 						color: #373737;
+						&:hover{
+							color: white;
+						}
 					}
 					.list-item:last-child {
 						margin-bottom: 0;
@@ -84,12 +96,19 @@
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: center;
-					grid-gap: 16px 37px;
+					grid-gap: 30px 50px;
 					.info-item {
 						font-size: 15px;
 						font-weight: 300;
 						text-decoration: none;
 						color: #373737;
+						transition: 0.3s ease-out;
+						padding: 5px 5px;
+						&:hover{
+							background-color: #c3000a;
+							transform: scale(1.1, 1.2);
+							color: white;
+						}
 					}
 					.info-item::after {
 						content: '';
@@ -117,7 +136,7 @@
 			.footer-list {
 				margin-bottom: 40px;
 				flex-wrap: nowrap;
-				grid-gap: 0px 80px;
+				grid-gap: 50px 100px;
 				.list-wrapper {
                     
 					.list-title {
@@ -148,7 +167,7 @@
 					.footer-items {
 						text-align: left;
 						justify-content: unset;
-						grid-gap: 16px 37px;
+						grid-gap: 40px 60px;
 						.info-item {
 							font-size: 20px;
 						}
