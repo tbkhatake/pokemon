@@ -1,14 +1,14 @@
 let plans_slider = tns({
     container: '.plans-slider',
-    "fixedWidth": 242,
+    "fixedWidth": 272,
     "center": true,
     preventScrollOnTouch: 'auto',
     "responsive": {
         "360": {
-            "fixedWidth": 282
+            "fixedWidth": 302
         }, 
         "400": {
-            "fixedWidth": 322
+            "fixedWidth": 342
         },       
         "1200":{
             "items": 4,
@@ -158,15 +158,15 @@ function fetchPlansData(planType){
             })
             let plans_slider = tns({
                 container: '.plans-slider',
-                "fixedWidth": 242,
+                "fixedWidth": 272,
                 "center": true,
                 preventScrollOnTouch: 'auto',
                 "responsive": {
                     "360": {
-                        "fixedWidth": 282
+                        "fixedWidth": 302
                     }, 
                     "400": {
-                        "fixedWidth": 322
+                        "fixedWidth": 342
                     },       
                     "1200":{
                         "items": 4,
