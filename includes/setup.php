@@ -6,8 +6,10 @@ function raccoon_enqueue_styles(){
 
 	if(is_home() || is_front_page()){
         wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/home/bundle.css' );
-    }
-
+    }else if(is_page_template('pages/internet.php')){
+        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/internet/bundle.css' );
+	}
+	
 	wp_enqueue_script( 'theme-common-js', get_template_directory_uri().'/dist/bundle.js', array(), false, true);
 }
 
