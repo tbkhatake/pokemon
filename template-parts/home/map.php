@@ -54,11 +54,11 @@ $city_query = new WP_Query($city_args);
                             $mun_effect = '#'.'mun_'.$city_code.':hover';
                             $mun_style = '#'.'mun_'.$city_code;
                             $style = $mun_style.'{
-                                fill: #F9B700;
+                                fill: #cccccc;
                                 cursor: pointer;
                             }';
                             $effect = $mun_effect.'{
-                                fill: #c3000a;
+                                fill: #f9b700;
                                 stroke: #f9b700 !important;
                                 stroke-width: 200px;
                             }';
