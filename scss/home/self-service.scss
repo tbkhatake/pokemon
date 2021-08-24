@@ -78,6 +78,10 @@
 				flex-direction: column;
 				align-items: center;
 				flex-wrap: nowrap;
+				transition: 0.3s ease-out;
+				&:hover{
+					transform: scale(1.1);
+				}
 				.box-icon {
 					width: 48px;
 					height: 48px;

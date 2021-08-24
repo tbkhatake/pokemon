@@ -80,10 +80,10 @@
                 color: #C3000A;
                 text-decoration: none;
                 cursor: pointer;
-                &:hover{
+				&:hover{
                     background-color: #C3000A;
                     color: #F4F5F5;
-                }
+				}
             }
         }
     }
@@ -149,6 +149,10 @@
                     align-self: flex-start;
                     margin-top: 40px;
                     border: 2px solid #C3000A;
+                    transition: 0.3s ease-out;
+                    &:hover{
+                        transform: scale(1.1, 1.2);
+                    }
                 }
             }
 
@@ -167,9 +171,9 @@
             }
         }
     }
-    @media(min-width: 1440px){
-        margin-left: calc((100% - 1248px) / 2);
-        margin-right: calc((100% - 1248px) / 2);
+    @media(min-width:1366px){
+        margin-left: calc((100% - 1366px) / 2);
+        margin-right: calc((100% - 1366px) / 2);
     }
 }
 

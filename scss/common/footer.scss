@@ -1,7 +1,13 @@
 .footer-section {
 	font-family: 'Klavika', sans-serif;
 	width: 100%;
-	background-color: #FCFCFC;
+	background-color: #fcfcfc;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	.container-footer {
+		margin-left: var(--container-size);
+		margin-right: var(--container-size);
+	}
 	.upper-footer {
 		display: flex;
 		flex-wrap: wrap;
@@ -11,7 +17,7 @@
 			display: flex;
 			margin-bottom: 32px;
 			flex-wrap: wrap;
-			grid-gap: 37px 24px;
+			grid-gap: 40px 50px;
 			justify-content: center;
 			.list-wrapper {
 				.list-title {
@@ -22,6 +28,12 @@
 				.list-group {
 					.list-item {
 						margin-bottom: 16px;
+						transition: 0.3s ease-out;
+						padding: 5px 5px;
+						color: #373737;
+						&:hover {
+							transform: scale(1.1, 1.2);
+						}
 					}
 					.list-link {
 						font-size: 15px;
@@ -47,7 +59,7 @@
 				display: flex;
 				justify-content: center;
 
-				.social-container{
+				.social-container {
 					max-width: 32px;
 					max-height: 32px;
 					display: flex;
@@ -57,8 +69,8 @@
 						text-decoration: none;
 					}
 					.social-icon {
-						width: 100%; 
-						height: 100%;	
+						width: 100%;
+						height: 100%;
 					}
 				}
 				.social-container:not(:last-child) {
@@ -84,21 +96,30 @@
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: center;
-					grid-gap: 16px 37px;
-					.info-item {
-						font-size: 15px;
-						font-weight: 300;
-						text-decoration: none;
-						color: #373737;
+					grid-gap: 30px 30px;
+					.info-item-wrapper {
+						
+						.info-item {
+							font-size: 15px;
+							font-weight: 300;
+							text-decoration: none;
+							color: #373737;
+							display: inline-block;
+							transition: 0.3s ease-out;
+							&:hover{
+								transform: scale(1.1, 1.2);
+							}
+						}
+						
 					}
-					.info-item::after {
+					.info-item-wrapper::after {
 						content: '';
 						display: inline-block;
 						background-color: #c3000a;
 						width: 8px;
 						height: 8px;
 						border-radius: 50%;
-						margin-left: 16px;
+						margin-left: 35px;
 					}
 				}
 				.footer-logo {
@@ -110,16 +131,19 @@
 }
 @media (min-width: 1200px) {
 	.footer-section {
+		.container-footer {
+			margin-left: 98px;
+			margin-right: 98px;
+		}
 		.upper-footer {
 			width: 100%;
 			flex-wrap: nowrap;
-            justify-content: space-around;
+			justify-content: space-around;
 			.footer-list {
 				margin-bottom: 40px;
 				flex-wrap: nowrap;
-				grid-gap: 0px 80px;
+				grid-gap: 50px 100px;
 				.list-wrapper {
-                    
 					.list-title {
 						font-size: 24px;
 					}
@@ -132,7 +156,7 @@
 			}
 			.social-media {
 				margin-bottom: 0px;
-                width: 30%;
+				width: 30%;
 				.list-title {
 					font-size: 24px;
 					margin-bottom: 32px;
@@ -148,15 +172,18 @@
 					.footer-items {
 						text-align: left;
 						justify-content: unset;
-						grid-gap: 16px 37px;
+						grid-gap: 40px 50px;
 						.info-item {
 							font-size: 20px;
+						}
+						.info-item::after {
+							margin-left: 50px;
 						}
 					}
 					.footer-logo {
 						display: block;
-                        width: 214px;
-                        height: 32px;
+						width: 214px;
+						height: 32px;
 					}
 				}
 			}

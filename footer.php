@@ -4,7 +4,7 @@
         $footerLogo = get_field('logo_footer', 'options')
     ?>
     <footer class="footer-section">
-        <div class="container">
+        <div class="container-footer">
             <div class="upper-footer">
                 <div class="footer-list">
                     <?php if(have_rows('coluna_footer', 'options')): ?>
@@ -55,8 +55,10 @@
                                     <?php 
                                         $itemInfo = get_sub_field('informacao_footer');
                                         $itemLink = get_sub_field('link_do_item');
-                                    ?>  
-                                    <a href="<?= $itemLink; ?>" class="info-item"><?= $itemInfo; ?></a>
+                                    ?> 
+                                    <div class="info-item-wrapper">
+                                        <a href="<?= $itemLink; ?>" class="info-item"><?= $itemInfo; ?></a>
+                                    </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>

@@ -70,7 +70,11 @@
 					font-weight: 500;
 					padding: 6.5px 25.31px;
 					text-decoration: none;
-					display: inline-block	;
+					display: inline-block;
+					&:hover{
+						background-color: #C3000A;
+						color: #F4F5F5;
+					}
 				}
 			}
 		}
@@ -177,6 +181,10 @@
 						border: 2px solid #c3000a;
 						font-size: 20px;
 						padding: 12.5px 51px;
+						transition: 0.3s ease-out;
+						&:hover{
+							transform: scale(1.1, 1.2);
+						}
 					}
 				}
 			}
