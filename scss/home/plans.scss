@@ -77,7 +77,7 @@
             position: absolute;
             display: flex;
             justify-content: center;
-            bottom: 10px;
+            bottom: 5px;
             z-index: 1;
             
             button{
@@ -244,8 +244,9 @@
 
                 .desk-options{
                     font-size: 32px;
+                    font-weight: 300;
                     text-transform: capitalize;
-                    padding: 0 20px;
+                    padding: 0 40px;
                     padding-bottom: 10px;
                     border-bottom: 2px solid ;
                     cursor: pointer;
@@ -263,6 +264,12 @@
             display: none;
         }
 
+        @keyframes lookAtMe{
+            0%{transform: scale(1, 1);}
+            50%{transform: scale(1.03);}
+            100%{transform: scale(1, 1);}
+        }
+
         .cards-wrapper{
             padding-top: 25px;
             height: 670px;
@@ -277,6 +284,12 @@
                 margin-right:20px;
 
                 &-active{
+                    animation: lookAtMe;
+                    animation-iteration-count: infinite;
+                    animation-duration:3s;
+                    &:hover{
+                        animation-play-state: paused;
+                    }
                     .card-dest{
                         display: block;
                         position: absolute;
@@ -287,7 +300,7 @@
                         color: #C3000A;
                         font-size: 24px;
                         font-weight: 700;
-                        box-shadow: 0px 3px 6px #C3000A33;
+                        box-shadow: 0px 3px 6px #F9B700BF;
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -347,6 +360,10 @@
                     font-size: 20px;
                     min-width: 193px;
                     min-height: 48px;
+                    transition: 0.3s ease-out;
+                    &:hover{
+                        transform: scale(1.1, 1.2);
+                    }
                 }
             }
         }

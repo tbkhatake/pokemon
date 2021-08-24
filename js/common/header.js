@@ -18,6 +18,7 @@ window.onclick = function(event){
 const subMenuSpace = document.querySelector('.sub-menu-space');
 const menu = document.querySelector('.menu')
 const subMenuBtn = document.querySelectorAll('.menu-item-has-children')
+const subMenuBtn2 = document.querySelectorAll('.menu-item')
 
 subMenuBtn.forEach(button => {
     button.addEventListener('click',function(){
@@ -41,13 +42,13 @@ subMenuBtn.forEach(button => {
     });
 });
 
-subMenuBtn.forEach(button => {
+subMenuBtn2.forEach(button => {
     button.addEventListener('mouseover',function(){ 
         subMenuSpace.classList.add('sub-menu-space-active')
     });
 });
 
-subMenuBtn.forEach(button => {
+subMenuBtn2.forEach(button => {
     button.addEventListener('mouseout',function(){
         subMenuSpace.classList.remove('sub-menu-space-active')
     });
