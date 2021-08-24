@@ -14,13 +14,13 @@ select.addEventListener('change', () => fetchCityData(select.value));
 //Realçar cidades mapa
 function cityHighlight (id) {
     let munId = 'mun_' + id;
-    let munStyle = '#' + munId + '{fill: #F9B700 !important;}'
+    let munStyle = '#' + munId + '{fill: #c3000a !important;}';
     mapStyle.innerHTML = munStyle;
 }
 
 function fetchCityData (cityCode) {
     cityHighlight(cityCode);
-    fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_city_data&city=' + cityCode)
+    fetch('/desktop/wp-admin/admin-ajax.php?action=raccoon_get_city_data&city=' + cityCode)
     .then(data => {
         let response = data.json();
         response.then(resp => {
