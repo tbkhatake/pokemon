@@ -35,7 +35,7 @@
 			<div class="nav-down">
 				<?php wp_nav_menu(array(
 					'theme_location' => 'header-menu-desk',
-					'container_class' => 'menu-desk'
+					'container_class' => 'menu-desk',
 				));?>
 				<div class="nav-buttons">
 					<button class="button search">
