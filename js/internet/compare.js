@@ -19,3 +19,25 @@ if(haveCompare){
         }
     });
 }
+
+let infoBoxActive = document.querySelectorAll('.down-icon');
+let infoBox = document.querySelectorAll('.info-box');
+let compareSec = document.querySelector('.compare')
+
+infoBoxActive.forEach((info, key) =>{
+    info.addEventListener('click',() => {
+        infoBox[key].classList.toggle('info-box-active')
+        console.log(infoBox[key])
+        
+    })   
+    
+})
+
+window.addEventListener("click", function(event) {
+    if(event.target == compareSec){
+        infoBox.forEach(infoBox =>{ 
+            infoBox.classList.remove('info-box-active')
+            console.log(infoBox)
+        })
+    }
+});

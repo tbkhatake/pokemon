@@ -8,11 +8,12 @@ menuBtn.addEventListener('click',() =>{
     modal.classList.toggle('modal-active'); 
 })
 
-window.onclick = function(event){
+window.addEventListener("click", function(event) {
     if(event.target == modal){
         modal.classList.remove('modal-active')
     }
-}
+});
+
 
 //Mobile sub-menu active
 const subMenuSpace = document.querySelector('.sub-menu-space');
