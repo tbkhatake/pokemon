@@ -22,7 +22,7 @@
         .cards{
             position: relative;
             overflow: hidden;
-            height: 1200px;
+            height: 1140px;
             width: 100%;
             .compare-slider{
                 position: absolute;
@@ -55,6 +55,14 @@
                         width: 100px;
                         text-align: center;
                     }
+
+                    .tec-icon{
+                        width: 55px;
+                        height: 30px;
+                        margin-top: 24px;
+                        margin-bottom:-9px;
+                    }
+
                     &-text{
                         font-size: 16px;
                         font-weight: 300;
@@ -71,10 +79,10 @@
                         }
 
                         .card-icons{
-                            margin-top: 40px;
+                            margin-top: 30px;
+                            padding:0 29px;
                             display: flex;
                             flex-wrap: wrap;
-                            justify-content: center;
                             align-items: center;
                             .card-icon{
                                 height: 50px;
@@ -91,6 +99,9 @@
         display: none;
     }
     @media(min-width: 1200px){
+        align-items: flex-start;
+        width: unset;
+
         .section-title{
             width: 100%;
             margin-bottom: 80px;
@@ -101,32 +112,52 @@
         }
         &-desktop{
             display: flex;
-            justify-content: center;
-            width:100%;
+            align-self: center;
+            pointer-events: none;
 
             .compare-table{
                 width: 970px;
-                table-layout:fixed;
-                th{
-                    width: 34%;
-                    min-width: 50px;
-                    font-size: 24px;
-                    font-weight: 500;
-                    text-align: left;
-                    padding: 0;
-                }
 
-                td{
-                    width: 160px;
-                    .card-plan-container{
+                .tr{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .th{
+                        width: 195px;
+                        height: 100%;
+                        margin: 0;
+    
+                        .benefits-name{
+                            width: 132px;
+                            font-size: 24px;
+                            font-weight: 500;
+                            text-align: left;
+                        }
+                    }
+    
+                    .td{
+                        position: relative;
+                        width: 152px;
                         display: flex;
-                        align-items: center;
+                        flex-direction: column;
                         justify-content: center;
-                        width: 122px;
-                        height: 122px;
-                        background-color: #C3000A;
-                        margin-bottom: 40px;
-                        .card-plan {
+                        align-items: center;
+                        padding: 30px 20px;
+                        &-services{
+                            padding-bottom: 0;
+                        }
+
+                        .card-plan-container{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 122px;
+                            height: 122px;
+                            background-color: #C3000A;
+
+                            .card-plan {
                             width: 85px;
                             height: 60px;
                             color: white;
@@ -134,13 +165,58 @@
                             font-weight: 500;
                             display: inline-block;
                             text-align: center;
+                            }
+                        }
+
+                        .tec-icon{
+                            width: 55px;
+                            height: 30px;
+                            margin-bottom: 15px;
+                        }
+
+                        .card-text{
+                            width: 160px;
+                            text-align: center;
+                            font-size: 16px;
+                        }
+
+                        .down-icon{
+                            margin-right: 15px;
+                            width: 16px;
+                            height: 16px;
+                            align-self: flex-end;
+                            cursor: pointer;
+                            pointer-events: visible;
+                        }
+
+                        .info-box{
+                           display: none;
+                           align-items: center;
+                           position: absolute;
+                           padding: 5px;
+                           right: -70px;
+                           bottom:-15px;
+                           height: 40px;
+                           width: 100px;
+                           box-shadow: 0px 3px 6px #C3000A33;
+                           border-radius: 5px; 
+
+                            &-active{
+                                display: flex;
+                            }
+                        }
+                        .services{
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding: 0 14px;
+
+                            .card-icon{
+                                margin: 8px 8px;
+                            }
                         }
                     }
-                   
-                    .card-text{
-                        width: 160px;
-                    }
                 }
+                
             }
             
         }
