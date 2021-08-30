@@ -1,6 +1,8 @@
-<?php $section5 = get_field('section5')?>
+<?php $section5_title = get_field('section5-title')?>
+<?php $section5_slides = get_field('section5-slides')?>
+
 <section class="know-super-desktop">
-    <h2 class="section-title"><?php echo($section5['section5-title']); ?></h2>
+    <h2 class="section-title"><?php echo($section5_title); ?></h2>
     <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
         <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
             <img class="controls-btn" src="<?=get_template_directory_uri()?>/images/left-arrow.svg" alt="left-arrow">
@@ -11,7 +13,7 @@
     </ul>
     <div class="slider-cont">
         <div class="slider-ksd">
-            <?php foreach($section5['section5-slides'] as $slide):?>
+            <?php foreach($section5_slides as $slide):?>
                     <div class="slide-card">
                         <img class="slide-img" src="<?=$slide['slide-image']['url'];?>" alt="img1">
                         <div class="slide-wraper">
