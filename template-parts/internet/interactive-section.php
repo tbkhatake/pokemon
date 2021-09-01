@@ -8,8 +8,10 @@
     $cta_label = get_field('rotulo_cta');
 ?>
 <section class="interactive-section">
+        <div class="laptop-background"></div>
         <div class="container">
             <h2 class="section-title"><?= $interactive_title; ?></h2>
+            
         </div>
         <div class="comparison">
             <img class="slide1" src="<?= $first_image; ?>" alt="Imagem comparativa 1">
