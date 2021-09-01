@@ -112,6 +112,7 @@
             .main-img-wrapper{
                 align-items: flex-start;
                 height: 565px; 
+                width: unset;
 
                 .main-img-container{
                     width: 100%;
@@ -182,8 +183,6 @@
     }
     @media(min-width:1366px){
         .section-wrapper{
-            padding-left: calc((100% - 1366px) / 2);
-            padding-right: calc((100% - 1366px) / 2);
             background-color: #C3000ABF;
             .main-img-wrapper{
                 background-color: transparent;
