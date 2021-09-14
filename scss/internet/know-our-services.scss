@@ -114,9 +114,11 @@
                 color: #C3000A;
                 text-decoration: none;
                 cursor: pointer;
+                transition: 0.3s ease-out;
 				&:hover{
                     background-color: #C3000A;
                     color: #F4F5F5;
+                    transform: scale(1.1, 1.2);
 				}
             }
         }
@@ -233,6 +235,7 @@
                 }
             }
         }
+
     }
     @media(min-width:1366px){
         margin-left: calc((100% - 1366px) / 2);

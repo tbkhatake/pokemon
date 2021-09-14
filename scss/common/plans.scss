@@ -95,7 +95,9 @@
                 background-color: #C3000A;
             }
         }
-        
+        .tns-horizontal.tns-subpixel>.tns-item{
+            display: flex;
+        } 
         .card{
             width: 200px;
             box-sizing: border-box;

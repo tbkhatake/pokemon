@@ -51,7 +51,6 @@ if(havePlans){
             el.classList.remove('desk-options-active')
             })
             el.classList.add('desk-options-active');
-
         })
     })
 
