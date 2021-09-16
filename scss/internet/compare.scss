@@ -1,0 +1,274 @@
+.compare{
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    .section-title {
+        text-align: center;
+        width: 160px;
+		font-size: 24px;
+		line-height: 2.25rem;
+		font-weight: 300;
+		text-decoration: underline 2px #c3000a;
+        text-underline-position: under;
+		display: inline-block;
+	}
+    &-mobile{
+        margin-top: 40px;
+        width: 100%;
+        .cards{
+            position: relative;
+            overflow: hidden;
+            height: 1050px;
+            width: 100%;
+            .compare-slider{
+                position: absolute;
+                display: flex;
+                .card{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &-plan-container{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 122px;
+                        height: 122px;
+                        background-color: #C3000A;
+                        margin-bottom: 40px;
+                    }
+                    &-plan{
+                        width: 85px;
+                        height: 60px;
+                        color: white;
+                        font-size: 32px;
+                        font-weight: 500;
+                        display: inline-block;
+                        text-align: center;
+                    }
+                    &-benefit{
+                        font-size: 18px;
+                        font-weight: 700;
+                        width: 100px;
+                        text-align: center;
+                    }
+
+                    .tec-icon{
+                        width: 55px;
+                        height: 30px;
+                        margin-top: 24px;
+                        margin-bottom:-9px;
+                    }
+
+                    .wifi-icon{
+                        width: 42px;
+                        height: 30px;
+                        margin-top: 24px;
+                        margin-bottom:-9px;
+                    }
+
+
+                    .franch-icon{
+                        width: 37px;
+                        height: 37px;
+                        margin-top: 24px;
+                        margin-bottom:-9px;
+                    }
+
+
+                    &-text{
+                        font-size: 16px;
+                        font-weight: 300;
+                        text-align: center;
+                        margin: 24px 16px;
+                    }
+                    &-services{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .card-benefit{
+                            width: 125px;
+                        }
+
+                        .card-icons{
+                            margin-top: 30px;
+                            padding:0 29px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-items: center;
+                            .card-icon{
+                                height: 50px;
+                                width: 50px;
+                                margin:8px 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-desktop{
+        display: none;
+    }
+    @media(min-width: 1200px){
+        margin-top: 160px;
+        align-items: flex-start;
+        width: unset;
+
+        .section-title{
+            width: 100%;
+            margin-bottom: 80px;
+            font-size: 40px;
+        }
+        &-mobile{
+            display: none;
+        }
+        &-desktop{
+            display: flex;
+            align-self: center;
+            pointer-events: none;
+
+            .compare-table{
+                width: 970px;
+
+                .tr{
+                    margin-top: 20px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    .th{
+                        width: 195px;
+                        margin: 0;
+    
+                        .benefits-name{
+                            width: 132px;
+                            font-size: 24px;
+                            font-weight: 500;
+                            text-align: left;
+                        }
+                    }
+    
+                    .td{
+                        position: relative;
+                        width: 152px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 30px 20px;
+                        &-services{
+                            padding-bottom: 0;
+                        }
+
+                        .card-plan-container{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            width: 122px;
+                            height: 122px;
+                            background-color: #C3000A;
+
+                            .card-plan {
+                            width: 85px;
+                            height: 60px;
+                            color: white;
+                            font-size: 32px;
+                            font-weight: 500;
+                            display: inline-block;
+                            text-align: center;
+                            }
+                        }
+
+                        .tec-icon{
+                            margin-bottom: 15px;
+                        }
+
+                        .wifi-icon{
+                            margin-bottom: 15px;
+                        }
+
+                        .franch-icon{
+                            margin-bottom: 15px;
+                        }
+
+                        .card-text{
+                            width: 160px;
+                            text-align: center;
+                            font-size: 16px;
+                        }
+
+                        .down-icon{
+                            margin-right: 15px;
+                            width: 16px;
+                            height: 16px;
+                            align-self: flex-end;
+                            cursor: pointer;
+                            pointer-events: visible;
+                        }
+
+                        .info-box{
+                            display: none;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            padding: 15px;
+                            right: -90px;
+                            bottom:-35px;
+                            height: 40px;
+                            width: 100px;
+                            box-shadow: 0px 3px 6px #C3000A33;
+                            border-radius: 5px; 
+
+                            &-active{
+                                display: flex;
+                            }
+                        }
+                        .services{
+                            display: flex;
+                            flex-wrap: wrap;
+                            padding: 0 14px;
+
+                            .card-icon{
+                                margin: 8px 8px;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            
+        }
+    }
+
+}
+.compare-graph{
+    display: none;
+    @media(min-width:1200px){
+        display: block;
+		position: absolute;
+		top: 3170px;
+		left: 0;
+		width: 100%;
+		height: 1600px;
+		overflow: hidden;
+		z-index: -1;
+	
+		.compare-graph-img-1{
+			position: absolute;
+			top: 160px;
+			left: -385px;
+		}
+	
+		.compare-graph-img-2{
+			position: absolute;
+			bottom: -0;
+			right: -420px;
+            transform: rotate(80deg);
+		}
+    }
+}
