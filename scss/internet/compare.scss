@@ -22,7 +22,7 @@
         .cards{
             position: relative;
             overflow: hidden;
-            height: 1140px;
+            height: 1050px;
             width: 100%;
             .compare-slider{
                 position: absolute;
@@ -63,6 +63,22 @@
                         margin-bottom:-9px;
                     }
 
+                    .wifi-icon{
+                        width: 42px;
+                        height: 30px;
+                        margin-top: 24px;
+                        margin-bottom:-9px;
+                    }
+
+
+                    .franch-icon{
+                        width: 37px;
+                        height: 37px;
+                        margin-top: 24px;
+                        margin-bottom:-9px;
+                    }
+
+
                     &-text{
                         font-size: 16px;
                         font-weight: 300;
@@ -99,6 +115,7 @@
         display: none;
     }
     @media(min-width: 1200px){
+        margin-top: 160px;
         align-items: flex-start;
         width: unset;
 
@@ -119,6 +136,7 @@
                 width: 970px;
 
                 .tr{
+                    margin-top: 20px;
                     width: 100%;
                     display: flex;
                     align-items: center;
@@ -167,8 +185,14 @@
                         }
 
                         .tec-icon{
-                            width: 55px;
-                            height: 30px;
+                            margin-bottom: 15px;
+                        }
+
+                        .wifi-icon{
+                            margin-bottom: 15px;
+                        }
+
+                        .franch-icon{
                             margin-bottom: 15px;
                         }
 
@@ -188,16 +212,17 @@
                         }
 
                         .info-box{
-                           display: none;
-                           align-items: center;
-                           position: absolute;
-                           padding: 5px;
-                           right: -70px;
-                           bottom:-15px;
-                           height: 40px;
-                           width: 100px;
-                           box-shadow: 0px 3px 6px #C3000A33;
-                           border-radius: 5px; 
+                            display: none;
+                            align-items: center;
+                            justify-content: center;
+                            position: absolute;
+                            padding: 15px;
+                            right: -90px;
+                            bottom:-35px;
+                            height: 40px;
+                            width: 100px;
+                            box-shadow: 0px 3px 6px #C3000A33;
+                            border-radius: 5px; 
 
                             &-active{
                                 display: flex;
@@ -220,4 +245,30 @@
         }
     }
 
+}
+.compare-graph{
+    display: none;
+    @media(min-width:1200px){
+        display: block;
+		position: absolute;
+		top: 3170px;
+		left: 0;
+		width: 100%;
+		height: 1600px;
+		overflow: hidden;
+		z-index: -1;
+	
+		.compare-graph-img-1{
+			position: absolute;
+			top: 160px;
+			left: -385px;
+		}
+	
+		.compare-graph-img-2{
+			position: absolute;
+			bottom: -0;
+			right: -420px;
+            transform: rotate(80deg);
+		}
+    }
 }

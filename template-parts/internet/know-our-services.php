@@ -27,3 +27,6 @@
         </div>
     </div>
 </section>
+<div class="kos-graph">
+    <img class="kos-graph-img-1" src="<?=get_template_directory_uri()?>/images/internet/kos-graph1.svg" alt="graphismo">
+</div>

@@ -82,3 +82,7 @@
         </div>
     </div>
 </section>
+<div class="plans-graph">
+    <img class="plans-graph-img-1" src="<?=get_template_directory_uri()?>/images/plans-graph1.svg" alt="graphismo">
+    <img class="plans-graph-img-2" src="<?=get_template_directory_uri()?>/images/plans-graph2.svg" alt="graphismo">
+</div>

@@ -196,7 +196,14 @@ function fetchQuizData(quizType){
                             let removeButton = document.createElement('p');
                             removeButton.innerText = resp.removeButton;
                             removeButton.classList.add('remove-button');
+
+                            let addButton = document.createElement('p');
+                            addButton.innerText = resp.addButton;
+                            addButton.classList.add('add-button');
+
                             if (removeCondition){
+                                pontosAdc.appendChild(addButton);
+                                addButton.style.display = 'none'
                                 pontosAdc.appendChild(removeButton);
                             }
                             
@@ -205,17 +212,24 @@ function fetchQuizData(quizType){
                             conversionButton.classList.add('conversion-button');
                             total.appendChild(conversionButton);
 
-                            let remover = document.querySelector('.remove-button');
-                            remover.addEventListener('click', ()=>{
-                            pointPoints.innerText = localPoints.pointsPoints3;
-                            descPoints.innerText = localPoints.pointsDesc3;
-                            pontosAdc.innerHTML = ' ';
-                            pontosAdc.appendChild(pointPoints);
-                            pontosAdc.appendChild(descPoints);
-                            let priceReplace = document.querySelector('.total-price')
-                            priceReplace.innerHTML = ' ';
-                            priceReplace.innerHTML = firstQuadPrice;
+                            removeButton.addEventListener('click', ()=>{
+                            totalPrice.innerHTML = firstQuadPrice;
+                            removeButton.style.display = 'none';
+                            addButton.style.display = 'block';
+                            pontosAdc.style.backgroundColor = '#80808040';
+                            pointPoints.style.color = '#373737';
+                            descPoints.style.color = '#373737';
                             })
+
+                            addButton.addEventListener('click', ()=>{
+                            totalPrice.innerHTML ='R$' +' '+ finalPrice.replace(".",",");
+                            removeButton.style.display = 'block'
+                            addButton.style.display = 'none'
+                            pontosAdc.style.backgroundColor = '#FFFFFF';
+                            pointPoints.style.color = '#C3000A';
+                            descPoints.style.color = '#C3000A';
+                            })
+
 
                             let tentarNovamente = document.querySelector('.tryAgain-button');
 

@@ -43,4 +43,10 @@
         <p class="tryAgain-button"><?=$quiz_buttons['quiz-buttons-tryAgain']?></p>
     </div>
 </section>
- 
+<div class="quiz-graph-zIndex">
+    <img class="quiz-graph-img-1" src="<?=get_template_directory_uri()?>/images/internet/quiz-graph1.svg" alt="graphismo">
+</div>
+<div class="quiz-graph">
+    <img class="quiz-graph-img-2" src="<?=get_template_directory_uri()?>/images/internet/quiz-graph2.svg" alt="graphismo">
+    <img class="quiz-graph-img-3" src="<?=get_template_directory_uri()?>/images/internet/quiz-graph3.svg" alt="graphismo">
+</div>

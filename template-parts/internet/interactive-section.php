@@ -9,7 +9,6 @@
 ?>
 <section class="interactive-section">
         <div class="laptop-background"></div>
-        <div class="container">
             <h2 class="section-title"><?= $interactive_title; ?></h2>
             
         </div>
@@ -34,5 +33,8 @@
                 <a class="content-cta" href="<?= $content_cta; ?>"><?= $cta_label; ?></a>
             </div>
         </div>
-        
 </section>
+<div class="interactive-graph">
+    <img class="interactive-graph-img-1" src="<?=get_template_directory_uri()?>/images/internet/interactive-graph1.svg" alt="graphismo">
+    <img class="interactive-graph-img-2" src="<?=get_template_directory_uri()?>/images/internet/interactive-graph2.svg" alt="graphismo">
+</div>

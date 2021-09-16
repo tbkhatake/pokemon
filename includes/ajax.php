@@ -128,6 +128,7 @@ function raccoon_get_quiz_data() {
     }
         $quizResp =  $quizText;
         $removeButton = $quiz_buttons['quiz-buttons-remove'];
+        $adddButton = $quiz_buttons['quiz-buttons-add'];
         $conversionButton = $quiz_buttons['quiz-buttons-conversion'];
 
         $localPointsJson = [
@@ -189,6 +190,7 @@ function raccoon_get_quiz_data() {
                 'localPoints' => $localPointsJson,
                 'quizResp' => $quizResp,
                 'removeButton' => $removeButton,
+                'addButton' => $adddButton,
                 'conversionButton' => $conversionButton,
             );
         }

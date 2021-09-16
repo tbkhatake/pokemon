@@ -4,6 +4,8 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 100%;
+    overflow: hidden;
 
     .section-title {
         text-align: center;
@@ -201,6 +203,23 @@
                         transform: scale(1.1, 1.2);
                     }
                 }
+
+                .add-button{
+                    max-width: 125px;
+                    padding: 6px 18px;
+                    color: #F4F5F5;
+                    background-color: #C3000A;
+                    font-size: 15px;
+                    font-weight: 500;
+                    text-align: center;
+                    cursor: pointer;
+                    transition: 0.3s ease-out;
+                    &:hover{
+                        background-color: #C3000A;
+                        color: #F4F5F5;
+                        transform: scale(1.1, 1.2);
+                    }
+                }
             }
 
             .total{
@@ -262,6 +281,8 @@
 
 
     @media(min-width:1200px){
+        margin-top: 80px;
+        height: 810px;
         .section-title{
             width: 100%;
             margin-bottom: 60px;
@@ -326,6 +347,7 @@
             height: 325px;
             overflow: hidden;
             position: relative;
+            width: 1366px;
 
             .span{
                 display: block;
@@ -431,12 +453,20 @@
                         padding: 12px 20px;
                         font-size: 20px;
                     }
-                }
 
+                    .add-button{
+                        max-width: 125px;
+                        padding: 12px 20px;
+                        font-size: 20px;
+                    }   
+                }
                 .total{
+                    position: relative;
                     height: 265px;
                     width: 265px;
                     padding: 22px 12px;
+                    z-index: 2;
+                    background-color: white;
 
                     &-price{
                         font-size: 36px;
@@ -459,5 +489,55 @@
                 font-size: 20px;
             }
         }
+    }
+}
+.quiz-graph-zIndex{
+    display: none;
+    @media(min-width:1200px){
+        display: block;
+		position: absolute;
+		top: 5700px;
+		right: 0;
+		width: 520px;
+		height: 505px;
+		overflow: hidden;
+		z-index: 1;
+	
+		.quiz-graph-img-1{
+			position: absolute;
+			top: -80px;
+			right: -165px;
+            transform: rotate(-90deg);
+		}
+    }
+}
+	
+.quiz-graph{
+    display: none;
+    @media(min-width:1200px){
+        display: block;
+		position: absolute;
+		top: 5975px;
+		left: 0;
+		width: 100%;
+		height: 1150px;
+		overflow: hidden;
+		z-index: -1;
+
+		.quiz-graph-img-2{
+			position: absolute;
+			top:-50px;
+			left:-345px;
+            transform: rotate(210deg);
+            
+		}
+
+        .quiz-graph-img-3{
+			position: absolute;
+			bottom: 140px;
+			right: -450px;
+            transform: rotate(70deg);
+
+		}
     }
 }

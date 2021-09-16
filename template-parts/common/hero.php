@@ -31,3 +31,7 @@
             <?php endif; ?>
         </div>
 </section>
+<div class="hero-graph">
+    <img class="hero-graph-img-1" src="<?=get_template_directory_uri()?>/images/hero-graph1.svg" alt="graphismo">
+    <img class="hero-graph-img-2" src="<?=get_template_directory_uri()?>/images/hero-graph2.svg" alt="graphismo">
+</div>

@@ -6,7 +6,7 @@ if(haveExpoImg){
         "controls":false,
         "nav":false,
         "autoplay":true,
-        "speed":3000,
+        "speed":700,
         "autoplayTimeout":3500,
         "mode":"gallery",
         "autoplayButtonOutput":false,
