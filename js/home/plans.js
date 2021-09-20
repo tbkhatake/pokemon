@@ -2,28 +2,36 @@ let havePlans = document.querySelector('.plans-slider');
 if(havePlans){
     let plans_slider = tns({
         container: '.plans-slider',
-        "fixedWidth": 272,
+        "fixedWidth": 210,
         "center": true,
+        "loop":false,
         preventScrollOnTouch: 'auto',
+        "gutter":32,
         "responsive": {
             "360": {
-                "fixedWidth": 302
+                "fixedWidth": 250
             }, 
-            "400": {
-                "fixedWidth": 342
+            "375": {
+                "fixedWidth": 270
             },       
+            "400": {
+                "fixedWidth": 300
+            },  
+            "440": {
+                "fixedWidth": 350
+            },  
             "1200":{
                 "items": 4,
                 "center": false,
+                "fixedWidth": 270
             },
             "1366":{
+                "gutter":40,
                 "items": 4,
-                "fixedWidth": 340,
-                "center": false,
+                "fixedWidth": 300,
             },
         }
     });
-
     let plansSelect = document.querySelector('.categories-select');
     let plansDeskSelect = document.querySelector('.categories-desk-select');
     let plansDeskOptions = document.querySelectorAll('.desk-options');
@@ -64,6 +72,10 @@ if(havePlans){
                 cards = resp.cards;
                 
                 cards.forEach(function(el){
+                    let cardOutside = document.createElement('div');
+                    cardOutside.classList.add('card-outside');
+
+
                     let card = document.createElement('div');
                     card.classList.add('card');
                     if( el.mvp == true){
@@ -102,6 +114,7 @@ if(havePlans){
                     servicesIS.classList.add('services-IS');
                     servicesWrapper.appendChild(servicesTitle);
                     servicesWrapper.appendChild(servicesIS);
+                   
 
                     let cta = document.createElement('a');
                     cta.classList.add('cta');
@@ -134,18 +147,36 @@ if(havePlans){
                         featuresWrapper.appendChild(feature);
                     }
 
+                    let servicesPlus = document.createElement('div');
+                    servicesPlus.classList.add('services-plus');
+
                     let servicesLength = el.services.icon.length;
                     for(let i = 0; i < servicesLength ; i++){
                         let servLink = document.createElement('a');
                         servLink.classList.add('IS-link');
                         servLink.setAttribute('href', el.services.link[i]);
-                        
+
                         let servIcon = document.createElement('img');
                         servIcon.classList.add('IS-icon');
                         servIcon.setAttribute('src' ,el.services.icon[i]) ;
-                        
+                       
                         servLink.appendChild(servIcon);
-                        servicesIS.appendChild(servLink);
+                        if(i <= 3){
+                            servicesIS.appendChild(servLink);
+                        }else{
+                            servicesPlus.appendChild(servLink);
+                            card.appendChild(servicesPlus);
+                        }
+                    }
+                    
+                    if(servicesLength > 4){
+                        let plusServButton = document.createElement('p');
+                        plusServButton.classList.add('services-plus-button');
+                        plusServButton.innerHTML = '+' + (servicesLength - 4);
+                        servicesIS.appendChild(plusServButton);
+                        plusServButton.addEventListener('click', ()=>{
+                        servicesPlus.classList.toggle('services-plus-active')
+                    })
                     }
 
                     card.appendChild(speed);
@@ -155,33 +186,55 @@ if(havePlans){
                     card.appendChild(featuresWrapper);
                     card.appendChild(servicesWrapper);
                     card.appendChild(cta);
-                    plansSlider.appendChild(card);
+                    cardOutside.appendChild(card);
+                    plansSlider.appendChild(cardOutside);
                     cardsWrapper.appendChild(plansSlider);
                 })
+                
                 let plans_slider = tns({
                     container: '.plans-slider',
-                    "fixedWidth": 272,
+                    "fixedWidth": 210,
                     "center": true,
+                    "loop":false,
                     preventScrollOnTouch: 'auto',
+                    "gutter":32,
                     "responsive": {
                         "360": {
-                            "fixedWidth": 302
+                            "fixedWidth": 250
                         }, 
-                        "400": {
-                            "fixedWidth": 342
+                        "375": {
+                            "fixedWidth": 270
                         },       
+                        "400": {
+                            "fixedWidth": 300
+                        },  
+                        "440": {
+                            "fixedWidth": 350
+                        },  
                         "1200":{
                             "items": 4,
                             "center": false,
+                            "fixedWidth": 270
                         },
                         "1366":{
+                            "gutter":40,
                             "items": 4,
-                            "fixedWidth": 340,
-                            "center": false,
+                            "fixedWidth": 300,
                         },
                     }
                 });
+   
             })
         })
     } 
+    let serviceActiveButton = document.querySelectorAll('.services-plus-button');
+    let servicesHidden = document.querySelectorAll('.services-plus');
+    serviceActiveButton.forEach(function(button, key){
+        if(button.innerText == ""){
+            button.style.display = 'none';
+        }
+        button.addEventListener('click', ()=>{
+            servicesHidden[key].classList.toggle('services-plus-active');
+        })
+    })
 }

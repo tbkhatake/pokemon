@@ -25,58 +25,92 @@
         <div class="plans-slider #tns3">
             <?php foreach($section2[0]['section2-cards'] as $card):?>
                 <?php if ($card['card2-mvp'] == 1){?>
-                    <div class="card card-active">
-                        <div class="card-dest"><?= $card['card2-mvpText']?></div>
-                        <h3 class="card-speed"><?= $card['card2-speed']?></h3>
-                        <p class="card-price"><?= $card['card2-price']?></p>
-                        <p class="card-text"><?= $card['card2-text']?></p>
-                        <span class="card-redline"> </span>
-                        <div class="features-wrapper">                
-                            <?php foreach($card['card2-features'] as $features):?>
-                                <div class="feature">
-                                    <div class="icon-space">
-                                        <img class="feature-icon" src="<?= $features['features-icon']['url']?>" alt="">
-                                    </div>
-                                    <p class="feature-title"><?= $features['features-title']?></p>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="services-wrapper"> 
-                            <p class="services-title">Serviços inclusos</p> 
-                            <div class="services-IS">
-                                <?php foreach($card['card2-IS'] as $services):?>
-                                    <a class="IS-link" href="<?= $services['IS-link']?>"><img class="IS-icon" src="<?= $services['IS-icon']['url']?>" alt=""></a>
+                    <div class="card-outside">
+                        <div class="card card-active">
+                            <div class="services-plus">
+                                <?php foreach($card['card2-IS'] as $servicesKey => $services):?>
+                                    <?php if($servicesKey > 3):?>
+                                        <a class="IS-link" href="<?= $services['IS-link']?>"><img class="IS-icon" src="<?= $services['IS-icon']['url']?>" alt=""></a>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
-                        </div>  
-                        <a class="cta" href="<?= $card['card2-cta']['url']?>"><?= $card['card2-cta']['title']?> </a>
+                            <div class="card-dest"><?= $card['card2-mvpText']?></div>
+                            <h3 class="card-speed"><?= $card['card2-speed']?></h3>
+                            <p class="card-price"><?= $card['card2-price']?></p>
+                            <p class="card-text"><?= $card['card2-text']?></p>
+                            <span class="card-redline"> </span>
+                            <div class="features-wrapper">                
+                                <?php foreach($card['card2-features'] as $features):?>
+                                    <div class="feature">
+                                        <div class="icon-space">
+                                            <img class="feature-icon" src="<?= $features['features-icon']['url']?>" alt="">
+                                        </div>
+                                        <p class="feature-title"><?= $features['features-title']?></p>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="services-wrapper"> 
+                                <p class="services-title">Serviços inclusos</p> 
+                                <div class="services-IS">
+                                    <?php foreach($card['card2-IS'] as $servicesKey => $services):?>
+                                        <?php if($servicesKey <= 3):?>
+                                            <a class="IS-link" href="<?= $services['IS-link']?>"><img class="IS-icon" src="<?= $services['IS-icon']['url']?>" alt=""></a>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                    <?php if($servicesKey >= 3):?>
+                                        <p class="services-plus-button">+<?=$servicesKey-3?></p>
+                                    <?php else:?>
+                                        <p class="services-plus-button"></p>
+                                    <?php endif?>
+                                </div>
+                            </div>  
+                            <a class="cta" href="<?= $card['card2-cta']['url']?>"><?= $card['card2-cta']['title']?> </a>
+                            <a class="more-info" href="<?=$card['card2_moreInfo']['url']?>"><?= $card['card2_moreInfo']['title']?></a>
+                        </div>
                     </div>
                 <?php }else{ ?>   
-                    <div class="card">
-                        <h3 class="card-speed"><?= $card['card2-speed']?></h3>
-                        <p class="card-price"><?= $card['card2-price']?></p>
-                        <p class="card-text"><?= $card['card2-text']?></p>
-                        <span class="card-redline"> </span>
-                        <div class="features-wrapper">                
-                            <?php foreach($card['card2-features'] as $features):?>
-                                <div class="feature">
-                                    <div class="icon-space">
-                                        <img class="feature-icon" src="<?= $features['features-icon']['url']?>" alt="">
-                                    </div>
-                                    <p class="feature-title"><?= $features['features-title']?></p>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
-                        <div class="services-wrapper"> 
-                            <p class="services-title">Serviços inclusos</p> 
-                            <div class="services-IS">
-                                <?php foreach($card['card2-IS'] as $services):?>
-                                    <a class="IS-link" href="<?= $services['IS-link']?>"><img class="IS-icon" src="<?= $services['IS-icon']['url']?>" alt=""></a>
+                    <div class="card-outside">
+                        <div class="card">
+                            <div class="services-plus">
+                                <?php foreach($card['card2-IS'] as $servicesKey => $services):?>
+                                    <?php if($servicesKey > 3):?>
+                                        <a class="IS-link" href="<?= $services['IS-link']?>"><img class="IS-icon" src="<?= $services['IS-icon']['url']?>" alt=""></a>
+                                    <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
-                        </div>  
-                        <a class="cta" href="<?= $card['card2-cta']['url']?>"><?= $card['card2-cta']['title']?> </a>
-                    </div> 
+                            <h3 class="card-speed"><?= $card['card2-speed']?></h3>
+                            <p class="card-price"><?= $card['card2-price']?></p>
+                            <p class="card-text"><?= $card['card2-text']?></p>
+                            <span class="card-redline"> </span>
+                            <div class="features-wrapper">                
+                                <?php foreach($card['card2-features'] as $features):?>
+                                    <div class="feature">
+                                        <div class="icon-space">
+                                            <img class="feature-icon" src="<?= $features['features-icon']['url']?>" alt="">
+                                        </div>
+                                        <p class="feature-title"><?= $features['features-title']?></p>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <div class="services-wrapper"> 
+                                <p class="services-title">Serviços inclusos</p> 
+                                <div class="services-IS">
+                                    <?php foreach($card['card2-IS'] as $servicesKey => $services):?>
+                                        <?php if($servicesKey <= 3):?>
+                                            <a class="IS-link" href="<?= $services['IS-link']?>"><img class="IS-icon" src="<?= $services['IS-icon']['url']?>" alt=""></a>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                    <?php if($servicesKey >= 3):?>
+                                        <p class="services-plus-button">+<?=$servicesKey-3?></p>
+                                    <?php else:?>
+                                        <p class="services-plus-button"></p>
+                                    <?php endif?>
+                                </div>
+                            </div>  
+                            <a class="cta" href="<?= $card['card2-cta']['url']?>"><?= $card['card2-cta']['title']?> </a>
+                            <a class="more-info" href="<?=$card['card2_moreInfo']['url']?>"><?= $card['card2_moreInfo']['title']?></a>
+                        </div> 
+                    </div>
                 <?php } ?> 
             <?php endforeach; ?>
         </div>
