@@ -57,7 +57,7 @@
                                             <a class="IS-link" href="<?= $services['IS-link']?>"><img class="IS-icon" src="<?= $services['IS-icon']['url']?>" alt=""></a>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
-                                    <?php if($servicesKey >= 3):?>
+                                    <?php if($servicesKey > 3):?>
                                         <p class="services-plus-button">+<?=$servicesKey-3?></p>
                                     <?php else:?>
                                         <p class="services-plus-button"></p>
@@ -100,7 +100,7 @@
                                             <a class="IS-link" href="<?= $services['IS-link']?>"><img class="IS-icon" src="<?= $services['IS-icon']['url']?>" alt=""></a>
                                         <?php endif; ?>
                                     <?php endforeach; ?>
-                                    <?php if($servicesKey >= 3):?>
+                                    <?php if($servicesKey > 3):?>
                                         <p class="services-plus-button">+<?=$servicesKey-3?></p>
                                     <?php else:?>
                                         <p class="services-plus-button"></p>
