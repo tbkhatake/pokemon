@@ -10,8 +10,8 @@ let point = 0
 function fetchQuizData(quizType){
   
     let quizid = document.getElementById('quizid').value;
-    // fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_quiz_data&quizid=' + quizid + '&quiztype=' + quizType)
-    fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_quiz_data&quizid=' + quizid + '&quiztype=' + quizType) 
+    fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_quiz_data&quizid=' + quizid + '&quiztype=' + quizType)
+    // fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_quiz_data&quizid=' + quizid + '&quiztype=' + quizType) 
     .then(data => {
         let response = data.json();
             response.then(resp => {
@@ -20,8 +20,8 @@ function fetchQuizData(quizType){
                 
                 
                 let pageid = document.getElementById('pageid').value;
-                // fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&pageid=' + pageid + '&plantype=' + 'internet') 
-                fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&pageid=' + pageid + '&plantype=' + 'internet') 
+                fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&pageid=' + pageid + '&plantype=' + 'internet') 
+                // fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&pageid=' + pageid + '&plantype=' + 'internet') 
                     .then(data => {
                         let response = data.json();
                         response.then(resp => {

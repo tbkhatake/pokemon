@@ -2,7 +2,7 @@
 $ssTitle = get_field('titulo_autoatendimento');
 ?>
 <section class="self-service">
-<img class="self-graphism" src="<?=get_template_directory_uri()?>/assets/background-self.svg">   
+  
     <div class="container">
         <h2 class="section-title"><?= $ssTitle; ?></h2>
         <div class="box-grid">
@@ -17,7 +17,7 @@ $ssTitle = get_field('titulo_autoatendimento');
                         <img class="box-icon" src="<?= $icon; ?>" alt="<?= $icon['alt']; ?>">
                         <p class="box-info"><?= $info; ?></p>
                     </button></a>
-                <?php endwhile; ?>
+                <?php endwhile;?>
             <?php endif; ?>
         </div>
     </div>
