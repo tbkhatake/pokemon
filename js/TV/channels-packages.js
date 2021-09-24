@@ -1,4 +1,4 @@
-let havePackages = document.querySelectorAll('.packages-slider');
+let havePackages = document.querySelector('.packages-slider');
 if(havePackages){
     let packages = document.querySelector('.packages');
     let channels = document.querySelectorAll('.icon-wrapper')
