@@ -7,10 +7,10 @@
         <?php if(have_rows('repetidor_acordeon')): ?>
             
                 <ul>
-                   <!--<div class="slider-accordion">-->
+                   <div class="slider-accordion">
                         
                             <?php while(have_rows('repetidor_acordeon')): the_row(); ?>
-                              <!-- <div class="repeater-accordion">-->
+                                <div class="repeater-accordion">
                                         <li id="accordionElement">
                                             <?php
                                                 $accordion_background = get_sub_field('fundo_acordeon');
@@ -26,7 +26,7 @@
                                                 </a>
                                             </div>
                                         </li>
-                                <!--</div>-->
+                                </div>
                             <?php endwhile; ?>
                        
                     </div>

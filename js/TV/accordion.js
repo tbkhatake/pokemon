@@ -4,11 +4,16 @@ if (haveAccordion) {
 	let slider = tns({
 		container: '.slider-accordion',
 		preventScrollOnTouch: 'auto',
-		items: 5,
-        mouseDrag: true
+		items: 3,
+		mouseDrag: true,
+		responsive: {
+			590: {
+				items: 5,
+			},
+            890: {
+                items: 6,
+            },
+            
+		},
 	});
 }
-
-
-
-
