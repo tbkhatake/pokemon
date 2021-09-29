@@ -27,8 +27,22 @@
 				</div>
 				<form class="nav-cities" action="">
 					<select class="nav-select" name="">
-						<option value="">Piracicaba, SP</option>
+						<?php
+							$city_plans_args = array(
+								'post_type' => 'city',
+								'orderby' => 'date',
+								'order'   => 'ASC',
+							);
+
+							$city_plans_query = new WP_Query($city_plans_args);
+						?>
+
+						<?php if($city_plans_query->have_posts()) :while($city_plans_query->have_posts()):$city_plans_query->the_post()?>
+							<option value="<?= get_post_field( 'post_name', get_post() )?>"><?= the_title()?></option>
+						<?php endwhile; endif;?>
+
 					</select>
+					<?php wp_reset_postdata();?>
 					<img class="nav-image" src="<?=get_template_directory_uri()?>/images/down-arrow.svg" alt="seta para baixo">
 				</form>
 			</div>	
@@ -68,8 +82,21 @@
 				<form class="modal-login" action="">
 					<div class="modal-cities">
 						<select class="cities-select" name="" id="">
-							<option value="">Piracicaba, SP</option>
+						<?php
+							$city_plans_args = array(
+								'post_type' => 'city',
+								'orderby' => 'date',
+								'order'   => 'ASC',
+							);
+
+							$city_plans_query = new WP_Query($city_plans_args);
+						?>
+
+						<?php if($city_plans_query->have_posts()) :while($city_plans_query->have_posts()):$city_plans_query->the_post()?>
+							<option value="<?= get_post_field( 'post_name', get_post() )?>"><?= the_title()?></option>
+						<?php endwhile; endif;?>
 						</select>
+						<?php wp_reset_postdata();?>
 						<img class="cities-image" src="<?=get_template_directory_uri()?>/images/down-arrow-mobile.svg" alt="seta para baixo">
 					</div>
 						<input class="modal-login-button" type="button" value="Login">
