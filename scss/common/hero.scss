@@ -80,26 +80,11 @@
 		}
 	}
 }
-.hero-graph-container{
+.hero-graph{
 	display: none;
-	position: absolute;
-	bottom: -110px;
-	width: 100%;
-	height: 700px;
-	overflow: hidden;
-	
-	@media(min-width:1200px){
-		display: block;
-		pointer-events: none;
-		.graph-bottom-hero {
-			position: absolute;
-			right: -250px;
-			bottom: 0;
-			z-index: -1;
-			
-		}
-	}
 }
+
+
 @media (min-width: 1200px) {
 	
 	.hero {
@@ -188,6 +173,28 @@
 					}
 				}
 			}
+		}
+	}
+	.hero-graph{
+		display: block;
+		position: absolute;
+		top: 150px;
+		left: 0;
+		width: 100%;
+		height: 870px;
+		overflow: hidden;
+		z-index: -1;
+	
+		.hero-graph-img-1{
+			position: absolute;
+			top: -140px;
+			left: -135px;
+		}
+	
+		.hero-graph-img-2{
+			position: absolute;
+			bottom: 0px;
+			right: -235px;
 		}
 	}
 }

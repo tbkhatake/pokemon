@@ -17,6 +17,39 @@
 		margin-bottom: 40px;
 	}
 
+    .slider-container{
+        width:100%;
+        height:724px;
+        overflow:hidden;
+
+        .tns-nav{
+            width: 100%;
+            position:absolute;
+            bottom:0;
+            left:0;
+            display:flex;
+            justify-content: center;
+
+            button{
+                margin-left:8px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                padding: 0;
+                border:none ;
+                background-color: #37373799;
+            }
+    
+            .tns-nav-active{
+                background-color: #C3000A;
+            }
+        }
+    }
+
+    #kos-customize-controls{
+        display: none;
+    }
+        
     &-cards{
         position: relative;
         width: 100%;
@@ -43,7 +76,8 @@
             padding: 24px 10px;
             position: absolute;
             bottom: 3px;
-            width: 255px;
+            left:10%;
+            width: 80%;
             min-height: 427px;
             box-shadow: 0px 3px 6px #C3000A33;
             display: flex;
@@ -80,125 +114,165 @@
                 color: #C3000A;
                 text-decoration: none;
                 cursor: pointer;
+                transition: 0.3s ease-out;
 				&:hover{
                     background-color: #C3000A;
                     color: #F4F5F5;
+                    transform: scale(1.1, 1.2);
 				}
             }
         }
     }
     @media(min-width: 1200px){
-        margin-top:60px;
-        margin-left: 64px;
-        margin-right: 64px;
+        align-items: flex-start;
+        width: unset;
+        margin: 0;
+        margin-top:100px;
+        height: 975px;
 
         .section-title{
             width: 100%;
-            margin-bottom: 100px;
+            margin-bottom: 60px;
             font-size: 40px;
         }
 
-        &-cards{ 
-            width: 1106px;
-            align-self: flex-start;
-            margin-bottom: 100px;
+        .slider-container{
+            height: 815px;
+            .tns-nav{
+                button{
+                    margin-left:10px;
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+
+        #kos-customize-controls{
+            box-sizing: border-box;
+            display: inline-block;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 110px;
+            position: relative;
+            top: 350px;
+            z-index: 1;
+
+            .controls-btn{
+                cursor: pointer;
+            }
+        }
+
+        &-cards{
+            position: relative;
+            height: 825px;
+
             .card-img{
                 display: none;
             }
+    
             .card-desk-img{
-                display: block;
-                width: 900px;
-                height: 550px;
-                align-self: start;
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                height: 612px;
+                object-fit: cover;
                 z-index: -2;
             }
+    
             .card-wraper{
-                padding: 40px 36px;
+                bottom: 20px;
+                left:120px;
                 width: 572px;
-                height: 380px;
-                right: 3px;
+                min-height: 396px;
+                padding: 27px 0;
+                padding-left: 36px;
+                padding-right: 50px; 
+                align-items: flex-start;
+
                 &::after{
+                    display: inline-block;
                     position: absolute;
                     z-index: -1;
                     top: -5px;
-                    left: -5px;
+                    left: 5px;
                     content: '';
                     width: 100%;
                     height: 100%;
                     background-color: #C3000A;
                 }
-
+    
                 .card-title{
+                    width: 350px;
                     font-size: 28px;
+                    font-weight: 700;
+                    line-height: 2.625rem;
                 }
-
+    
                 .card-line{
-                    width: 264px;
                     height: 5px;
-                    align-self: flex-start;
+                    width: 246px;
+                    margin-bottom: 24px;
                 }
-
+    
                 .card-content{
                     font-size: 20px;
-                    line-height: 1.875rem;
+                    font-weight: 300;
+                    line-height: 1.8rem;
                 }
-
+    
                 .card-button{
-                    padding: 12.5px 32px;
-                    align-self: flex-start;
-                    margin-top: 40px;
+                    align-self: center;
                     border: 2px solid #C3000A;
-                    transition: 0.3s ease-out;
+                    padding:12px 42px;
+                    color: #C3000A;
+                    text-decoration: none;
+                    cursor: pointer;
                     &:hover{
-                        transform: scale(1.1, 1.2);
+                        background-color: #C3000A;
+                        color: #F4F5F5;
                     }
                 }
             }
-
         }
 
-        &-cards:nth-child(odd){
-            align-self: flex-end;
-            .card-desk-img{
-                align-self: flex-end;
-            }
-            .card-wraper{
-                left: 3px;
-                &::after{
-                    left: 5px;
-                }
-            }
-        }
     }
     @media(min-width:1366px){
         margin-left: calc((100% - 1366px) / 2);
         margin-right: calc((100% - 1366px) / 2);
+
+
+        .slider-container{
+            width: 1366px;
+        }
+
+        #kos-customize-controls{
+            width: 1366px;
+            padding: 0 120px;
+        }
+
+        .card-wraper{
+            left: 185px;
+        }
     }
 }
 
-.kos-graphism{
-    position: absolute;
-    overflow: hidden;
-    z-index: -3;
+.kos-graph{
     display: none;
-   
-     @media(min-width:1200px){
+    @media(min-width:1200px){
         display: block;
-        width: 100%;
-        height: 1600px;
-        bottom: -3085px;
-    
-        .img{
-            position: absolute;
-            display: block;
-        }
-        .-bg1{
-            top: -20px;
-            left: -184px;
-        }
-        .-bg2{
-            right: -160px;
-            bottom: 20px;
-        }
+		position: absolute;
+		top: 7130px;
+		left: 0;
+		width: 100%;
+		height: 730px;
+		overflow: hidden;
+		z-index: -1;
+	
+		.kos-graph-img-1{
+			position: absolute;
+			top: 155px;
+			left: -355px;
+		}
     }
 }

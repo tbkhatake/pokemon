@@ -1,11 +1,12 @@
 <?php 
-$section4 = get_field('section4');
+$section4 = get_field('section4-boxes');
+$section4_title = get_field('section4-title');
 ?>
 <section class="hire-us">
     <div class="container">
-        <h2 class="section-title"><?= $section4['section4-title']; ?></h2>
+        <h2 class="section-title"><?= $section4_title; ?></h2>
         <div class="box-grid">
-        <?php foreach($section4['section4-boxes'] as $box):?>
+        <?php foreach($section4 as $box):?>
             <?php
                 $buttonLink = $box['box-link'];
                 $icon = $box['box-icon'];

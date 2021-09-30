@@ -2,6 +2,7 @@
 	font-family: 'Klavika', sans-serif;
 	width: 100%;
 	background-color: #fcfcfc;
+	padding-top: 40px;
 	padding-bottom: 40px;
 	.container-footer {
 		margin-left: var(--container-size);
@@ -95,26 +96,30 @@
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: center;
-					grid-gap: 30px 50px;
-					.info-item {
-						font-size: 15px;
-						font-weight: 300;
-						text-decoration: none;
-						color: #373737;
-						transition: 0.3s ease-out;
-						padding: 5px 5px;
-						&:hover {
-							transform: scale(1.1, 1.2);
+					grid-gap: 30px 30px;
+					.info-item-wrapper {
+						
+						.info-item {
+							font-size: 15px;
+							font-weight: 300;
+							text-decoration: none;
+							color: #373737;
+							display: inline-block;
+							transition: 0.3s ease-out;
+							&:hover{
+								transform: scale(1.1, 1.2);
+							}
 						}
+						
 					}
-					.info-item::after {
+					.info-item-wrapper::after {
 						content: '';
 						display: inline-block;
 						background-color: #c3000a;
 						width: 8px;
 						height: 8px;
 						border-radius: 50%;
-						margin-left: 16px;
+						margin-left: 35px;
 					}
 				}
 				.footer-logo {
@@ -128,7 +133,7 @@
 	.footer-section {
 		.container-footer {
 			margin-left: 98px;
-            margin-right: 98px;
+			margin-right: 98px;
 		}
 		.upper-footer {
 			width: 100%;
@@ -167,9 +172,12 @@
 					.footer-items {
 						text-align: left;
 						justify-content: unset;
-						grid-gap: 40px 60px;
+						grid-gap: 40px 50px;
 						.info-item {
 							font-size: 20px;
+						}
+						.info-item::after {
+							margin-left: 50px;
 						}
 					}
 					.footer-logo {

@@ -10,18 +10,20 @@
                         <div class="card-plan-container">
                             <h3 class="card-plan"><?=$card['plans-plan'];?></h3>
                         </div>
-                        <p class="card-benefit">Tecnololgia</p>
-                        <img class="tec-icon" src="<?=$card['plans-tecIcon']['url'];?>" alt="ícone">
-                        <p class="card-text -tecnology"><?=$card['plans-tecnology'];?></p>
                         <p class="card-benefit">Velocidade De Download</p>
                         <p class="card-text -downSpeed"><?=$card['plans-downSpeed'];?></p>
                         <p class="card-benefit">Velocidade De Upload</p>
                         <p class="card-text -upSpeed"><?=$card['plans-upSpeed'];?></p>
+                        <p class="card-benefit">Tecnololgia</p>
+                        <img class="tec-icon" src="<?=$card['plans-tec-icon']['url'];?>" alt="ícone">
+                        <p class="card-text -tecnology"><?=$card['plans-tecnology'];?></p>
                         <p class="card-benefit">Wi-Fi</p>
+                        <img class="wifi-icon" src="<?=$card['plans-wifi-icon']['url'];?>" alt="ícone">
                         <p class="card-text -wifi"><?=$card['plans-wifi'];?></p>
                         <p class="card-benefit">Acesso Simultâneo</p>
                         <p class="card-text -qttAcess"><?=$card['plans-qttAcess'];?></p>
                         <p class="card-benefit">Franquia</p>
+                        <img class="franch-icon" src="<?=$card['plans-franchise-icon']['url'];?>" alt="ícone">
                         <p class="card-text -franchise"><?=$card['plans-franchise'];?></p>
                         <div class="card-services">
                             <p class="card-benefit">Serviços digitais</p>
@@ -48,46 +50,52 @@
                 <?php endforeach; ?>
             </tr>
             <tr class="tr">
+            <th class="th"> <p class="benefits-name">Velocidade De Download</p></th>
+            <?php foreach($compare as $card):?>
+                <td class="td"> 
+                    <p class="card-text -downSpeed"><?=$card['plans-downSpeed'];?></p>
+                    <img class="down-icon" src="<?=get_template_directory_uri()?>/images/question-circle.png" alt="">
+                    <p class="info-box"><?=$card['plans-obs'];?></p>
+                </td>
+                <?php endforeach; ?>
+            </tr>
+            <tr class="tr">
+            <th class="th"> <p class="benefits-name">Velocidade De Upload</p></th>
+            <?php foreach($compare as $card):?>
+                <td class="td"> <p class="card-text -upSpeed"><?=$card['plans-upSpeed'];?></p></td>
+                <?php endforeach; ?>
+            </tr>
+            <tr class="tr">
                 <th class="th"> <p class="benefits-name">Tecnololgia</p></th>
                 <?php foreach($compare as $card):?>
                     <td class="td"> 
-                        <img class="tec-icon" src="<?=$card['plans-tecIcon']['url'];?>" alt="ícone">
+                        <img class="tec-icon" src="<?=$card['plans-tec-icon']['url'];?>" alt="ícone">
                         <p class="card-text -tecnology"><?=$card['plans-tecnology'];?></p>
                     </td>
                 <?php endforeach; ?>
             </tr>
             <tr class="tr">
-                <th class="th"> <p class="benefits-name">Velocidade De Download</p></th>
+                <th class="th"> <p class="benefits-name">Mega Wi-Fi</p></th>
                 <?php foreach($compare as $card):?>
                     <td class="td"> 
-                        <p class="card-text -downSpeed"><?=$card['plans-downSpeed'];?></p>
-                        <img class="down-icon" src="<?=get_template_directory_uri()?>/images/question-circle.png" alt="">
-                        <p class="info-box"><?=$card['plans-obs'];?></p>
+                        <img class="wifi-icon" src="<?=$card['plans-wifi-icon']['url'];?>" alt="ícone">
+                        <p class="card-text -wifi"><?=$card['plans-wifi'];?></p>
                     </td>
                 <?php endforeach; ?>
             </tr>
             <tr class="tr">
-                <th class="th"> <p class="benefits-name">Velocidade De Upload</p></th>
+                <th class="th"> <p class="benefits-name">Franquia</p></th>
                 <?php foreach($compare as $card):?>
-                    <td class="td"> <p class="card-text -upSpeed"><?=$card['plans-upSpeed'];?></p></td>
-                <?php endforeach; ?>
-            </tr>
-            <tr class="tr">
-                <th class="th"> <p class="benefits-name">Wi-Fi</p></th>
-                <?php foreach($compare as $card):?>
-                    <td class="td"> <p class="card-text -wifi"><?=$card['plans-wifi'];?></p></td>
+                    <td class="td"> 
+                        <img class="franch-icon" src="<?=$card['plans-franchise-icon']['url'];?>" alt="ícone">
+                        <p class="card-text -franchise"><?=$card['plans-franchise'];?></p>
+                    </td>
                 <?php endforeach; ?>
             </tr>
             <tr class="tr">
                 <th class="th"> <p class="benefits-name">Acesso Simultâneo</p></th>
                 <?php foreach($compare as $card):?>
                     <td class="td"> <p class="card-text -qttAcess"><?=$card['plans-qttAcess'];?></p></td>
-                <?php endforeach; ?>
-            </tr>
-            <tr class="tr">
-                <th class="th"> <p class="benefits-name">Franquia</p></th>
-                <?php foreach($compare as $card):?>
-                    <td class="td"> <p class="card-text -franchise"><?=$card['plans-franchise'];?></p></td>
                 <?php endforeach; ?>
             </tr>
             <tr class="tr">
@@ -104,4 +112,8 @@
             </tr>
         </table>
     </div>
-
+</section>
+<div class="compare-graph">
+    <img class="compare-graph-img-1" src="<?=get_template_directory_uri()?>/images/internet/compare-graph1.svg" alt="graphismo">
+    <img class="compare-graph-img-2" src="<?=get_template_directory_uri()?>/images/internet/compare-graph2.svg" alt="graphismo">
+</div>
