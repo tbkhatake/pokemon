@@ -16,6 +16,5 @@ if(haveKsd){
                 "fixedWidth": 850,
             }      
         }
-    
     });
 }

@@ -38,8 +38,6 @@ if(haveStep){
     });
 
     let stepSliderControl = document.querySelector('.step-slider-controls');
-    console.log(stepSliderControl.id)
     itensCounter = Math.floor(stepSliderControl.id/2);
-    console.log(itensCounter)
     stepSliderControl.style.width = (itensCounter*62)+106+"px"
 }

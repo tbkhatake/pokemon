@@ -1,6 +1,4 @@
 .interactive-section {
-	padding-top: 180px;
-	padding-bottom: 120px;
 	text-align: center;
 	justify-content: center;
 	.section-title {
@@ -104,7 +102,6 @@
 		}
 	}
 	.content {
-		margin-bottom: 70px;
 		text-align: center;
 		.content-title {
 			font-size: 24px;
@@ -158,12 +155,12 @@
             max-width: 450px;
         }
         .comparison {
-            
-            width: 600px;
-            height: 380px;
+            width: 632px;
+            height: 396px;
             position: relative;
             overflow-x: hidden;
             margin-bottom: 100px;
+			top: -10px;
             .slide {
                 position: absolute;
                 width: 100%;
@@ -219,7 +216,6 @@
             }
         }
         .content {
-            margin-bottom: 160px;
             .content-title {
                 font-size: 36px;
                 line-height: 44px;
