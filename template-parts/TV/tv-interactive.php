@@ -34,5 +34,7 @@
                 <a class="content-cta" href="<?= $content_cta; ?>"><?= $cta_label; ?></a>
             </div>
         </div>
-        
 </section>
+<div class="tv-interactive-graph">
+    <img class="tv-interactive-graph-img" src="<?=get_template_directory_uri()?>/images/TV/tv-interactive-graph.svg" alt="graphismo">
+</div>

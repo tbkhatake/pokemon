@@ -85,8 +85,8 @@ if(havePlans){
         cityFetchPlansData("Internet")
     })
     function fetchPlansData(planType){
-        fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&&plantype=' + planType + '&cityname=' + cityName)
-        // fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
+        // fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName)
+        fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
         .then(data => {
             let response = data.json();
             response.then(resp => {
@@ -174,7 +174,6 @@ if(havePlans){
 
                     let servicesPlus = document.createElement('div');
                     servicesPlus.classList.add('services-plus');
-
                     if(el.services.icon[0]){
                         let servicesLength = el.services.icon.length;
                         for(let i = 0; i < servicesLength ; i++){
@@ -191,7 +190,6 @@ if(havePlans){
                                 servicesIS.appendChild(servLink);
                             }else{
                                 servicesPlus.appendChild(servLink);
-                                
                             }
                         }
                     
@@ -261,8 +259,8 @@ if(havePlans){
         })
     } 
     function cityFetchPlansData(planType){
-        fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&&plantype=' + planType + '&cityname=' + cityName)
-        // fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
+        // fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&&plantype=' + planType + '&cityname=' + cityName)
+        fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
         .then(data => {
             let response = data.json();
             response.then(resp => {
@@ -452,6 +450,7 @@ if(havePlans){
         }
         button.addEventListener('click', ()=>{
             servicesHidden[key].classList.toggle('services-plus-active');
+            cardsWrapper.classList.toggle('cards-wrapper-active')
         })
     })
 }

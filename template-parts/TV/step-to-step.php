@@ -8,6 +8,7 @@
             <div class="step-carousel-wrapper">
                 <div class="items-wrapper">
                     <div class="item-img-wrapper">
+                        <span class="item-background"></span>
                         <img class="item-img" src="<?=$item['step-image']['url']?>" alt="<?=$item['step-image']['title']?>">
                         <div class="item-img-title-wrapper">
                             <p class="item-img-title"><?=$item['cell-title']?></p>
@@ -32,3 +33,6 @@
         </div>
     </div>
 </section>
+<div class="step-to-step-graph">
+    <img class="step-to-step-graph-img" src="<?=get_template_directory_uri()?>/images/TV/step-to-step-graph.svg" alt="graphismo">
+</div>

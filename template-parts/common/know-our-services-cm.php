@@ -1,6 +1,6 @@
 <?php $section3 = get_field('section3-cards')?>
 <?php $section3_title = get_field('section3-title')?>
-<section class="know-our-services">
+<section class="know-our-services-cm">
     <h2 class="section-title"><?php echo($section3_title); ?></h2>
     <ul class="controls" id="kos-customize-controls" aria-label="Carousel Navigation" tabindex="0">
         <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
@@ -13,7 +13,7 @@
     <div class="slider-container">
         <div class="kos-slider">
             <?php foreach($section3 as $card):?>
-                <div class="know-our-services-cards">
+                <div class="know-our-services-cm-cards">
                     <img class="card-img" src="<?=$card['cards-img']['url'];?>" alt="imagem">
                     <img class="card-desk-img" src="<?=$card['cards-desk-img']['url'];?>" alt="imagem">
                     <div class="card-wraper">

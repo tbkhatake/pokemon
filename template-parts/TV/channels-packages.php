@@ -67,5 +67,8 @@
             <?php endforeach;?>
         </div>
     </div>
-
 </section>
+<div class="channels-pack-graph">
+    <img class="channels-pack-graph-img-1" src="<?=get_template_directory_uri()?>/images/TV/channels-pack-graph1.svg" alt="graphismo">
+    <img class="channels-pack-graph-img-2" src="<?=get_template_directory_uri()?>/images/TV/channels-pack-graph2.svg" alt="graphismo">
+</div>

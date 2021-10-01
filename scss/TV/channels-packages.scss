@@ -203,7 +203,7 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            width: 100%;
+            width: 1024px;
 
             .d-packages-wrapper{
                 margin-top: 80px;
@@ -267,12 +267,12 @@
                     }
 
                     .slider-controls{
-                        width: 104%;
+                        width: 109%;
                         position: absolute;
                         display: flex;
                         justify-content: space-between;
                         top: 100px;
-                        left: -4%;
+                        left: -6%;
                         
                         .controls-btn{
                             position: relative;
@@ -332,5 +332,30 @@
                 }
             }
         }
+    }
+}
+.channels-pack-graph{
+    display: none;
+    @media(min-width:1200px){
+        display: block;
+		position: absolute;
+		top: 3360px;
+		left: 0;
+		width: 100%;
+		height: 1400px;
+		overflow: hidden;
+		z-index: -1;
+	
+		.channels-pack-graph-img-1{
+			position: absolute;
+			top: 0px;
+			right: -270px;
+		}
+	
+		.channels-pack-graph-img-2{
+			position: absolute;
+			bottom: 0;
+			left: -200px;
+		}
     }
 }

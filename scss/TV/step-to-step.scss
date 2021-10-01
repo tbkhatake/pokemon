@@ -84,11 +84,13 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                       
                         .item-img-title{
                             color: #C3000A;
                             font-size:40px;
                             font-weight: 700; 
                             text-align: center;
+                            background-color: white;
                             
                         }
                     }
@@ -195,6 +197,16 @@
                         position: relative;
                         width: 250px;
                         height: 410px;
+                        &::after{
+                            content: "";
+                            position: absolute;
+                            left: 39px;
+                            top: 46px;
+                            width: 182px;
+                            height: 300px;
+                            background-color: white;
+                            z-index: -1;
+                        }
             
                         .red-ball{
                             width: 64px;
@@ -252,5 +264,24 @@
                 }
             }
         }
+    }
+}
+.step-to-step-graph{
+    display: none;
+    @media(min-width:1200px){
+        display: block;
+		position: absolute;
+		top: 5695px;
+		left: 0;
+		width: 100%;
+		height: 810px;
+		overflow: hidden;
+		z-index: -1;
+	
+		.step-to-step-graph-img{
+			position: absolute;
+			bottom: 0px;
+			left: -310px;
+		}
     }
 }

@@ -1,4 +1,5 @@
 .interactive-section {
+	margin-top: 64px;
 	text-align: center;
 	justify-content: center;
 	.section-title {
@@ -145,7 +146,7 @@
             width: 822px;
             height: 467px;
             position: absolute;
-            top: 315px;
+            top: 145px;
             left: calc(var(--container-size) + 0);
         }
         .section-title {
@@ -159,8 +160,7 @@
             height: 396px;
             position: relative;
             overflow-x: hidden;
-            margin-bottom: 100px;
-			top: -10px;
+            margin-bottom: 80px;
             .slide {
                 position: absolute;
                 width: 100%;
@@ -237,5 +237,24 @@
                 
             }
         }
+    }
+}
+.tv-interactive-graph{
+    display: none;
+    @media(min-width:1200px){
+        display: block;
+		position: absolute;
+		top: 2370px;
+		left: 0;
+		width: 100%;
+		height: 800px;
+		overflow: hidden;
+		z-index: -1;
+	
+		.tv-interactive-graph-img{
+			position: absolute;
+			bottom: 0px;
+			left: -150px;
+		}
     }
 }

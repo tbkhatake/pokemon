@@ -31,7 +31,9 @@
                        
                     </div>
                 </ul>
-            
         <?php endif; ?>
     </div>
 </section>
+<div class="accordion-graph">
+    <img class="accordion-graph-img" src="<?=get_template_directory_uri()?>/images/TV/accordion-graph.svg" alt="graphismo">
+</div>

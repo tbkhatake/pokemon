@@ -64,16 +64,16 @@ function raccoon_get_plans_data() {
 
     for($i = 0 ; $i < $plansQuantity ; $i++){
         if($plantype == $plansOptions[$i]){
-            foreach($plansCards[$i] as $cards){
+            foreach($plansCards[$i] as $key => $cards){
                 $featuresQuantity = count($cards['card2-features']);
                 $servicesQuantity = count($cards['card2-IS']);
                 for($t = 0 ; $t < $featuresQuantity ; $t++){
-                    $featuresIcon[$t] = $cards['card2-features'][$t]['features-icon']['url'];
-                    $featuresTitle[$t] = $cards['card2-features'][$t]['features-title'];
+                    $featuresIcon[$key][$t] = $cards['card2-features'][$t]['features-icon']['url'];
+                    $featuresTitle[$key][$t] = $cards['card2-features'][$t]['features-title'];
                 }
                 for($t = 0 ; $t < $servicesQuantity ; $t++){
-                    $servicesIcon[$t] = $cards['card2-IS'][$t]['IS-icon']['url'];
-                    $servicesLink[$t] = $cards['card2-IS'][$t]['IS-link']['url'];
+                    $servicesIcon[$key][$t] = $cards['card2-IS'][$t]['IS-icon']['url'];
+                    $servicesLink[$key][$t] = $cards['card2-IS'][$t]['IS-link']['url'];
                 }
                 
                 $cardUnity[] = [
@@ -83,15 +83,16 @@ function raccoon_get_plans_data() {
                     'price' => $cards['card2-price'],
                     'text' => $cards['card2-text'],
                     'features' => [
-                        'icon' => $featuresIcon,
-                        'title' => $featuresTitle 
+                        'icon' => $featuresIcon[$key],
+                        'title' => $featuresTitle[$key] 
                     ],
                     'services' => [
-                        'icon' => $servicesIcon,
-                        'link' => $servicesLink
+                        'icon' => $servicesIcon[$key],
+                        'link' => $servicesLink[$key]
                     ],
                     'cta'=> $cards['card2-cta'],
                     'moreInfo'=> $cards['card2-moreInfo'],
+                    'servicesQtt'=>$servicesQuantity
                 ];
             }
         }
