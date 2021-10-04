@@ -68,7 +68,7 @@
 				}
 				.info-wrapper {
 					width: 100%;
-					height: 100%;
+					height: 75%;
 					position: absolute;
 					top: 0;
 					left: 0;
@@ -142,21 +142,32 @@
 					}
 				}
 				li {
+					position: relative;
 					width: 240px;
+					height: 800px;
 					transform: rotate(340deg);
-					top: -80px;
+					top: -125px;
+					overflow: hidden;
+					&:hover{
+						min-width: 330px;
+					}
 					.accordion-background {
-						height: 800px;
-						width: 350px;
+						height: 100%;
+						width: 590px;
+						transform: rotate(20deg);
+						position: absolute;
+						left: -150px;
+						top:-65px;
 					}
 					.info-wrapper {
 						box-sizing: border-box;
+						height: 100%;
 
 						.accordion-cta {
 							font-size: 36px;
 							line-height: 54px;
 							transform: rotate(-340deg);
-							top: 50%;
+							top: 300px;
 							left: 15%;
 							padding: 0 30px 0 0px;
 						}

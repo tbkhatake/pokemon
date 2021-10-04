@@ -147,6 +147,27 @@
         }
     }
 
+    .step-slider-controls-wrapper{
+        position: absolute;
+        top:270px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        .step-slider-controls{
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+            .step-controls-btn{
+                position: relative;
+                z-index: 2;
+                cursor: pointer;
+            }
+        }
+    }
+
     @media(min-width:1200px){
         margin-top: 160px;
 
@@ -247,17 +268,20 @@
                 }
             }
         }
+
         .step-slider-controls-wrapper{
             width: 100%;
             display: flex;
             justify-content: flex-end;
             padding: 0 70px;
             box-sizing: border-box;
+            top:630px;
 
             .step-slider-controls{
                 display: flex;
                 justify-content: space-between;
-                .controls-btn{
+                width: unset;
+                .step-controls-btn{
                     position: relative;
                     z-index: 2;
                     cursor: pointer;

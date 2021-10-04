@@ -28,8 +28,8 @@
     </div>
     <div class="step-slider-controls-wrapper">
         <div class="step-slider-controls" id="<?=$key?>" aria-label="Carousel Navigation" tabindex="0">
-            <img class="controls-btn" src="<?=get_template_directory_uri()?>/images/TV/left-arrow.svg" alt="left-arrow">
-            <img class="controls-btn" src="<?=get_template_directory_uri()?>/images/TV/right-arrow.svg" alt="right-arrow">
+            <img class="step-controls-btn" src="<?=get_template_directory_uri()?>/images/TV/left-arrow.svg" alt="left-arrow">
+            <img class="step-controls-btn" src="<?=get_template_directory_uri()?>/images/TV/right-arrow.svg" alt="right-arrow">
         </div>
     </div>
 </section>

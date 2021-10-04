@@ -142,12 +142,13 @@
         justify-content: center;
         align-items: center;
         .tv-background {
-            background-image: url(../../assets/NoPath.png);
-            width: 822px;
-            height: 467px;
+            background-image: url(../../assets/tv-background.png);
+            width: 742px;
+            height: 497px;
             position: absolute;
             top: 145px;
             left: calc(var(--container-size) + 0);
+			background-repeat: no-repeat;
         }
         .section-title {
             font-size: 39px;
@@ -156,11 +157,12 @@
             max-width: 450px;
         }
         .comparison {
-            width: 632px;
-            height: 396px;
+            width: 717px;
+            height: 401px;
             position: relative;
             overflow-x: hidden;
-            margin-bottom: 80px;
+            margin-bottom: 110px;
+			bottom: 14px;
             .slide {
                 position: absolute;
                 width: 100%;
