@@ -1,6 +1,13 @@
 .path-section {
 	padding: 60px 0;
 	text-align: center;
+	position: relative;
+	.path-graphism-left {
+		display: none;
+	}
+	.path-graphism-right {
+		display: none;
+	}
 	.section-title {
 		margin-bottom: 24px;
 		text-align: center;
@@ -202,6 +209,20 @@
 	.path-section {
 		padding: 60px 0;
 		text-align: center;
+		overflow: hidden;
+		.path-graphism-left {
+			display: block;
+			position: absolute;
+			top: 400px;
+			left: -300px;
+		}
+		.path-graphism-right {
+			display: block;
+			position: absolute;
+			bottom: 250px;
+			right: -150px;
+			z-index: -1;
+		}
 		.section-title {
 			width: 100%;
 			margin-bottom: 168px;
@@ -233,6 +254,7 @@
 					z-index: -1;
 				}
 				.fst-box {
+					background-color: #ffffff;
 					box-sizing: border-box;
 					box-shadow: 0px 3px 6px #c3000a33;
 					border-top: 8px solid #c3000a;
@@ -290,6 +312,7 @@
 					z-index: -1;
 				}
 				.snd-box {
+					background-color: #ffffff;
 					box-sizing: border-box;
 					box-shadow: 0px 3px 6px #c3000a33;
 					border-top: 8px solid #c3000a;
@@ -334,6 +357,7 @@
 					z-index: -1;
 				}
 				.trd-box {
+					background-color: #ffffff;
 					box-sizing: border-box;
 					box-shadow: 0px 3px 6px #c3000a33;
 					border-top: 8px solid #c3000a;
