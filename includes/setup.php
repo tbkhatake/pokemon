@@ -10,6 +10,8 @@ function raccoon_enqueue_styles(){
         wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/internet/bundle.css' );
 	}else if(is_page_template('pages/tv.php')){
 		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/TV/bundle.css' );
+	}else if(is_page_template('pages/combos.php')){
+		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/combos/bundle.css' );
 }
 	
 	wp_enqueue_script( 'theme-common-js', get_template_directory_uri().'/dist/bundle.js', array(), false, true);

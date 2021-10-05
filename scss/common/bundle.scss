@@ -2,11 +2,15 @@
 @import './reset.scss';
 @import './common.scss';
 
+// Slider
+@import '../lib/tiny-slider.scss';
+
 // Component
 @import './header.scss';
 @import './footer.scss';
 @import './modal.scss';
 @import './hero.scss';
 @import './plans.scss';
+@import './know-our-services.scss';
 @import './know-our-services-cm.scss';
 @import './contact.scss';
