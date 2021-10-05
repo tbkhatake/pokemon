@@ -1,5 +1,8 @@
+
 let slide = document.getElementById('onDesktop');
 let card = document.querySelector('input[name=checkbox]');
+if (slide){
+
 
 
 
@@ -11,7 +14,7 @@ card.addEventListener("change", function() {
     }
 });
     
-
+}
 
 
 

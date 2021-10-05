@@ -1,5 +1,7 @@
 let quizButtton = document.querySelector('.start-button');
 let quizWrapper = document.querySelector('.quiz-wrapper');
+if (quizWrapper){
+
 
 quizButtton.addEventListener('click', () => {
     quizWrapper.innerHTML = ' ';
@@ -256,4 +258,5 @@ function fetchQuizData(quizType){
                 
         })
     })
+}
 }
