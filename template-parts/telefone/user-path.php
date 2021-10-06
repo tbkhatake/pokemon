@@ -54,6 +54,7 @@
                     <p class="drop-down-text">
                         <?= $drop_text; ?>
                     </p>
+                    <svg class="plusIcon" id="plus-icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="svg-inline--fa fa-plus fa-w-14" data-icon="plus" data-prefix="fas" viewBox="0 0 448 512"><path fill="currentColor" d="M416 208H272V64c0-18-14-32-32-32h-32c-18 0-32 14-32 32v144H32c-18 0-32 14-32 32v32c0 18 14 32 32 32h144v144c0 18 14 32 32 32h32c18 0 32-14 32-32V304h144c18 0 32-14 32-32v-32c0-18-14-32-32-32z"/></svg>
                 </button>
                 <div id="dropdownContent" class="accordion-content">
                     <p class="accordion-title"><?= $accordion_title; ?></p>

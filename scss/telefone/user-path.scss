@@ -21,7 +21,7 @@
 	}
 	.section-wrapper {
 		text-align: left;
-		max-width: 209px;
+		max-width: 246px;
 		margin: 0 auto;
 		.first-block {
 			margin-bottom: 41px;
@@ -138,21 +138,32 @@
 				display: block;
 				max-width: 246px;
 				margin: 0 auto;
-				padding: 5px 16px 31px 0;
+				padding: 5px 15px 31px 0;
 				cursor: pointer;
 				text-align: left;
 				background-color: transparent;
 				border: 0;
 				border-bottom: 2px solid #c4c4c4;
+				display: flex;
+				position: relative;
 				.drop-down-text {
 					font-size: 20px;
 					font-weight: 700;
 					line-height: 24px;
 				}
+				.plusIcon{
+					width: 16px;
+					height: 16px;
+					color:#c3000a;
+					position: absolute;
+					right:0;
+					top: 30px;
+				}
 			}
 			.accordion-content {
 				margin-top: 50px;
                 display: none;
+				
                 &-active {
                     display: block;
                 }
