@@ -16,7 +16,9 @@ export const styles = () =>
 		.pipe(dest("css"));
 
 export const scripts = () => {
-	return src(["js/common/header.js", "js/lib/tiny-slider.js", "js/common/hero.js","js/home/know-super-desktop.js","js/common/plans.js","js/home/map.js", "js/internet/compare.js", "js/internet/interactive-section.js","js/TV/channels-packages.js", "js/TV/accordion.js","js/TV/tv-interactive.js","js/TV/step-to-step.js","js/internet/expositor.js","js/common/know-our-services.js","js/internet/quiz.js","js/internet/interactive-section.js"])
+
+	return src(["js/common/header.js", "js/lib/tiny-slider.js", "js/common/hero.js","js/home/know-super-desktop.js","js/common/plans.js","js/home/map.js", "js/internet/compare.js", "js/internet/interactive-section.js","js/TV/channels-packages.js", "js/TV/accordion.js","js/TV/tv-interactive.js","js/TV/step-to-step.js","js/internet/expositor.js","js/common/know-our-services.js","js/internet/quiz.js","js/internet/interactive-section.js","js/telefone/know-our-services.js","js/telefone/user-path.js"])
+
 		.pipe(uglify())
 		.pipe(concat("bundle.js"))
 		.pipe(dest("./dist/"));

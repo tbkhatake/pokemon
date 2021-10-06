@@ -12,6 +12,8 @@ function raccoon_enqueue_styles(){
 		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/TV/bundle.css' );
 	}else if(is_page_template('pages/combos.php')){
 		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/combos/bundle.css' );
+	}else if(is_page_template('pages/telefone.php')){
+        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/telefone/bundle.css' );
 }
 	
 	wp_enqueue_script( 'theme-common-js', get_template_directory_uri().'/dist/bundle.js', array(), false, true);
