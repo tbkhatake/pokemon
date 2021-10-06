@@ -4,7 +4,6 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    max-height: 725px;
 
     .section-title {
         text-align: center;
@@ -59,19 +58,25 @@
         margin-top: 30px;
         overflow: hidden;
         width: 100%;
-        height: 600px;
-
+        height: 585px;
+        &-active{
+            height: 650px;
+        }
+        @media(min-width:400px){
+            height: 545px;
+            &-active{
+                height: 610px;
+            }
+        }
         .plans-slider{
             position: absolute;
             left: 0;
             display: flex;
-            height: 100%;
 
             .card-outside{
                 .card{
                     width: 100%;
                     box-sizing: border-box;
-                    max-height: 540px;
                     box-shadow: 0px 3px 6px #C3000A33;
                     padding: 24px 15px;
                     display: flex;
@@ -119,61 +124,7 @@
                         background-color: #c3000a;
                     }
 
-                    .services-plus{
-                        display: none;
-
-                        &-active{
-                            background-color: white;
-                            position: absolute;
-                            display: flex;
-                            flex-direction: row;
-                            flex-wrap: wrap;
-                            justify-content: space-between;
-                            align-content: flex-start;
-                            width: 100%;
-                            height: 175px;
-                            top: 200px;
-                            z-index: 1;
-                            padding: 0 23px;
-                            box-sizing: border-box;
-
-                            @media(min-width:360px){
-                                padding: 0 43px;
-                                margin-bottom: 8.5px;
-                            }
-                            @media(min-width:375px){
-                                padding: 0 52px;
-                                top: 175px;
-                            }
-
-                            @media(min-width:400px){
-                                padding: 0 68px;
-                            }
-
-                            @media(min-width:440px){
-                                padding: 0 93px;
-                            }
-
-                            
-                            .IS-link{
-                                margin-left: 6px;
-                                margin-right: 6px;
-                                margin-bottom: 10px;
-                                &:nth-child(1n+0){
-                                    margin-left: 0;
-                                }
-                                &:nth-child(4n+0){
-                                    margin-right: 0;
-                                }
-                                .IS-icon{
-                                    width: 32px;
-                                    height: 32px;
-                                   
-                                }
-                            }
-
-                        }
-                    }
+                    
         
                     .features-wrapper{
                         margin-top: 15px;
@@ -201,21 +152,63 @@
                             }
                         }
                     }
-        
+                    .services-title{
+                        margin-top: 20px;
+                        text-align: center;
+                        font-size: 16px;
+                    }
+                    ::-webkit-scrollbar {
+                        width: 3px;
+                        border-radius: 5px;
+                    }
+                    ::-webkit-scrollbar-track {
+                        background: #ffffff00;
+                    }
+                      
+                    ::-webkit-scrollbar-thumb {
+                    background: #C3000A;
+                    cursor: pointer;
+                    }
+
+                    ::-webkit-scrollbar-thumb:hover {
+                    background: #C3000A;
+                    cursor: pointer;
+                    }
+                    &-active{
+                        ::-webkit-scrollbar-thumb {
+                            background: #F9B700BF;
+                        }
+                        ::-webkit-scrollbar-thumb:hover {
+                            background: #F9B700BF;
+                        }
+                    }
+                
                     .services-wrapper{
                         position: relative;
                         margin-top: 10px;
-                        width: 164px;
-                    
-                        .services-title{
-                            text-align: center;
-                            font-size: 16px;
+                        width: 184px;
+                        padding:5px 15px;
+                        max-height: 108px;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+
+                        @media(min-width:360px){
+                            padding:5px 33px;
+                        } 
+                        @media(min-width:375px){
+                            padding:5px 44px;
                         }
-        
+                        @media(min-width:400px){
+                            padding:5px 58px;
+                        }
+                        @media(min-width:440px){
+                            padding:5px 83px;
+                        }
+                        
+                        
                         .services-IS{
                             position: relative;
                             width: 100%;
-                            margin-top: 16px;
                             display: flex;
                             justify-content: center;
         
@@ -248,15 +241,43 @@
                                 width: 25px;
                                 border-radius: 50%;
                                 cursor: pointer;
+                                z-index: 2;
 
                                 @media(min-width:1200px){
                                     height:30px;
                                     width:30px;
-                                    right:-50px;
+                                    right:0;
                                 }
                             }
                         }
+
+                        .services-plus{
+                            display: none;
+    
+                            &-active{
+                                position: relative;
+                                width: 100%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                justify-content: center;
+            
+                                .IS-link{
+                                    margin-top: 2px;
+                                    margin-left: 6px;
+                                    margin-right: 6px;
+
+                                    .IS-icon{
+                                        width: 32px;
+                                        height: 32px;
+                                       
+                                    }
+                                }
+    
+    
+                            }
+                        }
                     }
+
                     
                     .cta{
                         margin-top: 16px;
@@ -315,7 +336,6 @@
 
     @media(min-width:1200px){
         margin-top: 160px;
-        max-height: 1000px;
 
         .section-title{
             width: 100%;
@@ -332,7 +352,6 @@
                 .desk-options{
                     font-size: 32px;
                     font-weight: 300;
-                    text-transform: capitalize;
                     padding: 0 40px;
                     padding-bottom: 10px;
                     border-bottom: 2px solid ;
@@ -359,16 +378,14 @@
 
         .cards-wrapper{
             padding-top: 25px;
-            height: 720px;
+            height: 830px;
 
             .plans-slider{
-                max-height: 720px;
                 padding-left: 20px;
 
                 .card-outside{
                     .card{
                         padding: 30px 15px;
-                        max-height: 700px;
         
                         &-active{
                             animation: lookAtMe;
@@ -411,27 +428,6 @@
                             margin-top: 15px;
                         }
 
-                        .services-plus{
-                            &-active{
-                                height: 235px;
-                                top: 235px;
-                                padding: 0 10px;
-
-                                .IS-link{
-                                    margin-bottom: 7px;
-                                    .IS-icon{
-                                        width: 50px;
-                                        height: 50px;
-                                       
-                                    }
-                                }
-                                @media(min-width:1366px){
-                                    top: 210px;
-                                    padding: 0 26px;
-                                }
-                            }
-                        }
-
                         .features-wrapper{
                             .feature{
                                 margin-top: 15px;
@@ -445,15 +441,26 @@
                             }
 
                         }
-            
+                        
+                        .services-title{
+                            font-size: 20px;
+                        }
+                        ::-webkit-scrollbar {
+                            width: 5px;
+                            border-radius: 5px;
+                            cursor: pointer;
+                          }
                         .services-wrapper{
-                            margin-top: 20px;
-                            .services-title{
-                                font-size: 20px;
+                            margin-top: 23px;
+                            width: 270px;
+                            max-height: 170px;
+                            padding:5px 2px;
+
+                            @media(min-width:1366px){
+                                padding:5px 16px;
                             }
             
                             .services-IS{
-                                margin-top: 23px;
             
                                 .IS-link{
                                     margin-left: 8px;
@@ -463,6 +470,19 @@
                                         height: 50px;
                                     }
                                 }
+                            }
+                            .services-plus{
+                                .IS-link{
+                                    margin-top: 5px;
+                                    margin-left: 8px;
+                                    margin-right: 8px;
+                                    .IS-icon{
+                                        width: 50px;
+                                        height: 50px;
+                                        
+                                    }
+                                }
+
                             }
                         }
                         .cta{

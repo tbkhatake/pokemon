@@ -103,7 +103,6 @@
 		}
 	}
 	.content {
-		margin-bottom: 70px;
 		text-align: center;
 		.content-title {
 			font-size: 24px;
@@ -142,13 +141,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .laptop-background {
-            background-image: url(../../assets/NoPath.png);
-            width: 822px;
-            height: 467px;
+        .tv-background {
+            background-image: url(../../assets/tv-background.png);
+            width: 742px;
+            height: 497px;
             position: absolute;
-            top: 135px;
+            top: 145px;
             left: calc(var(--container-size) + 0);
+			background-repeat: no-repeat;
         }
         .section-title {
             font-size: 39px;
@@ -157,12 +157,12 @@
             max-width: 450px;
         }
         .comparison {
-            bottom: 10px;
-            width: 646px;
-            height: 395px;
+            width: 717px;
+            height: 401px;
             position: relative;
             overflow-x: hidden;
-            margin-bottom: 100px;
+            margin-bottom: 110px;
+			bottom: 14px;
             .slide {
                 position: absolute;
                 width: 100%;
@@ -218,7 +218,6 @@
             }
         }
         .content {
-			margin-bottom: 0;
             .content-title {
                 font-size: 36px;
                 line-height: 44px;
@@ -242,29 +241,22 @@
         }
     }
 }
-
-.interactive-graph{
+.tv-interactive-graph{
     display: none;
     @media(min-width:1200px){
         display: block;
 		position: absolute;
-		top: 2250px;
+		top: 2370px;
 		left: 0;
 		width: 100%;
-		height: 1100px;
+		height: 800px;
 		overflow: hidden;
 		z-index: -1;
 	
-		.interactive-graph-img-1{
+		.tv-interactive-graph-img{
 			position: absolute;
-			top: 75px;
-			left: -185px;
-		}
-	
-		.interactive-graph-img-2{
-			position: absolute;
-			bottom: -175px;
-			right: -275px;
+			bottom: 0px;
+			left: -150px;
 		}
     }
 }

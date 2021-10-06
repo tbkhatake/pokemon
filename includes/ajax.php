@@ -42,9 +42,19 @@ add_action( 'wp_ajax_nopriv_raccoon_get_city_data', 'raccoon_get_city_data' );
 <?php
 
 function raccoon_get_plans_data() {
+    $cityName = $_GET['cityname'];
+    $city = $_GET['city'];
+    $city_args = array(
+        'post_type' => 'city',
+        'name' => $cityName
+    );
+
+    $city_query = new WP_Query($city_args);
+    $city_query->the_post();
+        
     $pageid = intval($_GET['pageid']);
     $plantype = $_GET['plantype'];
-    $sectionPlans = get_field('section2-category',$pageid);
+    $sectionPlans = get_field('section2-category');
 
     foreach($sectionPlans as $plans){
         $plansOptions[] = $plans['category-title'];
@@ -54,16 +64,16 @@ function raccoon_get_plans_data() {
 
     for($i = 0 ; $i < $plansQuantity ; $i++){
         if($plantype == $plansOptions[$i]){
-            foreach($plansCards[$i] as $cards){
+            foreach($plansCards[$i] as $key => $cards){
                 $featuresQuantity = count($cards['card2-features']);
                 $servicesQuantity = count($cards['card2-IS']);
                 for($t = 0 ; $t < $featuresQuantity ; $t++){
-                    $featuresIcon[$t] = $cards['card2-features'][$t]['features-icon']['url'];
-                    $featuresTitle[$t] = $cards['card2-features'][$t]['features-title'];
+                    $featuresIcon[$key][$t] = $cards['card2-features'][$t]['features-icon']['url'];
+                    $featuresTitle[$key][$t] = $cards['card2-features'][$t]['features-title'];
                 }
                 for($t = 0 ; $t < $servicesQuantity ; $t++){
-                    $servicesIcon[$t] = $cards['card2-IS'][$t]['IS-icon']['url'];
-                    $servicesLink[$t] = $cards['card2-IS'][$t]['IS-link']['url'];
+                    $servicesIcon[$key][$t] = $cards['card2-IS'][$t]['IS-icon']['url'];
+                    $servicesLink[$key][$t] = $cards['card2-IS'][$t]['IS-link']['url'];
                 }
                 
                 $cardUnity[] = [
@@ -73,14 +83,16 @@ function raccoon_get_plans_data() {
                     'price' => $cards['card2-price'],
                     'text' => $cards['card2-text'],
                     'features' => [
-                        'icon' => $featuresIcon,
-                        'title' => $featuresTitle 
+                        'icon' => $featuresIcon[$key],
+                        'title' => $featuresTitle[$key] 
                     ],
                     'services' => [
-                        'icon' => $servicesIcon,
-                        'link' => $servicesLink
+                        'icon' => $servicesIcon[$key],
+                        'link' => $servicesLink[$key]
                     ],
-                    'cta'=> $cards['card2-cta']
+                    'cta'=> $cards['card2-cta'],
+                    'moreInfo'=> $cards['card2-moreInfo'],
+                    'servicesQtt'=>$servicesQuantity
                 ];
             }
         }

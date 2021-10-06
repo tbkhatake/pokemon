@@ -1,8 +1,7 @@
-let haveInteractive = document.querySelector('#onDesktop');
-    if(haveInteractive){
-    let slide = document.getElementById('onDesktop');
+let slide = document.getElementById('onDesktop');
+if(slide){
     let card = document.querySelector('input[name=checkbox]');
-
+    
     card.addEventListener("change", function() {
         if (this.checked) {
             slide.classList.add("active");
@@ -10,11 +9,6 @@ let haveInteractive = document.querySelector('#onDesktop');
             slide.classList.remove("active");
         }
     });
+
 }
-
-
-
-
-
-
-
+    
