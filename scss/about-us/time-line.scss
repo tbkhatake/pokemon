@@ -1,0 +1,273 @@
+.time-line{
+    margin-top: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    .section-title {
+        text-align: center;
+        width: 190px;
+		font-size: 24px;
+		line-height: 2.25rem;
+		font-weight: 300;
+		text-decoration: underline 2px #c3000a;
+        text-underline-position: under;
+		display: inline-block;
+	}
+
+    .time-line-mobile{
+        margin: 0 25px 0 32px;
+        margin-top: 52px;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        border-left: 2px solid #C3000A;
+       
+        .card-line{
+            margin-top: 64px;
+            margin-left: 13px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &:first-child{
+                margin-top: 0;
+            }
+            .card-ball{
+                left: -26px;
+                border-radius: 50%;
+                position: absolute;
+                display: block;
+                height: 20px;
+                width: 20px;
+                border: 2px solid #C3000A;
+                background-color: white;
+                &-active{
+                    background-color: #C3000A;
+                }
+            }
+            .card-age{
+                position: relative;
+                font-size: 24px;
+                font-weight: 500;
+                color: #C3000A;
+                width: 236px;
+                text-align: center;
+            }
+
+            .card-content{
+                width: 236px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                display: none;
+
+                &-active{
+                    display: flex;
+                }
+
+                .content-title{
+                    margin-top: 24px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    color: #373737;
+                }
+
+                .content-red-line{
+                    display: block;
+                    margin-top: 15px;
+                    background-color: #C3000A;
+                    height: 5px;
+                    width: 160px;
+                }
+
+                .content-desc{
+                    margin-top: 10px;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 1.5rem;
+                    color: #373737;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .time-line-desk{
+        display: none;
+    }
+
+    @media(min-width:1200px){
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .section-title{
+            width: 100%;
+            font-size: 40px;
+        }
+
+        .time-line-mobile{
+            display: none;
+        }
+
+        .time-line-desk{
+            display: block;
+            width: 1200px;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+
+            @media(min-width:1366px){
+                width: 1366px;
+            }
+
+            .image-wrapper{
+                width: 100%;
+                height: 420px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                left:360px;
+                transition: 0.3s;
+
+                @media(min-width:1366px){
+                    left:420px;
+                }
+                
+                .card-image{
+                    position: relative;
+                    width: 450px;
+                    height: 300px;
+                    margin-left: -50px;
+                    margin-right: -50px;
+                    z-index: 0;
+                    transition: 0.3s;
+                    cursor: pointer;
+
+                    &-active{
+                        width: 600px;
+                        height: 400px;
+                        z-index: 2;
+                        top: 20px;
+                    }
+
+                    &-active2{
+                        top: 20px;
+                        z-index: 1;
+                    }
+                }
+            }
+      
+            .age-wrapper{
+                margin-top: 56px;
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+                position: relative;
+
+                .age-red-line{
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    display: block;
+                    background-color: #C3000A;
+                    top: 10px;
+                    z-index: -1;
+                }
+
+                .age-block{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .age-ball{
+                        border-radius: 50%;
+                        display: block;
+                        height: 20px;
+                        width: 20px;
+                        border: 2px solid #C3000A;
+                        background-color: white;
+                        cursor: pointer;
+                        &-active{
+                            background-color: #C3000A;
+                        }
+                    }
+
+                    .age{
+                        margin-top: 8px;
+                        font-size: 20px;
+                        font-weight: 500;
+                        color: #C3000A;
+                    }
+                }
+            }
+
+            .content-wrapper{
+                margin-top: 46px;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .desk-card-content{
+                    position: relative;
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 570px;
+                    padding: 40px 50px 30px 36px;
+                    box-shadow: 0px 3px 6px #C3000A33;
+                    box-sizing: border-box;
+                    background-color: white;
+                    margin-bottom: 5px;
+
+                    &-active{
+                        display: flex;
+                    }
+    
+                    &::after{
+                        content: '';
+                        display: inline-block;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #C3000A;
+                        top: -5px;
+                        right: -5px;
+                        z-index: -1;
+                    }
+    
+                    .content-title{
+                        font-size: 28px;
+                        font-weight: 700;
+                        color: #373737;
+                    }
+    
+                    .content-red-line{
+                        margin-top: 16px;
+                        display: block;
+                        width: 345px;
+                        height: 5px;
+                        background-color: #C3000A;
+                    }
+    
+                    .content-desc{
+                        width: 485px;
+                        margin-top: 24px;
+                        font-size: 20px;
+                        font-weight: 300;
+                        line-height: 1.875rem;
+                        text-align: center;
+                    }
+                }
+            }
+            
+  
+        }
+    }
+}
