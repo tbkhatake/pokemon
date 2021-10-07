@@ -14,7 +14,6 @@
             </div>
         <?php endforeach;?>
     </div>
-
     <div class="time-line-desk ">
         <div class="image-wrapper">
             <?php foreach($time_line_section['section-cards'] as $card_image_key => $card_image):?>
