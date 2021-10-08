@@ -10,9 +10,7 @@ if(haveOS){
 
     let osCardWrapper = document.querySelectorAll('.os-section-wrapper')
     let osOptions = document.querySelectorAll('.os-option')
-    console.log(osCardWrapper)
-    console.log(osOptions)
-
+    
     osCardWrapper[0].classList.add('os-section-wrapper-active')
     osOptions[0].classList.add('os-option-active')
 
