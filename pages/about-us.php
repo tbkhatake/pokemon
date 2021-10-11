@@ -4,4 +4,5 @@
 <?php get_template_part("template-parts/common/hero");?>
 <?php get_template_part("template-parts/about-us/time-line");?>
 <?php get_template_part("template-parts/about-us/our-essence");?>
+<?php get_template_part("template-parts/about-us/gallery");?>
 <?php get_footer() ?>
