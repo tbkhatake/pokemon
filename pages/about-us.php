@@ -6,4 +6,5 @@
 <?php get_template_part("template-parts/about-us/our-essence");?>
 <?php get_template_part("template-parts/about-us/gallery");?>
 <?php get_template_part("template-parts/about-us/jobs-programs");?>
+<?php get_template_part("template-parts/about-us/jobs");?>
 <?php get_footer() ?>
