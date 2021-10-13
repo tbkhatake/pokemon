@@ -39,8 +39,6 @@ if(haveGallery){
         }
     });
 
-    console.log(slider_gallery_desk.getInfo())
-
     let slider_gallery_desk_dots = tns({
         container: '.gallery-desk-dots-slider',
         "items": 4,
