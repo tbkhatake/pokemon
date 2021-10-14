@@ -1,0 +1,266 @@
+.jobs-programs{
+    margin-top: 68px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .section-title {
+        display: inline-block;
+        text-align: center;
+        width: 190px;
+		font-size: 24px;
+		line-height: 2.25rem;
+		font-weight: 300;
+		text-decoration: underline 2px #c3000a;
+        text-underline-position: under;
+        align-self: center;
+	}
+
+    .jp-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .jp-select-wrapper{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            margin-top: 24px;
+            height: 30px;
+            background-color: white;
+            border: 1px solid#C3000A ;
+            box-sizing: border-box;
+            
+            .jp-select{
+                padding-right:30px;
+                padding-left: 10px;
+                height: 100%;
+                background-color: white;
+                color: #C3000A;
+                outline:none;
+                border: none;
+            }
+    
+            & select[class="jp-select"]{
+                appearance: none;
+                outline:none;
+            }
+    
+            .jp-select-arrow{
+                right: 10px;
+                position: absolute;
+                height: 10px;
+                width: 16px;
+                color: #C3000A;
+                display: block;
+                pointer-events: none;
+            }
+        }
+    
+        .jp-cards-wrapper{
+            margin-top: 24px;
+            width: 100%;
+    
+            .jp-card{
+                width: 100%;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+    
+                &-active{
+                    display: flex;
+                }
+    
+                &-image{
+                    width: 100%;
+                    height: 340px;
+                }
+    
+                .jp-content-wrapper{
+                    margin-top: -70px;
+                    width: 254px;
+                    padding: 24px 10px;
+                    box-shadow: 0px 3px 6px #C3000A33;
+                    margin-bottom: 5px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    box-sizing: border-box;
+                    background-color: white;
+    
+                    .jp-card-title{
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 2.625rem;
+                    }
+    
+                    .jp-card-red-line{
+                        display: block;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #C3000A;
+                    }
+    
+                    .jp-card-text{
+                        margin-top: 16px;
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 1.4rem;
+                        color: #373737;
+                    }
+    
+                    .jp-card-button{
+                        margin-top: 24px;
+                        padding: 6.5px 18.5px;
+                        background-color: white;
+                        color: #C3000A;
+                        border: #C3000A 1px solid;
+                        &:hover{
+                            background-color: #C3000A;
+                            color: #F4F5F5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .jp-desk{
+        display: none;
+    }
+    @media(min-width:1200px){
+        .section-title{
+            width: 100%;
+            font-size: 40px;
+        }
+
+        .jp-mobile{
+            display: none;
+        }
+
+        .jp-desk{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .jp-desk-options{
+                margin-top: 80px;
+                display: flex;
+
+                .jp-desk-option{
+                    position: relative;
+                    font-size: 24px;
+                    font-weight: 300;
+                    padding: 0 32px 18px 32px;
+                    border-bottom: 1px solid #373737;
+                    cursor: pointer;
+                    z-index: 1;
+
+                }
+                .tns-nav-active{
+                    border-bottom: 2px solid #C3000A;
+                    color: #C3000A;
+                }
+            }
+
+            .jp-desk-controls{
+                width:910px;
+                display: flex;
+                justify-content: space-between;
+                position: absolute;
+                top: 110px;
+
+                &-btn{
+                    position: relative;
+                    cursor: pointer;
+                }
+
+            }
+            .jp-desk-cards-wrapper{
+                display: block;
+                margin-top: 40px;
+                width: 1165px;
+                overflow: hidden;
+
+                .jp-slider-wrapper{
+                    
+                    .jp-desk-card{
+                        display: flex;
+                        position: relative;
+    
+                        &-image{
+                            position: relative;
+                            z-index:-1;
+                            width: 720px;
+                            height: 480px;
+                            margin-bottom: 50px;
+                        }
+        
+                        .jp-desk-content-wrapper{
+                            box-sizing: border-box;
+                            position: relative;
+                            top: 45px;
+                            right:55px;
+                            width: 572px;
+                            margin-bottom: 50px;
+                            background-color: white;
+                            box-shadow: 0px 3px 6px #C3000A33;
+                            padding: 40px 56px 25px 36px;
+                            
+    
+                            &::after{
+                                position: absolute;
+                                content: '';
+                                background-color:#C3000A;
+                                width: 100%;
+                                height: 100%;
+                                top: -5px;
+                                right: -5px;
+                                z-index: -1;
+                            }
+                            
+                            .jp-desk-card-title{
+                                font-size: 26px;
+                                font-weight: 700;
+                                line-height: 2.625rem;
+                            }
+        
+                            .jp-desk-card-red-line{
+                                margin-top: 18px;
+                                display: block;
+                                width: 264px;
+                                height: 5px;
+                                background-color:#C3000A ;
+                            }
+        
+                            .jp-desk-card-text{
+                                margin-top: 24px;
+                                font-size: 18px;
+                                font-weight: 300;
+                                line-height: 1.875rem;
+                            }
+        
+                            .jp-desk-card-button{
+                                display: block;
+                                margin-top: 24px;
+                                padding: 12.5px 25px;
+                                color: #C3000A;
+                                border:#C3000A 1px solid;
+                                cursor: pointer;
+                                transition: 0.3s ease-out;
+                                font-size: 20px;
+                                font-weight: 500;
+                                &:hover{
+                                    background-color: #C3000A;
+                                    color: #F4F5F5;
+                                    transform: scale(1.1, 1.2);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
