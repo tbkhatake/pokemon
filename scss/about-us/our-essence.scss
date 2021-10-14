@@ -1,0 +1,182 @@
+.our-essence{
+    margin-top: 28px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .section-title {
+        display: inline-block;
+        text-align: center;
+        width: 190px;
+		font-size: 24px;
+		line-height: 2.25rem;
+		font-weight: 300;
+		text-decoration: underline 2px #c3000a;
+        text-underline-position: under;
+        align-self: center;
+	}
+
+    .os-mobile{
+        overflow: hidden;
+        width: 100%;
+        .tns-nav{
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            bottom: -20px;
+            z-index: 1;
+            
+            button{
+                display: block;
+                margin-left:8px;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                padding: 0;
+                border:none ;
+                background-color: #37373799;
+            }
+    
+            .tns-nav-active{
+                background-color: #C3000A;
+            }
+        }
+        .section-wrapper{
+            margin-top:32px;
+            position: relative;
+            padding: 32px 24px;
+            box-sizing: border-box;
+            .bg-image{
+                position: absolute;
+                top:0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+    
+            .content-wrapper{
+                padding: 24px 10px;
+                position: relative;
+                z-index: 2;
+                background-color: white;
+                box-sizing: border-box;
+                border:#C3000A 5px solid;
+                
+                .card-title{
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #373737;
+                }
+    
+                .card-red-line{
+                    margin-top: 16px;
+                    display: block;
+                    height: 2px;
+                    background-color: #C3000A;
+                }
+    
+                .card-text{
+                    margin-top: 16px;
+                    font-size: 15px;
+                    font-weight: 300;
+                    color: #373737;
+                    line-height: 1.406rem;
+                }
+            }
+        }
+    }
+    .os-desk{
+        display: none;
+    }
+
+    @media(min-width:1200px){
+        margin-top: 200px;
+        .section-title{
+            width: 100%;
+            font-size: 40px;
+        }
+
+        .os-mobile{
+            display: none;
+        }
+        .os-desk{
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-options{
+                display: flex;
+                width: 100%;
+                justify-content: center;
+
+                .os-option{
+                    padding:0 40px 16px 40px;
+                    border-bottom: 2px solid #373737;
+                    font-size: 24px;
+                    font-weight: 300;
+                    cursor: pointer;
+                    &-active{
+                        color: #C3000A;
+                        border-bottom: 2px solid #C3000A;
+                    }
+                }
+            }
+            .os-section-wrapper{
+                position: relative;
+                margin-top: 44px;
+                width: 918px;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+
+                &-active{
+                    display: flex;
+                }
+
+                .bg-image{
+                    position: absolute;
+                    top:0;
+                    left: 0;
+                    width: 100%;
+                    height: 612px;
+                }
+                .content-wrapper{
+                    margin-top: 40px;
+                    width: 594px;
+                    padding: 40px;
+                    position: relative;
+                    z-index: 2;
+                    background-color: white;
+                    box-sizing: border-box;
+                    border:#C3000A 5px solid;
+                    
+                    .card-title{
+                        font-size: 28px;
+                        font-weight: 700;
+                        color: #373737;
+                    }
+        
+                    .card-red-line{
+                        width: 264px;
+                        margin-top: 16px;
+                        display: block;
+                        height: 5px;
+                        background-color: #C3000A;
+                    }
+        
+                    .card-text{
+                        margin-top: 24px;
+                        font-size: 20px;
+                        font-weight: 300;
+                        color: #373737;
+                        line-height: 1.875rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
