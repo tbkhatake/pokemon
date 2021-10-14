@@ -14,3 +14,21 @@ if(haveBox){
     });
 }
 
+let haveSlider = document.querySelector('.slides-wrapper');
+if(haveSlider){
+    let boxSlider = tns({
+        container: '.slides-wrapper',
+        loop: false,
+        items: 1,
+        mouseDrag: true,
+        preventScrollOnTouch: 'auto',
+        controls: false,
+        navContainer: ".box-slider"
+    });
+}
+
+let btns = document.querySelectorAll('box-wrapper'[1]);
+const slideOusadia = document.getElementById('ousadia');
+btns.addEventListener("click", () => {
+    slideOusadia.classList.add("showOusadia");
+})

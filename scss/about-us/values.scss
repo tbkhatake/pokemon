@@ -4,6 +4,7 @@
 	max-width: 320px;
 	width: 100%;
 	text-align: center;
+
 	.section-title {
 		margin-bottom: 24px;
 		text-align: center;
@@ -15,16 +16,19 @@
 		text-underline-position: under;
 		display: inline-block;
 	}
+
 	.slides-wrapper {
 		width: 100%;
 		text-align: left;
 		display: flex;
 		overflow-x: hidden;
+		position: relative;
 		.slide {
 			box-sizing: border-box;
 			width: 320px;
 			position: relative;
 			height: 420px;
+			transition: ease-in-out;
 			.slide-image {
 				width: 320px;
 				height: 340px;
@@ -61,34 +65,36 @@
 			}
 		}
 	}
+
 	.box-grid {
-        width: 100%;
-        position: relative;
-        .tns-controls {
-            display: none;
-        }
-        .tns-nav{
-            position: absolute;
-            bottom: -10px;
-            left: 135px; 
-        }
-        .tns-nav > button {
-            width: 10px;
-            height: 10px;
-            padding: 0;
-            border-radius: 50%;
-            background: #37373799;
-            border: 0;
-        }
-        .tns-nav > button.tns-nav-active {
-            background: #c3000a;
-        }
-        .tns-nav > button:not(:last-child) {
-            margin-right: 10px;
-        }
+		width: 100%;
+		position: relative;
+		.tns-controls {
+			display: none;
+		}
+		.tns-nav {
+			position: absolute;
+			bottom: -10px;
+			left: 135px;
+		}
+		.tns-nav > button {
+			width: 10px;
+			height: 10px;
+			padding: 0;
+			border-radius: 50%;
+			background: #37373799;
+			border: 0;
+		}
+		.tns-nav > button.tns-nav-active {
+			background: #c3000a;
+		}
+		.tns-nav > button:not(:last-child) {
+			margin-right: 10px;
+		}
 		.box-slider {
 			.box-elements {
-                padding: 20px 10px;
+				padding: 20px 10px;
+
 				.box-wrapper {
 					box-sizing: border-box;
 					cursor: pointer;
@@ -126,6 +132,15 @@
 					}
 				}
 			}
+			.tns-nav-active {
+				.box-wrapper {
+					background-color: #c3000a;
+					color: #ffffff;
+					.box-icon {
+						filter: grayscale(100%) invert(1);
+					}
+				}
+			}
 		}
 	}
 }
@@ -147,7 +162,7 @@
 			.slide {
 				box-sizing: border-box;
 				width: 1041px;
-				margin-right: 140.33px;
+
 				position: relative;
 				height: 600px;
 				.slide-image {
@@ -161,8 +176,8 @@
 					box-shadow: 0px 3px 6px #c3000a33;
 					border: 6px solid rgba(195, 0, 10, 0.7);
 					position: absolute;
-					bottom: 20px;
-					right: -140px;
+					bottom: 00px;
+					right: 00px;
 					background-color: #ffffff;
 					.box-title {
 						font-size: 32px;
@@ -185,6 +200,9 @@
 						line-height: 30px;
 					}
 				}
+			}
+			.slide:not(:last-child) {
+				margin-right: 140.33px;
 			}
 		}
 		.box-grid {

@@ -18,43 +18,55 @@
 ?>
 <section class="values-section">
     <h2 class="section-title"><?= $section_title; ?></h2>
-    <div class="slides-wrapper">
-        <div id="velocidade" class="slide">
-            <img class="slide-image" src="<?= $velocidade_image['url'] ?>" alt="<?= $velocidade_image['alt'] ?>">
-            <div class="slide-box">
-                <p class="box-title"><?= $fst_box_title; ?></p>
-                <p class="box-description"><?= $fst_box_description; ?></p>
-            </div>
-        </div>
-        <div id="ousadia" class="slide">
-            <img class="slide-image" src="<?= $ousadia_image['url'] ?>" alt="<?= $ousadia_image['alt']; ?>">
-            <div class="slide-box">
-                <p class="box-title"><?= $snd_box_title; ?></p>
-                <p class="box-description"><?= $snd_box_description; ?></p>
-            </div>
-        </div>
-        <div id="crescimento" class="slide">
-            <img class="slide-image" src="<?= $crescimento_image['url'] ?>" alt="<?= $crescimento_image['alt']; ?>">
-            <div class="slide-box">
-                <p class="box-title"><?= $trd_box_title; ?></p>
-                <p class="box-description"><?= $trd_box_description; ?></p>
-            </div>
-        </div>
-        <div id="empreendedorismo" class="slide">
-            <img class="slide-image" src="<?= $empreendedorismo_image['url'] ?>" alt="<?= $empreendedorismo_image['alt']; ?>">
-            <div class="slide-box">
-                <p class="box-title"><?= $fourth_box_title; ?></p>
-                <p class="box-description"><?= $fourth_box_description; ?></p>
-            </div>
-        </div>
-        <div id="sinergia" class="slide">
-            <img class="slide-image" src="<?= $sinergia_image['url'] ?>" alt="<?= $sinergia_image['alt']; ?>">
-            <div class="slide-box">
-                <p class="box-title"><?= $fifth_box_title; ?></p>
-                <p class="box-description"><?= $fifth_box_description; ?></p>
-            </div>
-        </div>
-    </div>
+                <div class="slides-wrapper">
+                    <div class="slide-element">
+                        <div id="velocidade" class="slide">
+                            <img class="slide-image" src="<?= $velocidade_image['url'] ?>" alt="<?= $velocidade_image['alt'] ?>">
+                            <div class="slide-box">
+                                <p class="box-title"><?= $fst_box_title; ?></p>
+                                <p class="box-description"><?= $fst_box_description; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-element">
+                        <div id="ousadia" class="slide">
+                            <img class="slide-image" src="<?= $ousadia_image['url'] ?>" alt="<?= $ousadia_image['alt']; ?>">
+                            <div class="slide-box">
+                                <p class="box-title"><?= $snd_box_title; ?></p>
+                                <p class="box-description"><?= $snd_box_description; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-element">
+                        <div id="crescimento" class="slide">
+                            <img class="slide-image" src="<?= $crescimento_image['url'] ?>" alt="<?= $crescimento_image['alt']; ?>">
+                            <div class="slide-box">
+                                <p class="box-title"><?= $trd_box_title; ?></p>
+                                <p class="box-description"><?= $trd_box_description; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-element">
+                        <div id="empreendedorismo" class="slide">
+                            <img class="slide-image" src="<?= $empreendedorismo_image['url'] ?>" alt="<?= $empreendedorismo_image['alt']; ?>">
+                            <div class="slide-box">
+                                <p class="box-title"><?= $fourth_box_title; ?></p>
+                                <p class="box-description"><?= $fourth_box_description; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-element">
+                        <div id="sinergia" class="slide">
+                            <img class="slide-image" src="<?= $sinergia_image['url'] ?>" alt="<?= $sinergia_image['alt']; ?>">
+                            <div class="slide-box">
+                                <p class="box-title"><?= $fifth_box_title; ?></p>
+                                <p class="box-description"><?= $fifth_box_description; ?></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       
+    
     <div class="box-grid">
             <?php if(have_rows('box_valores')): ?>
                 <div class="box-slider">
