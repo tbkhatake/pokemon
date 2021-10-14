@@ -1,23 +1,24 @@
-let haveBox = document.querySelector('.box-slider');
-if(haveBox){
-    let boxSlider = tns({
+let haveValue = document.querySelector('.values-section');
+if(haveValue){
+    let valuesSlider = tns({
         container: '.box-slider',
+        gutter:20,
+        fixedWidth:120,
         loop: false,
         items: 2,
-        responsive: {
-            1200: 5,
-        },
         mouseDrag: true,
         preventScrollOnTouch: 'auto',
-        gutter: 20,
-        
+        "responsive": {
+            "1200": {
+                gutter:35,
+                fixedWidth:160,
+                items: 5,
+            }
+        },
     });
-}
 
-let haveSlider = document.querySelector('.slides-wrapper');
-if(haveSlider){
-    let boxSlider = tns({
-        container: '.slides-wrapper',
+    let valuesBoxSlider = tns({
+        container: '.values-slides-wrapper',
         loop: false,
         items: 1,
         mouseDrag: true,
