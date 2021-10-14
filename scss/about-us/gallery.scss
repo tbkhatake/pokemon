@@ -1,5 +1,5 @@
 .gallery{
-    margin-top: 28px;
+    margin-top: 64px;
     position: relative;
     width: 100%;
     display: flex;
@@ -117,7 +117,7 @@
     }
 
     @media(min-width:1200px){
-
+        margin-top: 86px;
         .section-title{
             width: 100%;
             font-size: 40px;
