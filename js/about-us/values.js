@@ -26,9 +26,3 @@ if(haveSlider){
         navContainer: ".box-slider"
     });
 }
-
-let btns = document.querySelectorAll('box-wrapper'[1]);
-const slideOusadia = document.getElementById('ousadia');
-btns.addEventListener("click", () => {
-    slideOusadia.classList.add("showOusadia");
-})
