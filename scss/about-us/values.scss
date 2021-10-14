@@ -234,7 +234,9 @@
 							max-width: 160px;
 						}
 					}
-					.box-wrapper:hover {
+				}
+				.tns-nav-active {
+					.box-wrapper {
 						background-color: #c3000a;
 						color: #ffffff;
 						.box-icon {
