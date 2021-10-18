@@ -8,6 +8,7 @@
 		display: none;
 	}
 	.section-wrapper {
+		overflow: hidden;
 		.container {
 			box-sizing: border-box;
 			display: flex;
@@ -16,6 +17,7 @@
 			justify-content: center;
 			margin: 0;
 			padding: 0 24px;
+
 			.section-title {
 				margin-bottom: 24px;
 				text-align: center;
@@ -32,6 +34,7 @@
 				font-size: 15px;
 				line-height: 22.5px;
 				font-weight: 300;
+				width: 100%;
 			}
 		}
 		.text-image {
