@@ -7,7 +7,7 @@
             Algo deu errado
         </p>
         <p class="page404__description">Parece que você foi efetivado</p>
-        <a href="http://localhost/desktop/" class="page404__button">Home</a>
+        <a href="https://desktop.raccoon-stage.com/" class="page404__button">Home</a>
     </div>
 </section>
 <?php
