@@ -14,7 +14,7 @@
 <?php $menuItens = get_field('header-links','options')?>
 <?php $forWhoLinks = get_field('header-forWhoLinks','options')?>
 
-	<div class="header-wrapper container">
+	<div class="header-wrapper">
 		<?php $logo = get_field('header-logo','options')?>
 		<img class="header-logo" src="<?=$logo['url']?>" alt="logo">
 		<img class="header-nav-icon" src="<?=get_template_directory_uri()?>/images/menu.png" alt="menu">
