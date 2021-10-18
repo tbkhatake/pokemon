@@ -8,11 +8,13 @@
 		display: none;
 	}
 	.section-wrapper {
+		overflow: hidden;
 		.container {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			overflow: hidden;
 			.section-title {
 				margin-bottom: 24px;
 				text-align: center;
@@ -29,6 +31,7 @@
 				font-size: 15px;
 				line-height: 22.5px;
 				font-weight: 300;
+				width: 100%;
 			}
 		}
 		.text-image {
