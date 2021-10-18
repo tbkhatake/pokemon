@@ -20,7 +20,7 @@ $city_query = new WP_Query($city_args);
     <div class="graphism-wrapper">
         <img src="<?=get_template_directory_uri()?>/assets/map-graphism.svg">
     </div>
-    <div class="container">
+    <div class="">
         <?php
             $mapTitle = get_field('titulo_mapa');
         ?>
