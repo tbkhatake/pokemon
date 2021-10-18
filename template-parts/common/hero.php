@@ -1,5 +1,5 @@
 <section class="hero">
-        <div class="hero-slider container">
+        <div class="hero-slider">
             <?php if(have_rows('carrossel_hero')): ?>
                 <div class="slider-engine">
                     <?php while(have_rows('carrossel_hero')): the_row(); ?>
