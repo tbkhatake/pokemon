@@ -1,6 +1,6 @@
 <?php $tvChannels = get_field('tvChannels-section')?>
 
-<section class="channels-packages container">
+<section class="channels-packages">
     <h2 class="section-title"><?= $tvChannels['section-title'];?></h2>
     <p class="section-text"><?= $tvChannels['section-text'];?></p>
     <div class="mobile">

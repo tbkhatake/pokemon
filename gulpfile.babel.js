@@ -17,7 +17,7 @@ export const styles = () =>
 
 export const scripts = () => {
 	
-	return src(["js/common/header.js", "js/lib/tiny-slider.js", "js/common/hero.js","js/home/know-super-desktop.js","js/common/plans.js","js/home/map.js", "js/internet/compare.js", "js/internet/interactive-section.js","js/TV/channels-packages.js", "js/TV/accordion.js","js/TV/tv-interactive.js","js/TV/step-to-step.js","js/internet/expositor.js","js/common/know-our-services.js","js/internet/quiz.js","js/internet/interactive-section.js","js/telefone/user-path.js","js/about-us/time-line.js","js/about-us/our-essence.js","js/about-us/gallery.js","js/about-us/jobs-programs.js","js/about-us/jobs.js","js/about-us/values.js", "js/b2b/forms.js", "js/b2b/b2b-gallery.js"])
+	return src(["js/common/header.js", "js/lib/tiny-slider.js", "js/common/hero.js","js/home/know-super-desktop.js","js/common/plans.js","js/home/map.js", "js/internet/compare.js", "js/internet/interactive-section.js","js/TV/channels-packages.js", "js/TV/accordion.js","js/TV/tv-interactive.js","js/TV/step-to-step.js","js/internet/expositor.js","js/common/know-our-services.js","js/internet/quiz.js","js/internet/interactive-section.js","js/telefone/user-path.js","js/about-us/time-line.js","js/about-us/our-essence.js","js/about-us/gallery.js","js/about-us/jobs-programs.js","js/about-us/jobs.js","js/about-us/values.js", "js/b2b/forms.js", "js/b2b/b2b-gallery.js", "js/treatment/description.js",js/treatment/forms.js"js/treatment/forms.js"])
 
 		.pipe(uglify())
 		.pipe(concat("bundle.js"))
