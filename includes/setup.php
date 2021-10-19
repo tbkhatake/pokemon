@@ -16,12 +16,15 @@ function raccoon_enqueue_styles(){
 		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/about-us/bundle.css' );
 	}else if(is_page_template('pages/telefone.php')){
         wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/telefone/bundle.css' );
+	}else if(is_page_template('pages/politicas.php')){
+        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/politicas/bundle.css' );
 	}else if(is_page_template('pages/b2b.php')){
 		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/b2b/bundle.css' );
 	}else if(is_page_template('pages/atendimento.php')){
 		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/treatment/bundle.css' );
 	}
 	
+	}
 	wp_enqueue_script( 'theme-common-js', get_template_directory_uri().'/dist/bundle.js', array(), false, true);
 }
 
