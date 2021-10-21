@@ -16,7 +16,7 @@
 
 	<div class="header-wrapper">
 		<?php $logo = get_field('header-logo','options')?>
-		<img class="header-logo" src="<?=$logo['url']?>" alt="logo">
+		<a class="header-nav-link" href="https://desktop.raccoon-stage.com"><img class="header-logo" src="<?=$logo['url']?>" alt="logo"></a>
 		<img class="header-nav-icon" src="<?=get_template_directory_uri()?>/images/menu.png" alt="menu">
 		<div class="header-nav">
 			<div class="nav-up">

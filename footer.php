@@ -62,7 +62,7 @@
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
-                        <img class="footer-logo" src="<?= $footerLogo; ?>" alt="<?= $footerLogo['alt']; ?>">
+                        <a class="footer-link" href="https://desktop.raccoon-stage.com"><img class="footer-logo" src="<?= $footerLogo; ?>" alt="<?= $footerLogo['alt']; ?>"></a>
                     </div>
                     
                 </div>
