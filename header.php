@@ -30,7 +30,7 @@
 						<?php
 							$city_plans_args = array(
 								'post_type' => 'city',
-								'orderby' => 'date',
+								'orderby' => 'name',
 								'order'   => 'ASC',
 							);
 
@@ -85,7 +85,7 @@
 						<?php
 							$city_plans_args = array(
 								'post_type' => 'city',
-								'orderby' => 'date',
+								'orderby' => 'name',
 								'order'   => 'ASC',
 							);
 

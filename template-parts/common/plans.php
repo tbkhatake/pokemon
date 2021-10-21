@@ -29,7 +29,6 @@
             <?php foreach($section2 as $category):?>
                 <p role="button" class="desk-options" plan="<?= $category['category-title']?>"><?= $category['category-title']?></p>
             <?php endforeach; ?>
-            <!-- <?php print_r($category)?> -->
         </div>
     </form>
     
