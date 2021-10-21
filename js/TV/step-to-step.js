@@ -40,7 +40,6 @@ if(haveStep){
         let stepSliderControl = document.querySelector('.step-slider-controls');
         itensCounter = Math.floor(stepSliderControl.id/2);
         stepSliderControl.style.width = (itensCounter*62)+106+"px"
-        console.log(itensCounter)
     }
 
     if(screen.width <= 1200){
