@@ -72,6 +72,7 @@
             .content-desc > p{
                 font-size: 16px;
                 font-weight: 300;
+                line-height:1.25rem ;
             }
 
             .first-title, .second-title{
@@ -84,6 +85,7 @@
                 margin-top: 16px;
                 font-size: 16px;
                 font-weight: 300;
+                line-height:1.25rem ;
             }
             .content-image{
                 margin-top: 16px;
@@ -104,6 +106,11 @@
                         width: 35px;
                         display: flex;
                         justify-content: center;
+                        
+                        .feature-icon{
+                            max-width: 35px;
+                            max-height: 35px;
+                        }
                     }
 
                     &-text{
@@ -177,6 +184,7 @@
                 .content-desc > p{
                     font-size: 18px;
                     font-weight: 300;
+                    line-height:1.375rem ;
                 }
     
                 .first-title, .second-title{
@@ -189,6 +197,7 @@
                     margin-top: 16px;
                     font-size: 18px;
                     font-weight: 300;
+                    line-height:1.375rem ;
                 }
                 .content-image{
                     margin-top: 30px;
@@ -200,6 +209,7 @@
                     margin-top: 40px;
                     width: 645px;
                     padding-bottom:30px ;
+                    line-height:1.5rem ;
     
                     .feature{
                         display: flex;

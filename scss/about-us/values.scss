@@ -220,6 +220,10 @@
 						align-items: center;
 						justify-content: center;
 						color: #c3000a;
+						&:hover{
+							background-color:#c3000a ;
+							color: white;
+						}
 						.box-icon {
 							width: 32px;
 							height: 32px;

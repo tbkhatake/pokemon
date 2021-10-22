@@ -1,5 +1,6 @@
 .jobs{
     margin-top: 64px;
+    margin-bottom: 64px;
     position: relative;
     width: 100%;
     display: flex;
@@ -197,6 +198,7 @@
     }
     @media(min-width:1200px){
         margin-top: 150px;
+        margin-bottom: 160px;
         .section-title{
             width: 100%;
             font-size: 40px;
