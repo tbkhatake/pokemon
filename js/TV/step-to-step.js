@@ -29,7 +29,7 @@ if(haveStep){
                 "edgePadding":340
             },
             "1920": {
-                "edgePadding":400
+                "edgePadding":380
             },  
             
         }
@@ -39,6 +39,7 @@ if(haveStep){
     if(screen.width >= 1200){
         let stepSliderControl = document.querySelector('.step-slider-controls');
         itensCounter = Math.floor(stepSliderControl.id/2);
+        console.log(itensCounter)
         stepSliderControl.style.width = (itensCounter*62)+106+"px"
     }
 
