@@ -38,7 +38,7 @@
                       <p class="required">Preenchimento obrigatório*</p>
                   </div>
                   <div class="fields-wrapper">
-                      <input class="tiny-form" id="forms-input" type="text" required placeholder="Email">
+                      <input class="tiny-form" id="forms-input" type="email" required placeholder="Email">
                       <p class="required">Preenchimento obrigatório*</p>
                   </div>
                   <div class="fields-wrapper">

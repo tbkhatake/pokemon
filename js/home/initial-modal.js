@@ -28,10 +28,14 @@ if(initialModal){
     let cityStorage = localStorage.getItem("city")
     if(cityStorage == null){
         initialModal.classList.add('initial-modal--active')
+        document.body.style.height = "100vh";
+        document.body.style.overflow = "hidden";
     }
     modalCity.forEach((city,key)=>{
         city.addEventListener('click', ()=>{
             initialModal.classList.remove('initial-modal--active')
+            document.body.style.height = "unset";
+            document.body.style.overflow = "unset";
             headerNavSelect.selectedIndex = key
             if(getCookies !== "accepted"){
                 localStorage.setItem("city",key)
