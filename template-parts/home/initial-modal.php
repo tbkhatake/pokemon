@@ -30,21 +30,22 @@
           <form class="forms-wrapper" action="">
               <p class="forms-desc">Por gentileza, nos envie a sua cidade.</p>
                   <div class="fields-wrapper">
-                      <input class="tiny-form" id="forms-input" type="text" required placeholder="Nome">
+                      <input class="tiny-form" id="forms-input" type="text" name="Nome" required placeholder="Nome">
                       <p class="required">Preenchimento obrigatório*</p>
                   </div>
                   <div class="fields-wrapper">
-                      <input class="tiny-form" id="forms-input" type="text" required placeholder="Telefone">
+                      <input class="tiny-form" id="forms-input" type="text" name="Telefone" required placeholder="Telefone">
                       <p class="required">Preenchimento obrigatório*</p>
                   </div>
                   <div class="fields-wrapper">
-                      <input class="tiny-form" id="forms-input" type="email" required placeholder="Email">
+                      <input class="tiny-form" id="forms-input  forms-input-email" type="email" name="Email" required placeholder="Email">
                       <p class="required">Preenchimento obrigatório*</p>
+                      <p class="required-email">Digite um e-mail válido*</p>
                   </div>
                   <div class="fields-wrapper">
                     <div class="fields-wrapper-state">
-                      <input class="tiny-form tiny-form-city" id="forms-input" type="text" required placeholder="Cidade">
-                      <input class="tiny-form tiny-form-state" id="forms-input" type="text" required placeholder="Estado">
+                      <input class="tiny-form tiny-form-city" id="forms-input" name="Cidade" type="text" required placeholder="Cidade">
+                      <input class="tiny-form tiny-form-state" id="forms-input" name="Estado" type="text" required placeholder="Estado">
                     </div>
                       <p class="required">Preenchimento obrigatório*</p>
                   </div>

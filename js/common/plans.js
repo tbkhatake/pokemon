@@ -291,8 +291,8 @@ if(havePlans){
             let response = data.json();
             response.then(resp => {
                 if(resp == null){
-                    cityName = 'piracicaba'
-                    cityFetchPlansData("Internet")
+                    cityName = 'sumare'
+                    cityFetchPlansData("internet")
                 }else{
                     cards = resp.cards;
                     cards.forEach(function(el){
