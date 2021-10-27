@@ -173,8 +173,10 @@
 						text-align: left;
 						justify-content: unset;
 						grid-gap: 40px 50px;
-						.info-item {
-							font-size: 20px;
+						.info-item-wrapper{
+							.info-item {
+								font-size: 18px;
+							}
 						}
 						.info-item::after {
 							margin-left: 50px;
