@@ -32,6 +32,7 @@
                 </div>
             <?php endforeach;?>
             <input class="forms-button" type="submit" value="<?= $forms['forms-button']['title'];?>">
+            <span class="button-validation"><?= $forms['forms-button']['title'];?></span>
         </form>
     </div>
 </section>

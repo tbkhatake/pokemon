@@ -10,6 +10,8 @@
 </head>
 
 <body <?php body_class() ?>>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLFR9MS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="header">
 <?php $menuItens = get_field('header-links','options')?>
 <?php $forWhoLinks = get_field('header-forWhoLinks','options')?>

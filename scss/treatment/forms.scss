@@ -56,6 +56,13 @@
                     text-align: right;
                     color: #C3000A;
                     display: none;
+                    &-email{
+                        margin-top: 8px;
+                        font-size: 12px;
+                        text-align: right;
+                        color: #C3000A;
+                        display: none;
+                    }
                 }
     
                 .tiny-form{
@@ -68,6 +75,18 @@
                     font-weight: 300;
                     &::placeholder{
                         font-weight: 300;
+                    }
+                    &-email{
+                        width: 100%;
+                        border: 1px #C9C9C9 solid;
+                        outline: none;
+                        padding: 10px 10px;
+                        box-sizing: border-box;
+                        height: 30px;
+                        font-weight: 300;
+                        &::placeholder{
+                            font-weight: 300;
+                        }
                     }
                 }
         
@@ -85,14 +104,28 @@
                     }
                 }
             }
-    
-            .t-forms-button{
-                cursor: pointer;
-                border: none;
-                background-color:#C3000A ;
-                color: white;
-                padding: 6.5px 20px;
-                font-size: 15px;
+            .t-form-button-wrapper{
+                display: flex;
+                flex-direction: column;  
+                .t-forms-button{
+                    cursor: pointer;
+                    border: none;
+                    background-color:#C3000A ;
+                    color: white;
+                    padding: 6.5px 20px;
+                    font-size: 15px;
+                }
+                .t-button-validation{
+                    position: relative;
+                    top: -31px;
+                    margin-bottom: -31px;
+                    cursor: pointer;
+                    border: none;
+                    background-color:#a2a2a2 ;
+                    color: white;
+                    padding: 8.5px 20px;
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -151,10 +184,19 @@
                         font-size: 16px;
                     }
                 }
-                .t-forms-button{
-                    margin: 0 auto;
-                    padding: 12.5px 40px;
-                    font-size: 20px;
+                .t-form-button-wrapper{   
+                    width: 100%;  
+                    align-items: center;
+                    .t-forms-button{
+                        padding: 12.5px 40px;
+                        font-size: 20px;
+                    }
+                    .t-button-validation{
+                        top: -49px;
+                        margin-bottom: -49px;
+                        padding: 14.5px 40px;
+                        font-size: 20px;
+                    }
                 }
             }
         }
