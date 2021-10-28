@@ -39,7 +39,7 @@
                                     $socialLink = get_sub_field('link_rede_social');
                                 ?>
                             <div class="social-container">
-                               <a class="social-link" href="<?= $linkList; ?>"> <img class="social-icon" src="<?= $socialIcon; ?>" alt="<?= $socialIcon['alt']; ?>"></a>
+                               <a class="social-link" href="<?= $socialLink; ?>"> <img class="social-icon" src="<?= $socialIcon; ?>" alt="<?= $socialIcon['alt']; ?>"></a>
                             </div>
                             <?php endwhile; ?>
                         <?php endif; ?>
@@ -54,7 +54,7 @@
                                 <?php while(have_rows('info_rodape', 'options')): the_row(); ?>
                                     <?php 
                                         $itemInfo = get_sub_field('informacao_footer');
-                                        $itemLink = get_sub_field('link_do_item');
+                                        $itemLink = get_sub_field('link_info_rodape');
                                     ?> 
                                     <div class="info-item-wrapper">
                                         <a href="<?= $itemLink; ?>" class="info-item"><?= $itemInfo; ?></a>
