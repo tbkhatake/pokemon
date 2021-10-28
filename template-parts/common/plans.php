@@ -2,7 +2,7 @@
         $city = $_GET['city'];
         $city_args = array(
             'post_type' => 'city',
-            'name' => 'piracicaba'   
+            'name' => 'sumare'   
         );
     
         $city_query = new WP_Query($city_args);

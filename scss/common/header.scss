@@ -70,9 +70,13 @@
                         font-size: 18px;
                         font-weight: 300;
                         color: #373737;
-            
-                        &:nth-child(odd){
-                            color: #C3000A;
+                        
+                        &-active{
+                            color:#C3000A
+                        }
+
+                        &:hover{
+                            color:#C3000A
                         }
                     }
                 }
@@ -193,7 +197,7 @@
 
                 .nav-buttons{
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: flex-end;
                     width: 208px;
 
                     .button{
@@ -208,11 +212,15 @@
                         background-color: white;
                         border: none;
 
+                        
                         .button-img{
                             margin-right:16px;
                             height: 27px;
                             width: 27px;
                         }
+                    }
+                    .search{
+                        display: none;
                     }
                 }
             }

@@ -140,6 +140,13 @@
                         color: #C3000A;
                         display: none;
                         margin-top: 4px;
+                        &-email{
+                            margin-top: 4px;
+                            font-size: 12px;
+                            text-align: right;
+                            color: #C3000A;
+                            display: none;
+                        }
                     }
         
                     .tiny-form{
@@ -278,6 +285,13 @@
                             text-align: right;
                             color: #C3000A;
                             display: none;
+                            &-email{
+                                margin-top: 8px;
+                                font-size: 12px;
+                                text-align: right;
+                                color: #C3000A;
+                                display: none;
+                            }
                         }
             
                         .tiny-form{

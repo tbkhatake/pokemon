@@ -1,3 +1,13 @@
+let forWhoItens = document.querySelectorAll('.for-who-itens')
+
+window.addEventListener('load',()=>{
+    forWhoItens.forEach(el=>{
+        if(el.href == window.location.href){
+            el.classList.add('for-who-itens-active')
+        }
+    })
+})
+
 //Modal Active
 
 const menuBtn = document.querySelector('.header-nav-icon');
@@ -13,7 +23,6 @@ window.addEventListener("click", function(event) {
         modal.classList.remove('modal-active')
     }
 });
-
 
 //Mobile sub-menu active
 const subMenuSpace = document.querySelector('.sub-menu-space');
