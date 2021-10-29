@@ -5,6 +5,9 @@
 	max-height: 322px;
 	overflow: hidden;
 	text-align: center;
+	&-none{
+        display: none;
+    }
 	.section-title {
 		text-align: center;
         width: 160px;

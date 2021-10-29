@@ -4,6 +4,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    &-none{
+        display: none;
+    }
     
     .section-title{
         text-align: center;

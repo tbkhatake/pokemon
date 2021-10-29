@@ -1,6 +1,6 @@
 <?php $forms = get_field('forms')?>
-
-<section class="treatment-forms">
+<?php $forms_have = $forms['section-title'] == "" ? "treatment-forms-none" : "treatment-forms"?>
+<section class=<?=$forms_have?>>
     <h2 class="section-title"><?= $forms['section-title'];?></h2>
     <div class="forms-container">
         <form class="forms-wrapper" action="">

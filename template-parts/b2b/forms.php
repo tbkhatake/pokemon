@@ -1,6 +1,6 @@
 <?php $forms = get_field('forms')?>
-
-<section class="forms">
+<?php $forms_have = $forms['section-title'] == "" ? "forms-none" : "forms"?>
+<section class=<?=$forms_have?>>
     <h2 class="section-title"><?= $forms['section-title'];?></h2>
     <div class="forms-container">
         <img class="forms-bg" src="<?= $forms['forms-image']['url'];?>" alt="<?= $forms['forms-image']['title'];?>">

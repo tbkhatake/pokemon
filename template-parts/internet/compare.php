@@ -1,6 +1,7 @@
 <?php $compare = get_field('compare-plans')?>
 <?php $compare_title = get_field('compare-title')?>
-<section class="compare">
+<?php $compare_title_have = $compare_title == "" ? "compare-none" : "compare"?>
+<section class=<?=$compare_title_have?>>
     <h2 class="section-title"><?php echo($compare_title);?></h2>
     <div class=compare-mobile>
         <div class="cards">

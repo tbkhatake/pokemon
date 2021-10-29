@@ -1,8 +1,6 @@
-<?php 
-$ssTitle = get_field('titulo_autoatendimento');
-?>
-<section class="self-service">
-  
+<?php $ssTitle = get_field('titulo_autoatendimento');?>
+<?php $ssTitle_have = $ssTitle == "" ? "self-service-none" : "self-service"?>
+<section class=<?=$ssTitle_have?>>
     <div class="container">
         <h2 class="section-title"><?= $ssTitle; ?></h2>
         <div class="box-grid">

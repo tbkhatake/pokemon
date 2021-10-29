@@ -1,6 +1,7 @@
 <?php $section3 = get_field('section3-cards')?>
 <?php $section3_title = get_field('section3-title')?>
-<section class="know-our-services">
+<?php $section3_have = $section3_title == "" ? "know-our-services-none" : "know-our-services"?>
+<section class=<?=$section3_have?>>
     <h2 class="section-title"><?php echo($section3_title); ?></h2>
     <?php foreach($section3 as $card):?>
         <div class="know-our-services-cards">

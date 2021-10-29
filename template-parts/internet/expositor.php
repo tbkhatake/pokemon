@@ -2,8 +2,8 @@
 <?php $expositor_main_image = get_field('expositor-main-image')?>
 <?php $expositor_main_text = get_field('expositor-main-text')?>
 <?php $expositor_itens = get_field('expositor-itens')?>
-
-<section class="expositor">
+<?php $expositor_title_have = $expositor_title == "" ? "expositor-none" : "expositor"?>
+<section class=<?=$expositor_title_have?>>
 <h2 class="section-title"><?php echo($expositor_title);?></h2>
 <div class="section-wrapper">
 <div class="sq-wrapper sq-wrapper1">

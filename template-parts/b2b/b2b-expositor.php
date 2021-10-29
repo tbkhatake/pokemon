@@ -1,6 +1,6 @@
 <?php $b2b_expositor = get_field('b2b-expositor')?>
-
-<section class="know-our-services-cm">
+<?php $b2b_expositor_have = $b2b_expositor['section-title'] == "" ? "know-our-services-cm-none" : "know-our-services-cm"?>
+<section class=<?=$b2b_expositor_have?>>
     <h2 class="section-title"><?= $b2b_expositor['section-title']; ?></h2>
     <ul class="controls" id="kos-customize-controls" aria-label="Carousel Navigation" tabindex="0">
         <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">

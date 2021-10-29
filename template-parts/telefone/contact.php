@@ -1,7 +1,6 @@
-<?php 
-$ssTitle = get_field('titulo_contato');
-?>
-<section class="contact">
+<?php $ssTitle = get_field('titulo_contato');?>
+<?php $ssTitle_have = $ssTitle['section-title'] == "" ? "contact-none" : "contact"?>
+<section class=<?=$ssTitle_have?>>
     <div class="container">
         <h2 class="section-title"><?= $ssTitle; ?></h2>
         <div class="box-grid">

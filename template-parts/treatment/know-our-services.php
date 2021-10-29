@@ -1,6 +1,7 @@
 <?php $section3 = get_field('section3-cards')?>
 <?php $section3_title = get_field('section3-title')?>
-<section class="know-our-services-cm">
+<?php $section3_title_have = $section3_title == "" ? "know-our-services-cm-none" : "know-our-services-cm"?>
+<section class=<?=$section3_title_have?>>
     <h2 class="section-title"><?php echo($section3_title); ?></h2>
     <ul class="controls" id="kos-customize-controls" aria-label="Carousel Navigation" tabindex="0">
         <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">

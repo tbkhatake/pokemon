@@ -1,6 +1,9 @@
 .text-section {
 	padding: 60px 0;
 	position: relative;
+	&-none{
+        display: none;
+    }
 	.text-graphism-left {
 		display: none;
 	}

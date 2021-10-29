@@ -8,6 +8,9 @@
     border-bottom:5px #c3000a solid;
     padding: 20px 0;
     background-color: white;
+    &-none{
+        display: none;
+    }
     
     .section-title{
         text-align: center;

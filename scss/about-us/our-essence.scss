@@ -5,6 +5,10 @@
     display: flex;
     flex-direction: column;
 
+    &-none{
+        display: none;
+    }
+
     .section-title {
         display: inline-block;
         text-align: center;

@@ -2,6 +2,9 @@
 	padding: 60px 0;
 	text-align: center;
 	position: relative;
+	&-none{
+        display: none;
+    }
 	.path-graphism-left {
 		display: none;
 	}

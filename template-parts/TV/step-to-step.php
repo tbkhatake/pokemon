@@ -1,6 +1,6 @@
 <?php $step = get_field('step-section')?>
-
-<section class="step">
+<?php $step_have = $step['section-title'] == "" ? "step-none" : "step"?>
+<section class=<?=$step_have?>>
     <h2 class="section-title"><?= $step['section-title'];?></h2>
     <p class="section-text"><?= $step['section-text'];?></p>
     <div class="step-carousel">

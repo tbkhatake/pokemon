@@ -1,6 +1,6 @@
 <?php $whatsapp = get_field('whatsapp-section')?>
-
-<section class="whatsapp">
+<?php $whatsapp_have = $whatsapp['section-title'] == "" ? "whatsapp-none" : "whatsapp"?>
+<section class=<?=$whatsapp_have?>>
     <h2 class="section-title"><?= $whatsapp['section-title'];?></h2>
     <div class="content-wrapper">
         <img class="whatsapp-image" src="<?= $whatsapp['section-icon']['url'];?>" alt="<?= $whatsapp['section-icon']['title'];?>">

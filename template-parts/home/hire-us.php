@@ -1,8 +1,7 @@
-<?php 
-$section4 = get_field('section4-boxes');
-$section4_title = get_field('section4-title');
-?>
-<section class="hire-us">
+<?php $section4 = get_field('section4-boxes');?>
+<?php $section4_title = get_field('section4-title');?>
+<?php $section4_title_have = $section4_title == "" ? "hire-us-none" : "hire-us"?>
+<section class=<?=$section4_title_have?>>
     <div class="container">
         <h2 class="section-title"><?= $section4_title; ?></h2>
         <div class="box-grid">

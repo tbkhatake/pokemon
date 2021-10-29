@@ -7,7 +7,8 @@
     $content_cta = get_field('link_conteudo');
     $cta_label = get_field('rotulo_cta');
 ?>
-<section class="interactive-section">
+<?php $interactive_title_have = $interactive_title == "" ? "interactive-section-none" : "interactive-section"?>
+<section class=<?=$interactive_title_have?>>
         <div class="laptop-background"></div>
             <h2 class="section-title"><?= $interactive_title; ?></h2>
             
