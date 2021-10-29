@@ -8,9 +8,14 @@
             <?php foreach($forms['tiny-form'] as $tinyForm ): ?>
                 <?php if($tinyForm['form-text'] == "Email" || $tinyForm['form-text'] == "email" || $tinyForm['form-text'] == "email*"|| $tinyForm['form-text'] == "Email*"):?>
                     <div class="fields-wrapper">
-                    <input class="tiny-form-email" id="t-forms-input-email" type="email" name="<?= $tinyForm['form-text'];?>" required placeholder="<?= $tinyForm['form-text'];?>">
-                    <p class="t-required-email">Digite um e-mail válido*</p>
-                </div>
+                        <input class="tiny-form" id="t-forms-input-email" type="email" name="<?= $tinyForm['form-text'];?>" required placeholder="<?= $tinyForm['form-text'];?>">
+                        <p class="t-required-email">Digite um e-mail válido*</p>
+                    </div>
+                <?php elseif($tinyForm['form-text'] == "Telefone" || $tinyForm['form-text'] == "telefone" || $tinyForm['form-text'] == "Telefone*"|| $tinyForm['form-text'] == "telefone*"):?>
+                    <div class="fields-wrapper">
+                        <input class="tiny-form" id="t-forms-input-tel" type="tel" name="<?= $tinyForm['form-text'];?>" required placeholder="<?= $tinyForm['form-text'];?>">
+                        <p class="t-required-tel">Digite um telefone válido*</p>
+                    </div>
                 <?php else:?>
                 <div class="fields-wrapper">
                     <input class="tiny-form" id="t-forms-input" type="text" name="<?= $tinyForm['form-text'];?>" required placeholder="<?= $tinyForm['form-text'];?>">

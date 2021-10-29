@@ -68,6 +68,14 @@
                         color: #C3000A;
                         display: none;
                     }
+
+                    &-tel{
+                        margin-top: 8px;
+                        font-size: 12px;
+                        text-align: right;
+                        color: #C3000A;
+                        display: none;
+                    }
                 }
     
                 .tiny-form{
@@ -111,13 +119,31 @@
                 }
             }
     
-            .forms-button{
-                cursor: pointer;
-                border: none;
-                background-color:#C3000A ;
-                color: white;
-                padding: 6.5px 20px;
-                font-size: 15px;
+            .form-button-wrapper{
+                display: flex;
+                flex-direction: column;  
+                .forms-button{
+                    cursor: pointer;
+                    border: none;
+                    background-color:#C3000A ;
+                    color: white;
+                    padding: 6.5px 20px;
+                    font-size: 15px;
+                    &:hover{
+                        background-color:#800006 ;
+                    }
+                }
+                .button-validation{
+                    position: relative;
+                    top: -31px;
+                    margin-bottom: -31px;
+                    cursor: pointer;
+                    border: none;
+                    background-color:#a2a2a2 ;
+                    color: white;
+                    padding: 8.5px 20px;
+                    font-size: 15px;
+                }
             }
         }
     }
@@ -191,10 +217,19 @@
                         font-size: 16px;
                     }
                 }
-                .forms-button{
-                    margin: 0 auto;
-                    padding: 12.5px 40px;
-                    font-size: 20px;
+                .form-button-wrapper{   
+                    width: 100%;  
+                    align-items: center;
+                    .forms-button{
+                        padding: 12.5px 40px;
+                        font-size: 20px;
+                    }
+                    .button-validation{
+                        top: -49px;
+                        margin-bottom: -49px;
+                        padding: 14.5px 40px;
+                        font-size: 20px;
+                    }
                 }
             }
         }
