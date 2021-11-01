@@ -11,7 +11,9 @@
                 <h3 class="card-title"><?=$card['cards-title'];?></h3>
                 <span class="card-line"></span>
                 <p class="card-content"><?=$card['cards-content'];?></p>
-                <a class="card-button" href="<?=$card['cards-button-link'];?>"><?=$card['cards-button-text'];?></a>
+                <?php if($card['cards-button-text']):?>
+                    <a class="card-button" href="<?=$card['cards-button-link'];?>"><?=$card['cards-button-text'];?></a>
+                <?php endif;?>
             </div>
         </div>
     <?php endforeach; ?>

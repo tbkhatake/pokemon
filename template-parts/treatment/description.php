@@ -14,7 +14,9 @@
                     <p class="first-title"><?= $first_paragraph['paragraph-title']?></p>
                     <p class="first-text"><?= $first_paragraph['paragraph-text']?></p>
                 <?php endforeach;?>
-                <img class="content-image" src="<?= $block['block-image']['url']?>" alt="<?= $block['block-image']['title']?>">
+                <?php if($block['block-image']['url']):?>
+                    <img class="content-image" src="<?= $block['block-image']['url']?>" alt="<?= $block['block-image']['title']?>">
+                <?php endif;?>
                 <?php foreach($block['block-second-text'] as $second_paragraph ):?>
                     <p class="second-title"><?= $second_paragraph['paragraph-title']?></p>
                     <p class="second-text"><?= $second_paragraph['paragraph-text']?></p>
@@ -23,7 +25,9 @@
                     <?php foreach($block['block-features'] as $bFeatures):?>
                         <div class="feature">
                             <div class="icon-wrapper">
-                                <img class="feature-icon" src="<?= $bFeatures['feature-icon']['url']?>" alt="<?= $bFeatures['feature-image']['title']?>">
+                                <?php if($bFeatures['feature-icon']['url']):?>
+                                    <img class="feature-icon" src="<?= $bFeatures['feature-icon']['url']?>" alt="<?= $bFeatures['feature-image']['title']?>">
+                                <?php endif;?>
                             </div>
                             <p class="feature-text"><?= $bFeatures['feature-text']?></p>
                         </div>

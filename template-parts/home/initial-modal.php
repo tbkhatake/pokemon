@@ -29,7 +29,7 @@ $city_plans_query = new WP_Query($city_plans_args);
           
         </form>
     </div>
-    <div class="initial-forms" id="forms-modal">
+    <!-- <div class="initial-forms" id="forms-modal">
       <div class="forms-container">
           <form class="forms-wrapper" action="">
               <p class="forms-desc">Por gentileza, nos envie a sua cidade.</p>
@@ -58,7 +58,7 @@ $city_plans_query = new WP_Query($city_plans_args);
                 </div>
           </form>
       </div>
-    </div>
+    </div> -->
 </section>
 <?php wp_reset_postdata(); ?>
 

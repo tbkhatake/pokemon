@@ -6,5 +6,7 @@
         <img class="whatsapp-image" src="<?= $whatsapp['section-icon']['url'];?>" alt="<?= $whatsapp['section-icon']['title'];?>">
         <p class="whatsapp-tell"><?= $whatsapp['section-tell'];?></p>
     </div>
-    <a class="whatsapp-button" href="<?= $whatsapp['section-button']['url'];?>"> <?= $whatsapp['section-button']['title'];?></a>
+    <?php if($whatsapp['section-button']['title']):?>
+        <a class="whatsapp-button" href="<?= $whatsapp['section-button']['url'];?>"> <?= $whatsapp['section-button']['title'];?></a>
+    <?php endif;?>
 </section>

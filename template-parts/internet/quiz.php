@@ -25,7 +25,9 @@
             <div class="quiz-box">
                 <p class="start-question"><?=$quiz_main_question;?></p>
                 <span class="redline"></span>
-                <p class="start-button"><?=$quiz_main_button;?></p>
+                <?php if($quiz_main_button):?>
+                    <p class="start-button"><?=$quiz_main_button;?></p>
+                <?php endif;?>
             </div>
         </div>
     </form>
@@ -40,7 +42,9 @@
             <div class="total">
             </div>
         </div>
-        <p class="tryAgain-button"><?=$quiz_buttons['quiz-buttons-tryAgain']?></p>
+        <?php if($quiz_buttons['quiz-buttons-tryAgain']):?>
+            <p class="tryAgain-button"><?=$quiz_buttons['quiz-buttons-tryAgain']?></p>
+        <?php endif;?>
     </div>
 </section>
 <div class="quiz-graph-zIndex">

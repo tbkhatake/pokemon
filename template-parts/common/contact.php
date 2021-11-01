@@ -11,10 +11,14 @@
                         $icon = get_sub_field('icone_contato');
                         $info = get_sub_field('info_contato');
                     ?>
-                   <a class="button-link" href="<?= $buttonLink; ?>"> <button type="button" class="box-wrapper">
-                        <img class="box-icon" src="<?= $icon; ?>" alt="<?= $icon['alt']; ?>">
-                        <p class="box-info"><?= $info; ?></p>
-                    </button></a>
+                    <?php if($icon || $info):?>
+                    <a class="button-link" href="<?= $buttonLink; ?>"> 
+                        <button type="button" class="box-wrapper">
+                            <img class="box-icon" src="<?= $icon; ?>" alt="<?= $icon['alt']; ?>">
+                            <p class="box-info"><?= $info; ?></p>
+                        </button>
+                    </a>
+                    <?php endif; ?>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>

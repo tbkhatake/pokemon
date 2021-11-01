@@ -21,17 +21,23 @@
                         <p class="jobs-card-text"><?=$jobs_cards['card-text']?></p>
                         <div class="jj-wrapper">
                             <?php foreach($jobs_cards['card-jobs'] as $jj):?>
-                                <div class="jj-dropdown">
-                                    <p class="jj-dropdown-title"><?=$jj['job-title']?></p>
-                                    <img class="jj-dropdown-arrow" src="<?=get_template_directory_uri()?>/images/down-white-arrow.svg" alt="">
-                                </div>
-                                <div class="jj-content">
-                                    <p class="jj-desc"><?=$jj['job-desc']?></p>
-                                    <a class="jj-button" href="<?=$jj['job-button']['link']?>"><?=$jj['job-button']['title']?></a>
-                                </div>
+                                <?php if($jj['job-title']):?>
+                                    <div class="jj-dropdown">
+                                        <p class="jj-dropdown-title"><?=$jj['job-title']?></p>
+                                        <img class="jj-dropdown-arrow" src="<?=get_template_directory_uri()?>/images/down-white-arrow.svg" alt="">
+                                    </div>
+                                    <div class="jj-content">
+                                        <p class="jj-desc"><?=$jj['job-desc']?></p>
+                                        <?php if($jj['job-button']['title']):?>
+                                            <a class="jj-button" href="<?=$jj['job-button']['link']?>"><?=$jj['job-button']['title']?></a>
+                                        <?php endif;?>
+                                    </div>
+                                <?php endif;?>
                             <?php endforeach;?>
                         </div>
-                        <a class="jobs-card-button" href="<?=$jobs_cards['card-button']['link']?>"><?=$jobs_cards['card-button']['title']?></a>
+                        <?php if($jobs_cards['card-button']['title']):?>
+                            <a class="jobs-card-button" href="<?=$jobs_cards['card-button']['link']?>"><?=$jobs_cards['card-button']['title']?></a>
+                        <?php endif;?>
                     </div>
                 </div>
             <?php endforeach;?>
@@ -59,17 +65,23 @@
                                 <p class="jobs-desk-card-text"><?=$jobs_desk_cards['card-text']?></p>
                                 <div class="jj-desk-wrapper">
                                     <?php foreach($jobs_desk_cards['card-jobs'] as $jj_desk):?>
-                                        <div class="jj-desk-dropdown">
-                                            <p class="jj-desk-dropdown-title"><?=$jj_desk['job-title']?></p>
-                                            <img class="jj-desk-dropdown-arrow" src="<?=get_template_directory_uri()?>/images/down-white-arrow.svg" alt="">
-                                        </div>
-                                        <div class="jj-desk-content">
-                                            <p class="jj-desk-desc"><?=$jj_desk['job-desc']?></p>
-                                            <a class="jj-desk-button" href="<?=$jj_desk['job-button']['link']?>"><?=$jj['job-button']['title']?></a>
-                                        </div>
+                                        <?php if($jj_desk['job-title']):?>
+                                            <div class="jj-desk-dropdown">
+                                                <p class="jj-desk-dropdown-title"><?=$jj_desk['job-title']?></p>
+                                                <img class="jj-desk-dropdown-arrow" src="<?=get_template_directory_uri()?>/images/down-white-arrow.svg" alt="">
+                                            </div>
+                                            <div class="jj-desk-content">
+                                                <p class="jj-desk-desc"><?=$jj_desk['job-desc']?></p>
+                                            <?php if($jj_desk['job-button']['title']):?>
+                                                <a class="jj-desk-button" href="<?=$jj_desk['job-button']['link']?>"><?=$jj_desk['job-button']['title']?></a>
+                                            <?php endif;?>
+                                            </div>
+                                        <?php endif;?>
                                     <?php endforeach;?>
                                 </div>
-                                <a class="jobs-desk-card-button" href="<?=$jobs_desk_cards['card-button']['link']?>"><?=$jobs_desk_cards['card-button']['title']?></a>
+                                <?php if($jobs_desk_cards['card-button']['title']):?>
+                                    <a class="jobs-desk-card-button" href="<?=$jobs_desk_cards['card-button']['link']?>"><?=$jobs_desk_cards['card-button']['title']?></a>
+                                <?php endif;?>
                             </div>
                         </div>
                     </div>
