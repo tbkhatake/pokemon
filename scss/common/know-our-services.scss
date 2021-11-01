@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-bottom: 90px;
     &-none{
         display: none;
     }
@@ -55,7 +56,6 @@
                 font-size: 24px;
                 font-weight: 700;
                 line-height: 2.625rem;
-                margin-bottom: 16px;
             }
 
             .card-line{
@@ -89,10 +89,13 @@
         }
     }
     @media(min-width: 1200px){
+        max-width: 1200px;
         margin-top:60px;
-        margin-left: 64px;
-        margin-right: 64px;
-
+        //margin-left: 64px;
+        //margin-right: 64px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 120px;
         .section-title{
             width: 100%;
             font-size: 40px;
@@ -130,12 +133,17 @@
 
                 .card-title{
                     font-size: 28px;
+                    align-self: flex-start;
                 }
 
                 .card-line{
+                    box-sizing: border-box;
                     width: 264px;
-                    height: 5px;
+                    padding-top: 5px;
                     align-self: flex-start;
+                    display: block;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
                 }
 
                 .card-content{
@@ -149,6 +157,7 @@
                     margin-top: 40px;
                     border: 2px solid #C3000A;
                     transition: 0.3s ease-out;
+                    font-size: 20px;
                     &:hover{
                         transform: scale(1.1, 1.2);
                     }
