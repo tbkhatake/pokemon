@@ -62,7 +62,7 @@
     
         <h2 class="section-title"><?= $step['section-title'];?></h2>
         <p class="section-text"><?= $step['section-text'];?></p>
-        <div class="step-carousel">
+        <div class="step-carousel-sd">
             <?php foreach($step['section-itens'] as $key => $item):?>
                 <div class="step-carousel-wrapper">
                     <div class="items-wrapper">

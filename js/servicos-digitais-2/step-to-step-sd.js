@@ -1,7 +1,7 @@
-let haveStepSd = document.querySelector('.step-carousel');
+let haveStepSd = document.querySelector('.step-carousel-sd');
 if(haveStepSd){
-    let step_slider = tns({
-        container: '.step-carousel',
+    let step_slider_sd = tns({
+        container: '.step-carousel-sd',
         preventScrollOnTouch: 'auto',
         items:1,
         loop:false,
