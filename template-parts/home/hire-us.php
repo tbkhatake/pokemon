@@ -11,10 +11,14 @@
                 $icon = $box['box-icon'];
                 $info = $box['box-text'];
             ?>
-            <a class="button-link" href="<?= $buttonLink; ?>"> <button type="button" class="box-wrapper">
-                <img class="box-icon" src="<?= $icon['url']; ?>" alt="<?= $icon['alt']; ?>">
-                <p class="box-info"><?= $info; ?></p>
-            </button></a>
+            <?php if($icon || $info):?>
+                <a class="button-link" href="<?= $buttonLink; ?>"> 
+                    <button type="button" class="box-wrapper">
+                        <img class="box-icon" src="<?= $icon['url']; ?>" alt="<?= $icon['alt']; ?>">
+                        <p class="box-info"><?= $info; ?></p>
+                    </button>
+                </a>
+            <?php endif; ?>
             <?php endforeach; ?>
         </div>
     </div>

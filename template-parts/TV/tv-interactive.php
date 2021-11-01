@@ -29,7 +29,9 @@
     <div class="content">
         <h3 class="content-title"><?= $content_title; ?></h3>
         <p class="content-description"><?= $content_description; ?></p>
-        <a class="content-cta" href="<?= $content_cta; ?>"><?= $cta_label; ?></a>
+        <?php if($cta_label):?>
+            <a class="content-cta" href="<?= $content_cta; ?>"><?= $cta_label; ?></a>
+        <?php endif;?>
     </div>
 </section>
 <div class="tv-interactive-graph">

@@ -1,5 +1,5 @@
 <?php $b2b_expositor = get_field('b2b-expositor')?>
-<?php $b2b_expositor_have = $b2b_expositor['section-title'] == "" ? "know-our-services-cm-none" : "know-our-services-cm"?>
+<?php $b2b_expositor_have = $b2b_expositor['section-title'] == "" ? "b2b-expositor-none" : "b2b-expositor"?>
 <section class=<?=$b2b_expositor_have?>>
     <h2 class="section-title"><?= $b2b_expositor['section-title']; ?></h2>
     <ul class="controls" id="kos-customize-controls" aria-label="Carousel Navigation" tabindex="0">
@@ -13,14 +13,16 @@
     <div class="slider-container">
         <div class="kos-slider">
             <?php foreach($b2b_expositor['section-cards'] as $card):?>
-                <div class="know-our-services-cm-cards">
+                <div class="b2b-expositor-cards">
                     <img class="card-img" src="<?=$card['cards-img']['url'];?>" alt="imagem">
                     <img class="card-desk-img" src="<?=$card['cards-desk-img']['url'];?>" alt="imagem">
                     <div class="card-wraper">
                         <h3 class="card-title"><?=$card['cards-title'];?></h3>
                         <span class="card-line"></span>
                         <p class="card-content"><?=$card['cards-content'];?></p>
-                        <a class="card-button" href="<?=$card['cards-button-link'];?>"><?=$card['cards-button-text'];?></a>
+                        <?php if($card['cards-button-text']):?>
+                            <a class="card-button" href="<?=$card['cards-button-link'];?>"><?=$card['cards-button-text'];?></a>
+                        <?php endif;?>
                     </div>
                 </div>
             <?php endforeach; ?>

@@ -19,6 +19,10 @@
     .section-text{
         display: none;
     }
+    .tns-inner {
+        margin: 0 !important;
+        
+    }
     .tns-outer{//pra fazer o slider ficar no centro
         width: 100%;
 
@@ -48,13 +52,12 @@
         }
     }
     
-    .step-carousel{
+    .step-carousel-sd{
         margin-top: 40px;
         width: 100%;
         overflow: hidden;
         position: relative;
         .step-carousel-wrapper{
-            
             .items-wrapper{
                 width: 100%;
                 position: relative;
@@ -217,7 +220,7 @@
             }
         }
         
-        .step-carousel{
+        .step-carousel-sd{
             margin-right: 90px;
             margin-top: 80px;
             margin-bottom: 64px;
