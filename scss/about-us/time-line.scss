@@ -6,6 +6,10 @@
     position: relative;
     width: 100%;
 
+    &-none{
+        display: none;
+    }
+
     .section-title {
         text-align: center;
         width: 190px;

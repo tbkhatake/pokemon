@@ -1,5 +1,6 @@
 <?php $time_line_section = get_field('time-line-section')?>
-<section class="time-line">
+<?php $time_line_have = $time_line_section['section-title'] == "" ? "time-line-none" : "time-line"?>
+<section class=<?=$time_line_have?>>
 <h2 class="section-title"><?php echo($time_line_section['section-title']); ?></h2>
     <div class="time-line-mobile ">
         <?php foreach($time_line_section['section-cards'] as $tl_cards):?>

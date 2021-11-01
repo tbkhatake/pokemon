@@ -6,6 +6,10 @@
 	width: 100%;
 	text-align: center;
 
+	&-none{
+        display: none;
+    }
+
 	.section-title {
 		margin-bottom: 24px;
 		text-align: center;
@@ -220,6 +224,10 @@
 						align-items: center;
 						justify-content: center;
 						color: #c3000a;
+						&:hover{
+							background-color:#c3000a ;
+							color: white;
+						}
 						.box-icon {
 							width: 32px;
 							height: 32px;

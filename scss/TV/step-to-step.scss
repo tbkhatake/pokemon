@@ -4,6 +4,9 @@
     flex-direction: column;
     align-items: center;
     position: relative;
+    &-none{
+        display: none;
+    }
     
     .section-title{
         text-align: center;
@@ -180,7 +183,7 @@
             margin-top: 40px;
             font-size: 20px;
             font-weight: 300;
-            line-height: 1.25rem;
+            line-height: 1.375rem;
             width: 870px;
         }
 
@@ -190,7 +193,7 @@
                 justify-content: flex-end;
                 box-sizing: border-box;
                 padding: 0 100px;
-                bottom: 11px;
+                bottom: 14px;
     
                 button{
                     margin-left:16px;
@@ -224,7 +227,7 @@
                             left: 39px;
                             top: 46px;
                             width: 182px;
-                            height: 300px;
+                            height: 318px;
                             background-color: white;
                             z-index: -1;
                         }
@@ -261,7 +264,7 @@
                             margin-top: 24px;
                             font-size: 18px;
                             font-weight: 300;
-                            line-height: 1.375rem;
+                            line-height: 1.406rem;
                             color: #373737;
                         }
                     }

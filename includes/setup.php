@@ -21,12 +21,12 @@ function raccoon_enqueue_styles(){
 	}else if(is_page_template('pages/b2b.php')){
 		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/b2b/bundle.css' );
 	
-	}else if(is_page_template('pages/servicos-digitais.php')){
-		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/servicos-digitais/bundle.css' );
-	
 	}else if(is_page_template('pages/servicos-digitais-2.php')){
 		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/servicos-digitais-2/bundle.css' );
-	
+
+	}else if(is_page_template('pages/atendimento.php')){
+		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/treatment/bundle.css' );
+
 	}
 	wp_enqueue_script( 'theme-common-js', get_template_directory_uri().'/dist/bundle.js', array(), false, true);
 }

@@ -1,5 +1,6 @@
 <?php $gallery_section = get_field('gallery-section')?>
-<section class="gallery">
+<?php $gallery_section_have = $gallery_section['section-title'] == "" ? "gallery-none" : "gallery"?>
+<section class=<?=$gallery_section_have?>>
     <h2 class="section-title"><?php echo($gallery_section['section-title']); ?></h2>
     <div class="gallery-mobile">
         <div class="gallery-slider">

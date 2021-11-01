@@ -5,6 +5,9 @@
 	text-align: center;
 	display: flex;
 	justify-content: center;
+	&-none{
+        display: none;
+    }
 
 	.section-title {
         width: 160px;

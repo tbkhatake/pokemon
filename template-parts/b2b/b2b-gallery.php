@@ -1,5 +1,6 @@
 <?php $b2b_gallery = get_field('b2b-gallery')?>
-<section class="b2b-gallery">
+<?php $b2b_gallery_have = $b2b_gallery['section-title'] == "" ? "b2b-gallery-none" : "b2b-gallery"?>
+<section class=<?=$b2b_gallery_have?>>
     <h2 class="section-title"><?= $b2b_gallery['section-title']; ?></h2>
     <div class="slider-container">
         <div class="b2b-gallery-controls" aria-label="Carousel Navigation" tabindex="0">

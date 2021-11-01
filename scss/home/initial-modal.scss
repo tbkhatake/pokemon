@@ -1,0 +1,367 @@
+.initial-modal{
+    display: none;
+}
+
+.initial-modal--active{
+    left: 0;
+    top: 0;
+    font-size: 16px;
+    z-index: 1000;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C3000A;
+}
+
+.modal__content{
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+.modal__logo{
+    margin-bottom: 24px;
+}
+
+.modal__cities{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-height: 50vh;
+    max-height:320px;
+}
+
+.modal__cities::-webkit-scrollbar{
+    width: 10px;
+}
+
+.modal__cities::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+.modal__cities::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.modal__search{
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 24px;
+    border: 1px solid #C3000A;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.modal__city{
+    transition: 0.3s;
+    padding: 12px 0 12px 14px;
+    cursor: pointer;
+}
+
+.modal__city:hover{
+    transform: scale(1.1);
+    color: #ffd700;
+    font-weight: bold;
+    padding-left: 5%;
+}
+
+.modal__notfound-city{
+    margin-top: 32px;
+    text-align: center;
+    font-weight: bold;
+    color: #ffd700;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.modal__notfound-city:hover{
+    padding-left: 0;
+}
+.initial-modal{
+    .initial-forms{
+        display: none;
+        position: absolute;
+        z-index: 1001;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0,0,0,0.3); 
+        &-active{
+            display: flex;
+        }
+        .forms-container{
+           
+            .forms-wrapper{
+                position: relative;
+                width: 280px;
+                margin-top: 60px;
+                height: 55vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0px 3px 6px #C3000A33;
+                padding: 24px 16px;
+                box-sizing: border-box;
+                background-color: white;
+        
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: -5px;
+                    left: -5px;
+                    background-color: #ffd700;
+                    z-index: -1;
+                }
+        
+                .forms-desc{
+                    margin-bottom: 16px;
+                    font-size: 16px;
+                }
+        
+                .fields-wrapper{
+                    width: 100%;
+                    margin-bottom: 24px;
+                    height: 46px;
+
+                    &-state{
+                        display: flex;
+                    }
+        
+                    .required{
+                        font-size: 12px;
+                        text-align: right;
+                        color: #C3000A;
+                        display: none;
+                        margin-top: 4px;
+                        &-email{
+                            margin-top: 4px;
+                            font-size: 12px;
+                            text-align: right;
+                            color: #C3000A;
+                            display: none;
+                        }
+                        &-tel{
+                            margin-top: 4px;
+                            font-size: 12px;
+                            text-align: right;
+                            color: #C3000A;
+                            display: none;
+                        }
+                        &-address{
+                            margin-top: 4px;
+                            font-size: 12px;
+                            text-align: right;
+                            color: #C3000A;
+                            display: none;
+                        }
+                    }
+        
+                    .tiny-form{
+                        width: 100%;
+                        border: 1px #C9C9C9 solid;
+                        outline: none;
+                        padding: 10px 10px;
+                        box-sizing: border-box;
+                        height: 30px;
+                        font-weight: 300;
+                        &-city{
+                            width: 70%;
+                        }
+                        &-state{
+                            width:30%;
+                        }
+                        &::placeholder{
+                            font-weight: 300;
+                        }
+                    }
+                }
+                .form-button-wrapper{
+                    display: flex;
+                    flex-direction: column;  
+                    .forms-button{
+                        cursor: pointer;
+                        border: none;
+                        background-color:#C3000A ;
+                        color: white;
+                        padding: 6.5px 20px;
+                        font-size: 15px;
+                        &:hover{
+                            background-color:#800006 ;
+                        }
+                    }
+                    .button-validation{
+                        position: relative;
+                        top: -31px;
+                        margin-bottom: -31px;
+                        cursor: pointer;
+                        border: none;
+                        background-color:#a2a2a2 ;
+                        color: white;
+                        padding: 8.5px 20px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal__content{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 85%;
+        max-width: 1160px;
+        height: 85%;
+    }
+
+    .modal__logo{
+        width: 50%;
+    }
+
+    .modal__cities::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #FFFFFF;
+    }
+
+    .modal__cities::-webkit-scrollbar-thumb:hover {
+        background-color: #ffd700;
+    }
+
+    .modal__cities-box{
+        width: 40%;
+    }
+
+    .modal__search{
+        text-align: center;
+        margin-bottom: 48px;
+        font-size: 21px;
+    }
+
+    .modal__cities{
+        margin-bottom: 48px;
+        max-height:325px;
+    }
+
+    .modal__city{
+        padding: 12px 0 12px 56px;
+        font-size: 21px;
+    } 
+
+    .modal__notfound-city{
+        padding: 12px;
+        font-size: 21px;
+        cursor: pointer;
+    }
+
+    .initial-modal{
+        box-sizing: border-box;
+        .initial-forms{
+            align-items: center;
+            background-color: rgba(0,0,0,0.3);
+            box-sizing: border-box; 
+            @media(min-width:1366px){
+            }
+            &-active{
+                display: flex;
+            }
+            .forms-container{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                width: 85%;
+                max-width: 1160px;
+                .forms-wrapper{
+                    position: relative;
+                    width: 465px;
+                    margin-top: -50px;
+                    height: 480px;
+                    padding: 40px 20px;
+            
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: -5px;
+                        left: -5px;
+                        background-color: #ffd700;
+                        z-index: -1;
+                    }
+            
+                    .forms-desc{
+                        margin-bottom: 35px;
+                        font-size: 20px;
+                    }
+            
+                    .fields-wrapper{
+                        width: 100%;
+                        height: 50px;
+                        margin-bottom: 24px;
+    
+                        &-state{
+                            display: flex;
+                        }
+            
+                        .required{
+                            margin-top: 8px;
+                            font-size: 12px;
+                            text-align: right;
+                            color: #C3000A;
+                            display: none;
+                            &-email{
+                                margin-top: 8px;
+                                font-size: 12px;
+                                text-align: right;
+                                color: #C3000A;
+                                display: none;
+                            }
+                        }
+            
+                        .tiny-form{
+                            width: 100%;
+                            border: 1px #C9C9C9 solid;
+                            outline: none;
+                            padding: 10px 10px;
+                            box-sizing: border-box;
+                            height: 30px;
+                            font-weight: 300;
+                            font-size:18px;
+                            &-city{
+                                width: 70%;
+                            }
+                            &-state{
+                                width:30%;
+                            }
+                            &::placeholder{
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+                .form-button-wrapper{   
+                    width: 100%;  
+                    align-items: center;
+                    .forms-button{
+                        padding: 12.5px 40px;
+                        font-size: 20px;
+                    }
+                    .button-validation{
+                        top: -49px;
+                        margin-bottom: -49px;
+                        padding: 14.5px 40px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

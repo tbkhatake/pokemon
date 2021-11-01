@@ -6,7 +6,9 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-
+	&-none{
+        display: none;
+    }
     .section-title {
         text-align: center;
         width: 160px;

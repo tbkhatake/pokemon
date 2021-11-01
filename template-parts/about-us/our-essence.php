@@ -1,5 +1,6 @@
 <?php $our_essence_section = get_field('our-essence-section')?>
-<section class="our-essence">
+<?php $our_essence_have = $our_essence_section['section-title'] == "" ? "our-essence-none" : "our-essence"?>
+<section class=<?=$our_essence_have?>>
     <h2 class="section-title"><?php echo($our_essence_section['section-title']); ?></h2>
     <div class="os-mobile">
         <div class="os-slider">

@@ -5,6 +5,9 @@
     align-items: center;
     position: relative;
     height: 650px;
+    &-none{
+        display: none;
+    }
 
     .slider-cont{
         width: 100%;

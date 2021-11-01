@@ -2,6 +2,11 @@
 <html <?= get_language_attributes() ?>>
 
 <head>
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-TLFR9MS');</script>
    	<meta charset="<?php bloginfo( 'charset' ) ?>" />
    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
@@ -10,13 +15,15 @@
 </head>
 
 <body <?php body_class() ?>>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLFR9MS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="header">
 <?php $menuItens = get_field('header-links','options')?>
 <?php $forWhoLinks = get_field('header-forWhoLinks','options')?>
 
 	<div class="header-wrapper">
 		<?php $logo = get_field('header-logo','options')?>
-		<img class="header-logo" src="<?=$logo['url']?>" alt="logo">
+		<a class="header-nav-link" href="https://desktop.raccoon-stage.com"><img class="header-logo" src="<?=$logo['url']?>" alt="logo"></a>
 		<img class="header-nav-icon" src="<?=get_template_directory_uri()?>/images/menu.png" alt="menu">
 		<div class="header-nav">
 			<div class="nav-up">
@@ -30,7 +37,7 @@
 						<?php
 							$city_plans_args = array(
 								'post_type' => 'city',
-								'orderby' => 'date',
+								'orderby' => 'name',
 								'order'   => 'ASC',
 							);
 
@@ -85,7 +92,7 @@
 						<?php
 							$city_plans_args = array(
 								'post_type' => 'city',
-								'orderby' => 'date',
+								'orderby' => 'name',
 								'order'   => 'ASC',
 							);
 

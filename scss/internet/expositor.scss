@@ -5,6 +5,9 @@
     align-items: center;
     position: relative;
     width: 100%;
+    &-none{
+        display: none;
+    }
 
     .section-title {
         text-align: center;

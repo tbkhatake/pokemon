@@ -2,6 +2,9 @@
 	margin-top: 64px;
 	text-align: center;
 	justify-content: center;
+	&-none{
+        display: none;
+    }
 	.section-title {
 		font-size: 24px;
 		line-height: 36px;
@@ -103,11 +106,13 @@
 		}
 	}
 	.container {
-		margin: 0;
-		padding: 0 34px;
+		box-sizing: border-box;
+		margin: 0 auto;
+		padding: 0 24px;
 		.content {
 			margin-bottom: 70px;
 			text-align: center;
+	
 			.content-title {
 				font-size: 24px;
 				line-height: 36px;
@@ -138,6 +143,7 @@
 			}
 		}
 	}
+	
 }
 @media (min-width: 1200px) {
     .interactive-section {
@@ -244,7 +250,8 @@
 					
 				}
 			}
-		} 
+		}
+        
     }
 }
 

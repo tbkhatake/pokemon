@@ -4,8 +4,8 @@
 <?php $quiz_main_question = get_field('quiz-main-question')?>
 <?php $quiz_main_button = get_field('quiz-main-button')?>
 <?php $quiz_buttons = get_field('quiz-buttons')?>
-
-<section class="quiz">
+<?php $quiz_title_have = $quiz_title == "" ? "quiz-none" : "quiz"?>
+<section class=<?=$quiz_title_have?>>
     <h2 class="section-title"><?php echo($quiz_title); ?></h2>
     <div class="img-desk">
         <span class="span span-1"></span>

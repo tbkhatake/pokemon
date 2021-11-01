@@ -5,6 +5,7 @@
     background-color: transparent;
     transform: translateY(-100%);
     transition:0.5s;
+    top: 30px;
 
     &-active{
         transform: translateY(0);
@@ -12,12 +13,16 @@
 
     .modal-area{
         background-color: white;
+        .container{
+            width: unset;
+        }
     }
 
     .modal-search{
         padding-top: 9px;
         display: flex;
         position: relative;
+        display: none;
     }    
 
     .modal-input{

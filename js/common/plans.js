@@ -84,6 +84,32 @@ if(havePlans){
         plansSlider.classList.add('plans-slider');
         cityFetchPlansData("Internet")
     })
+    let modalCity = document.querySelectorAll('.modal__city')
+    modalCity.forEach(city=>{
+        city.addEventListener('click', ()=>{
+            let refCity = city.innerText.toLowerCase().split(' ').join('-').split('ã').join('a').split('é').join('e')
+            cityName = refCity
+            cardsWrapper.innerHTML = ' ';
+            plansSlider = document.createElement('div');
+            plansSlider.classList.add('plans-slider');
+            cityFetchPlansData("Internet")
+        })
+    })
+
+    let getCookies = localStorage.getItem("cookies")
+    let cityStorage = localStorage.getItem("city")
+
+    window.addEventListener("pageshow",()=>{
+        if(getCookies == "accepted"){
+            navCitySelect.selectedIndex = cityStorage
+            cityName = navCitySelect.value
+            cardsWrapper.innerHTML = ' ';
+            plansSlider = document.createElement('div');
+            plansSlider.classList.add('plans-slider');
+            cityFetchPlansData("Internet")
+        }
+    })
+
     function fetchPlansData(planType){
         fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName)
         //fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
@@ -265,8 +291,8 @@ if(havePlans){
             let response = data.json();
             response.then(resp => {
                 if(resp == null){
-                    cityName = 'piracicaba'
-                    cityFetchPlansData("Internet")
+                    cityName = 'sumare'
+                    cityFetchPlansData("internet")
                 }else{
                     cards = resp.cards;
                     cards.forEach(function(el){

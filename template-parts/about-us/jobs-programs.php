@@ -1,6 +1,6 @@
 <?php $jobs_programs = get_field('jobs-programs')?>
-
-<section class="jobs-programs">
+<?php $jobs_programs_have = $jobs_programs['section-title'] == "" ? "jobs-programs-none" : "jobs-programs"?>
+<section class=<?=$jobs_programs_have?>>
     <h2 class="section-title"><?=$jobs_programs['section-title'];?></h2>
     <div class="jp-mobile">
         <div class="jp-select-wrapper">

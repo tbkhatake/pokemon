@@ -1,7 +1,6 @@
-<?php
-    $values_section = get_field('values-section')
-?>
-<section class="values-section">
+<?php $values_section = get_field('values-section')?>
+<?php $values_have = $values_section['section-title'] == "" ? "values-section-none" : "values-section"?>
+<section class=<?=$values_have?>>
     <h2 class="section-title"><?= $values_section['section-title']; ?></h2>
     <div class="values-slides-wrapper">
         <?php foreach($values_section['section-cards'] as $values_cards):?>
