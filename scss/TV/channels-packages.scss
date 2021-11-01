@@ -1,5 +1,7 @@
-.channels-packages{
-    margin-top: 64px;
+.channels-packages.container{
+    box-sizing: border-box;
+    margin: 64px 0 0 0;
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
     align-items: center;

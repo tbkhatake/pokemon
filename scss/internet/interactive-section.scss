@@ -102,35 +102,39 @@
 			}
 		}
 	}
-	.content {
-		margin-bottom: 70px;
-		text-align: center;
-		.content-title {
-			font-size: 24px;
-			line-height: 36px;
-			color: #c3000a;
-			max-width: 270px;
-			display: inline-block;
-			margin-bottom: 16px;
-		}
-		.content-description {
-			font-size: 15px;
-			font-weight: 300;
-			color: #373737;
-			line-height: 22.5px;
-			margin-bottom: 31px;
-		}
-		.content-cta {
-			display: inline-block;
-			font-size: 15px;
-			color: #c3000a;
-			padding: 6.5px 18.3px;
-			border: 1px solid #c3000a;
-			transition: 0.3s ease-out;
-			&:hover {
-				background-color: #c3000a;
-				transform: scale(1.1, 1.2);
-				color: white;
+	.container {
+		margin: 0;
+		padding: 0 34px;
+		.content {
+			margin-bottom: 70px;
+			text-align: center;
+			.content-title {
+				font-size: 24px;
+				line-height: 36px;
+				color: #c3000a;
+				max-width: 270px;
+				display: inline-block;
+				margin-bottom: 16px;
+			}
+			.content-description {
+				font-size: 15px;
+				font-weight: 300;
+				color: #373737;
+				line-height: 22.5px;
+				margin-bottom: 31px;
+			}
+			.content-cta {
+				display: inline-block;
+				font-size: 15px;
+				color: #c3000a;
+				padding: 6.5px 18.3px;
+				border: 1px solid #c3000a;
+				transition: 0.3s ease-out;
+				&:hover {
+					background-color: #c3000a;
+					transform: scale(1.1, 1.2);
+					color: white;
+				}
 			}
 		}
 	}
@@ -217,29 +221,30 @@
                 }
             }
         }
-        .content {
-			margin-bottom: 0;
-            .content-title {
-                font-size: 36px;
-                line-height: 44px;
-                max-width: 400px;
-                margin-bottom: 40px;
-            }
-            .content-description {
-                font-size: 20px;
-                line-height: 24px;
-                max-width: 400px;
-                //margin: 0 auto 40px;
-                margin-bottom: 40px;
-            }
-            .content-cta {
-                font-size: 20px;
-                color: #c3000a;
-                padding: 12.5px 41px;
-                border: 2px solid #c3000a;
-                
-            }
-        }
+		.container {
+			.content {
+				margin-bottom: 0;
+				.content-title {
+					font-size: 36px;
+					line-height: 44px;
+					max-width: 400px;
+					margin-bottom: 40px;
+				}
+				.content-description {
+					font-size: 20px;
+					line-height: 24px;
+					max-width: 400px;
+					margin: 0 auto 40px;
+				}
+				.content-cta {
+					font-size: 20px;
+					color: #c3000a;
+					padding: 12.5px 41px;
+					border: 2px solid #c3000a;
+					
+				}
+			}
+		} 
     }
 }
 
