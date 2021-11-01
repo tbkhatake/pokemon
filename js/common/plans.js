@@ -122,8 +122,10 @@ if(havePlans){
                     cardOutside.classList.add('card-outside');
                     let card = document.createElement('div');
                     card.classList.add('card');
-                    if( el.mvp == true){
+                    if(el.mvp == true){
                         card.classList.add('card-active');
+                    }
+                    if(el.mvpDest){
                         let dest = document.createElement('div');
                         dest.classList.add('card-dest');
                         dest.innerText = el.mvpDest;
@@ -302,8 +304,10 @@ if(havePlans){
 
                         let card = document.createElement('div');
                         card.classList.add('card');
-                        if( el.mvp == true){
+                        if(el.mvp == true){
                             card.classList.add('card-active');
+                        }
+                        if(el.mvpDest){
                             let dest = document.createElement('div');
                             dest.classList.add('card-dest');
                             dest.innerText = el.mvpDest;

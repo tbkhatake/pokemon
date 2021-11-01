@@ -82,6 +82,9 @@
                 <?php }else{ ?>   
                     <div class="card-outside">
                         <div class="card">
+                            <?php if($card['card2-mvpText']):?>
+                                <div class="card-dest"><?= $card['card2-mvpText']?></div>
+                            <?php endif;?>
                             <h3 class="card-speed"><?= $card['card2-speed']?></h3>
                             <p class="card-price"><?= $card['card2-price']?></p>
                             <p class="card-text"><?= $card['card2-text']?></p>
