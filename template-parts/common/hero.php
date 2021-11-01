@@ -22,7 +22,9 @@
                                 <div class="hero-content">
                                     <p class="hero-title"><?= $title_hero; ?> </p>
                                     <p class="hero-description"><?= $description_hero; ?> </p>
-                                    <a href="<?= $cta_hero_link; ?>" class="hero-cta"><?= $cta_hero_name; ?> </a>
+                                    <?php if($cta_hero_name):?>
+                                        <a href="<?= $cta_hero_link; ?>" class="hero-cta"><?= $cta_hero_name; ?> </a>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>

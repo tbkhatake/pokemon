@@ -19,7 +19,9 @@
                         <p class="jp-card-title"><?=$jp_cards['card-title']?></p>
                         <span class="jp-card-red-line"></span>
                         <p class="jp-card-text"><?=$jp_cards['card-text']?></p>
-                        <a class="jp-card-button" href="<?=$jp_cards['card-button']['link']?>"><?=$jp_cards['card-button']['title']?></a>
+                        <?php if($jp_cards['card-button']['title']):?>
+                            <a class="jp-card-button" href="<?=$jp_cards['card-button']['link']?>"><?=$jp_cards['card-button']['title']?></a>
+                        <?php endif;?>
                     </div>
                 </div>
             <?php endforeach;?>
@@ -45,7 +47,9 @@
                                 <p class="jp-desk-card-title"><?=$jp_desk_cards['card-title']?></p>
                                 <span class="jp-desk-card-red-line"></span>
                                 <p class="jp-desk-card-text"><?=$jp_desk_cards['card-text']?></p>
-                                <a class="jp-desk-card-button" href="<?=$jp_desk_cards['card-button']['link']?>"><?=$jp_desk_cards['card-button']['title']?></a>
+                                <?php if($jp_cards['card-button']['title']):?>
+                                    <a class="jp-desk-card-button" href="<?=$jp_desk_cards['card-button']['link']?>"><?=$jp_desk_cards['card-button']['title']?></a>
+                                <?php endif;?>
                             </div>
                         </div>
                     </div>
