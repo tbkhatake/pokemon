@@ -64,8 +64,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<p>Buscar</p>
 					</button>
 					<button class="button login">
+						<?php
+							$login_link = get_field('link_login','options');
+						?>
 						<img class="button-img" src="<?=get_template_directory_uri()?>/images/login.svg" alt="login">
-						<p>Login</p>
+						<a target="_blank" class="link-login" href="<?= $login_link['url']; ?>" ><?= $login_link['title']; ?></a>
+						
 					</button>
 				</div>
 			</div>
@@ -106,7 +110,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<?php wp_reset_postdata();?>
 						<img class="cities-image" src="<?=get_template_directory_uri()?>/images/down-arrow-mobile.svg" alt="seta para baixo">
 					</div>
-						<input class="modal-login-button" type="button" value="Login">
+						<!--<input class="modal-login-button" type="button" value="Login">-->
+						<a target="_blank" class="modal-login-button" href="<?= $login_link['url']; ?>"><?= $login_link['title']; ?></a>
 				</form>
 				<div class="modal-for-who">
 					<?php foreach($forWhoLinks as $forWhoItens): ?>
