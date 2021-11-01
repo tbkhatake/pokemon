@@ -2,7 +2,6 @@
 <?php $section5_slides = get_field('section5-slides')?>
 <?php $section5_title_have = $section5_title == "" ? "know-super-desktop-none" : "know-super-desktop"?>
 <section class=<?=$section5_title_have?>>
-<section class="know-super-desktop">
     <h2 class="section-title"><?php echo($section5_title); ?></h2>
     <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
         <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">

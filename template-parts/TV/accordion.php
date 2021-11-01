@@ -1,7 +1,6 @@
 <?php $ssTitle = get_field('titulo_acordeon');?>
 <?php $ssTitle_have = $ssTitle['section-title'] == "" ? "tv-accordion-none" : "tv-accordion"?>
 <section class=<?=$ssTitle_have?>>
-<section class="tv-accordion">
     <h2 class="section-title"><?= $ssTitle; ?></h2>
     <div class="accordion-wrapper">
         <?php if(have_rows('repetidor_acordeon')): ?>
