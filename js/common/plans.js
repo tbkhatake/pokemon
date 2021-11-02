@@ -43,7 +43,9 @@ if(havePlans){
         cardsWrapper.innerHTML = ' ';
         plansSlider = document.createElement('div');
         plansSlider.classList.add('plans-slider');
-        fetchPlansData(plansSelect.value);
+        console.log(plansSelect.value.split('+').join('e'));
+        let plansSelectValue = plansSelect.value.toLowerCase().split('+').join('e')
+        console.log(fetchPlansData(plansSelectValue));
     })
     let plans = [];
     plansDeskOptions.forEach(el => {
@@ -71,7 +73,7 @@ if(havePlans){
         cardsWrapper.innerHTML = ' ';
         plansSlider = document.createElement('div');
         plansSlider.classList.add('plans-slider');
-        cityFetchPlansData("Internet")
+        cityFetchPlansData("internet")
         plans.forEach(el =>{
             el.classList.remove('desk-options-active');
         })
@@ -82,8 +84,8 @@ if(havePlans){
         cardsWrapper.innerHTML = ' ';
         plansSlider = document.createElement('div');
         plansSlider.classList.add('plans-slider');
-        plansSelect.selectedIndex = "Internet";
-        cityFetchPlansData("Internet")
+        plansSelect.selectedIndex = "internet";
+        cityFetchPlansData("internet")
     })
     let modalCity = document.querySelectorAll('.modal__city')
     modalCity.forEach(city=>{
@@ -93,7 +95,7 @@ if(havePlans){
             cardsWrapper.innerHTML = ' ';
             plansSlider = document.createElement('div');
             plansSlider.classList.add('plans-slider');
-            cityFetchPlansData("Internet")
+            cityFetchPlansData("internet")
         })
     })
 
@@ -107,7 +109,7 @@ if(havePlans){
             cardsWrapper.innerHTML = ' ';
             plansSlider = document.createElement('div');
             plansSlider.classList.add('plans-slider');
-            cityFetchPlansData("Internet")
+            cityFetchPlansData("internet")
         }
     })
 
