@@ -1,7 +1,9 @@
 <?php
 $city_args = array(
     'post_type' => 'city',
-    'posts_per_page' => -1
+    'posts_per_page' => -1,
+    'orderby' => 'title',
+    'order' => 'ASC',
 );
 
 $city_query = new WP_Query($city_args);
@@ -78,8 +80,9 @@ $city_query = new WP_Query($city_args);
                 <div class="cta-wrapper">
                 <?php
                     $mapUrl = get_field("link_mapa");
+                    $cta_map = get_field("texto_link");
                 ?>
-                    <a id="cityLink" href="<?= $first_city_link; ?>" class="map-link">Veja o plano ideal para você</a>
+                    <a id="cityLink" href="<?= $first_city_link; ?>" class="map-link"><?= $cta_map; ?></a>
                 </div>
                 
                 
