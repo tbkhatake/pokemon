@@ -59,7 +59,9 @@
                 </button>
                 <div id="dropdownContent" class="accordion-content">
                     <p class="accordion-title"><?= $accordion_title; ?></p>
-                    <p class="accordion-description"><?= $accordion_description; ?></p>
+                    <?php if(get_field('descricao_acordeon')): ?>
+                        <p class="accordion-description"><?= $accordion_description; ?></p>
+                    <?php endif; ?>
                     <p class="tax-title"><?= $tax_title;?></p>
                     <?php if(have_rows('accordion_repeater')): ?>
                         <ul class="tax-box">

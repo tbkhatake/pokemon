@@ -39,6 +39,7 @@
 				margin-bottom: 56px;
 			}
 			.fst-box {
+				box-sizing: border-box;
 				color: #373737;
 				box-shadow: 0px 3px 6px #c3000a33;
 				padding: 25px 10px;
@@ -76,6 +77,7 @@
 				margin-bottom: 56px;
 			}
 			.snd-box {
+				box-sizing: border-box;
 				color: #373737;
 				box-shadow: 0px 3px 6px #c3000a33;
 				padding: 25px 10px;
@@ -86,6 +88,7 @@
 					margin-bottom: 16px;
 				}
 				.block-description {
+					box-sizing: border-box;
 					font-size: 15px;
 					line-height: 22.5px;
 					font-weight: 300;
@@ -112,6 +115,7 @@
 				margin-bottom: 56px;
 			}
 			.trd-box {
+				box-sizing: border-box;
 				color: #373737;
 				box-shadow: 0px 3px 6px #c3000a33;
 				padding: 25px 10px;
@@ -275,7 +279,7 @@
 					border-right: 8px solid #c3000a;
 					padding: 36px 50px 40px 35px;
 					max-width: 700px;
-					height: 278px;
+					//height: 278px;
 					.block-title {
 						font-size: 28px;
 					}
@@ -333,7 +337,7 @@
 					border-left: 8px solid #c3000a;
 					padding: 36px 50px 40px 35px;
 					max-width: 700px;
-					height: 278px;
+					//height: 278px;
 					.block-title {
 						font-size: 28px;
 					}
@@ -378,7 +382,7 @@
 					border-right: 8px solid #c3000a;
 					padding: 36px 50px 40px 35px;
 					max-width: 700px;
-					height: 278px;
+					//height: 278px;
 					.block-title {
 						font-size: 28px;
 					}
@@ -419,33 +423,39 @@
 						margin-bottom: 32px;
 					}
 					.tax-title {
+						width: 100%;
+						max-width: 664px;
 						text-align: right;
 						margin-bottom: 24px;
 						font-size: 20px;
 						font-weight: 500;
 						color: #c3000a;
-						margin-right: 45px;
+						//margin-right: 45px;
 					}
 					.tax-box {
 						.tax-item {
+							width: 100%;
 							display: flex;
 							align-items: center;
 							margin-bottom: 24px;
 							.tax-icon {
-								width: 32px;
-								height: 42px;
-								margin-right: 24px;
+								width: 24px;
+								height: 24px;
+								margin-right: 16px;
 							}
 							.tax-info {
+								width: 70%;
+								justify-self: flex-start;
 								font-weight: 300;
 								font-size: 20px;
-								line-height: 43.5px;
-								margin-right: 261px;
+								line-height: 24px;
 							}
 							.tax-price {
+								text-align: right;
+								width: 30%;
 								font-weight: 500;
 								font-size: 20px;
-								line-height: 43.5px;
+								line-height: 24px;
 							}
 						}
 					}
