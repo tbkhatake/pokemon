@@ -43,7 +43,6 @@ add_action( 'wp_ajax_nopriv_raccoon_get_city_data', 'raccoon_get_city_data' );
 
 function raccoon_get_plans_data() {
     $cityName = $_GET['cityname'];
-    $city = $_GET['city'];
     $city_args = array(
         'post_type' => 'city',
         'name' => $cityName
@@ -57,9 +56,14 @@ function raccoon_get_plans_data() {
     $sectionPlans = get_field('section2-category');
 
     foreach($sectionPlans as $plans){
-        $plansOptions[] = $plans['category-title'];
         $plansCards[] = $plans['section2-cards'];
     }
+    
+    for($i = 0 ; $i < (count($sectionPlans)) ; $i++){
+        $plansOptions[] = $sectionPlans[$i]['categories']['category-type'];
+    }
+    
+
      $plansQuantity = count($plansOptions);
 
     for($i = 0 ; $i < $plansQuantity ; $i++){

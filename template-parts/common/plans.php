@@ -11,6 +11,8 @@
 
 <?php $section2 = get_field('section2-category')?>
 <?php $section2_title = get_field('section2-title')?>
+<?php $section2_plansType = get_sub_field('categories')?>
+<?php print_r($section2_plansType)?>
 <section class="plans">
 <h2 class="section-title"><?php echo($section2_title); ?></h2>
     <form class="categories" action="">
@@ -26,9 +28,9 @@
     <form class="categories-desk" action="">
         <input type="hidden" name="pageid" value="<?= get_the_ID()?>">
         <div class="categories-desk-select" name="plans-categories">
-            <?php foreach($section2 as $category):?>
-                <p role="button" class="desk-options" plan="<?= $category['category-title']?>"><?= $category['category-title']?></p>
-            <?php endforeach; ?>
+            <?php for($i = 0 ; $i < (count($section2)) ; $i++):?>
+                <p role="button" class="desk-options" plan="<?= $section2[$i]['categories']['category-type']?>"><?= $section2[$i]['categories']['category-title']?></p>
+            <?php endfor;?>
         </div>
     </form>
     
