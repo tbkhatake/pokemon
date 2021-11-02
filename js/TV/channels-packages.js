@@ -56,10 +56,16 @@ if(havePackages){
         lessButton.style.display = 'none'
     })
 
+    channels.forEach(channel => {
+        if(channel.classList.contains('icon-wrapper-1')){
+            channel.classList.add('icon-wrapper-active')
+        }
+    })
+
     let changePackages = ()=>{
         if(packages.value == 1){
             channels.forEach(channel => {
-                if(channel.classList.contains('icon-wrapper-active') || channel.classList.contains('icon-wrapper-2')|| channel.classList.contains('icon-wrapper-3') || channel.classList.contains('icon-wrapper-4')){
+                if(channel.classList.contains('icon-wrapper-2')|| channel.classList.contains('icon-wrapper-3') || channel.classList.contains('icon-wrapper-4')){
                     channel.classList.remove('icon-wrapper-active')
                 }
             });
@@ -67,7 +73,7 @@ if(havePackages){
             channels.forEach(channel => {
                 if(channel.classList.contains('icon-wrapper-2')){
                     channel.classList.add('icon-wrapper-active')
-                }else if(channel.classList.contains('icon-wrapper-active') || channel.classList.contains('icon-wrapper-3') || channel.classList.contains('icon-wrapper-4')){
+                }else if(channel.classList.contains('icon-wrapper-3') || channel.classList.contains('icon-wrapper-4')){
                     channel.classList.remove('icon-wrapper-active')
                 }
             });
@@ -75,7 +81,7 @@ if(havePackages){
             channels.forEach(channel => {
                 if(channel.classList.contains('icon-wrapper-2') || channel.classList.contains('icon-wrapper-3')){
                     channel.classList.add('icon-wrapper-active')
-                }else if(channel.classList.contains('icon-wrapper-active') || channel.classList.contains('icon-wrapper-4')){
+                }else if(channel.classList.contains('icon-wrapper-4')){
                     channel.classList.remove('icon-wrapper-active')
                 }
             });
@@ -88,10 +94,18 @@ if(havePackages){
         }
     }
 
+    d_channels.forEach(channel => {
+        if(channel.classList.contains('d-icon-wrapper-1')){
+            channel.classList.add('d-icon-wrapper-active')
+        }
+    })
+
     let changePackagesDesk = (pack)=>{
         if(pack.classList.contains('d-packages-1')){
             d_channels.forEach(channel => {
-                if(channel.classList.contains('d-icon-wrapper-active') || channel.classList.contains('d-icon-wrapper-2')|| channel.classList.contains('d-icon-wrapper-3') || channel.classList.contains('d-icon-wrapper-4')){
+                if(channel.classList.contains('d-icon-wrapper-1')){
+                    channel.classList.add('d-icon-wrapper-active')
+                }else if(channel.classList.contains('d-icon-wrapper-2')|| channel.classList.contains('d-icon-wrapper-3') || channel.classList.contains('d-icon-wrapper-4')){
                     channel.classList.remove('d-icon-wrapper-active')
                 }
             });
@@ -99,7 +113,7 @@ if(havePackages){
             d_channels.forEach(channel => {
                 if(channel.classList.contains('d-icon-wrapper-2')){
                     channel.classList.add('d-icon-wrapper-active')
-                }else if(channel.classList.contains('d-icon-wrapper-active') || channel.classList.contains('d-icon-wrapper-3') || channel.classList.contains('d-icon-wrapper-4')){
+                }else if(channel.classList.contains('d-icon-wrapper-3') || channel.classList.contains('d-icon-wrapper-4')){
                     channel.classList.remove('d-icon-wrapper-active')
                 }
             });
@@ -107,7 +121,7 @@ if(havePackages){
             d_channels.forEach(channel => {
                 if(channel.classList.contains('d-icon-wrapper-2') || channel.classList.contains('d-icon-wrapper-3')){
                     channel.classList.add('d-icon-wrapper-active')
-                }else if(channel.classList.contains('d-icon-wrapper-active') || channel.classList.contains('d-icon-wrapper-4')){
+                }else if(channel.classList.contains('d-icon-wrapper-4')){
                     channel.classList.remove('d-icon-wrapper-active')
                 }
             });

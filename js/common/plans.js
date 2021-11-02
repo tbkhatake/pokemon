@@ -43,9 +43,8 @@ if(havePlans){
         cardsWrapper.innerHTML = ' ';
         plansSlider = document.createElement('div');
         plansSlider.classList.add('plans-slider');
-        console.log(plansSelect.value.split('+').join('e'));
         let plansSelectValue = plansSelect.value.toLowerCase().split('+').join('e')
-        console.log(fetchPlansData(plansSelectValue));
+        fetchPlansData(plansSelectValue);
     })
     let plans = [];
     plansDeskOptions.forEach(el => {
