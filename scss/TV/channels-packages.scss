@@ -122,14 +122,14 @@
                 .icon-wrapper{
                     width: 120px;
                     height: 120px;
-                    border-radius: 50%;
+                    border-radius: 10%;
                     &::after{
                         content: '';
                         position: absolute;
                         display: block;
                         width: 120px;
                         height: 120px;
-                        border-radius: 50%;
+                        border-radius: 10%;
                         left: 0;
                         top: 0;
                         z-index: 1;
@@ -139,12 +139,12 @@
                         content: none;
                     }
                     .channel-icon{
-                        width: 120px;
-                        height: 120px;
-                        border-radius: 50%;
+                        max-width: 120px;
+                        min-height: 120px;
                     }
                 }
                 .icon-wrapper-active{
+                    box-shadow: 0px 3px 6px #C3000A33;
                     &::after{
                         content: none;
                     }
@@ -302,14 +302,17 @@
                             .d-icon-wrapper{
                                 width: 74px;
                                 height: 74px;
-                                border-radius: 50%;
+                                border-radius: 10%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
                                 &::after{
                                     content: '';
                                     position: absolute;
                                     display: block;
                                     width: 74px;
                                     height: 74px;
-                                    border-radius: 50%;
+                                    border-radius: 10%;
                                     left: 0;
                                     top: 0;
                                     z-index: 1;
@@ -319,12 +322,13 @@
                                     content: none;
                                 }
                                 .channel-icon{
-                                    width: 74px;
-                                    height: 74px;
-                                    border-radius: 50%;
+                                    max-width: 74px;
+                                    max-height: 74px;
+                                    border-radius: 10%;
                                 }
                             }
                             .d-icon-wrapper-active{
+                                box-shadow: 0px 3px 6px #C3000A33;
                                 &::after{
                                     content: none;
                                 }

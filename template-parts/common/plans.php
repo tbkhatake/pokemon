@@ -18,9 +18,9 @@
     <form class="categories" action="">
         <input type="hidden" name="pageid" id="pageid" value="<?= get_the_ID()?>">
         <select class="categories-select" name="plans-categories">
-            <?php foreach($section2 as $category):?>
-                <option class="options" value="<?= $category['category-title']?>"><?= $category['category-title']?></option>
-            <?php endforeach; ?>
+        <?php for($i = 0 ; $i < (count($section2)) ; $i++):?>
+                <option role="button" class="desk-options" plan="<?= $section2[$i]['categories']['category-type']?>"><?= $section2[$i]['categories']['category-title']?></option>
+            <?php endfor;?>
         </select>
         <img class="categories-arrow" src="<?=get_template_directory_uri()?>/images/down-arrow-mobile.svg" alt="seta para baixo">   
     </form>
