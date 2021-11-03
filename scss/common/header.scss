@@ -119,85 +119,56 @@
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
-                
-                .menu-desk{
-                    
-                    .menu{
-                        display:flex;
-                        position: relative;
-                        z-index: 3;
-          
-                        .menu-item{
-                            display: inline;
-                            font-weight: 500;
-                            padding-right: 32px;
-                            cursor: pointer;
-                            transition: 0.3s ease-out;
-                            max-width:115px ;
-                            overflow: hidden;
-                            text-align: center;
-                            &:hover{
-                                transform: scale(1.1);
-                            }                        
-
-                            &:nth-last-child(1){
-                                padding-right:0;
-                            }
             
-                            a{
-                                font-size: 20px;
-                                text-decoration: none;
-                                color: #373737;
-                                
-                            }
-                            &:hover{
-                                &::after{
-                                    left: 0;
-                                    top: 48px;
-                                    position: absolute;
-                                    width: 100%;
-                                    height: 2px;
-                                    content: '';
-                                    background-color:#C3000A;
-                                }                     
-                                
-                            }
-                            &-has-children{
-                                .sub-menu{
-                                    padding-top: 30px;
-                                    display: flex;
-                                    flex-direction: column;
-                                    max-height: 0px;
-                                    overflow: hidden;
-
-                                    .menu-item{
-                                        background-color: #FFFFFFF2;
-                                        display: inline;
-                                        margin-right: 0;
-                                        font-size: 20px;
-                                        font-weight: 500;
-                                        padding: 0;
-                                        padding-top: 7px;
-                                        padding-bottom: 7px;
-                                        border:none;
-                                        &:hover{
-                                            &::after{
-                                                display: none;
-                                            }                     
-                                        }
-                                    }
+                .nav-mainlyLinks{
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    &-itens{
+                        height: 49px;
+                        position: relative;
+                        overflow: hidden;
+                        &:hover{
+                            overflow: unset;
+                        }
+                        .nav-mainlyLinks-item{
+                            display: block;
+                            font-size: 20px;
+                            font-weight: 500;
+                            color:#373737;
+                            margin-right: 24px;
+                            
+                        }
+                        &:hover>.nav-mainlyLinks-redLine{
+                            position: relative;
+                            bottom: -24px;
+                            display: block;
+                            background-color:#C3000A;
+                            height: 5px;
+                            width: calc(100% - 24px);
+                        }
+                        .nav-subLinks{
+                            position: absolute;
+                            top: 49px;
+                            background-color: #FFFFFFF2;
+                            padding-left: 322px;
+                            left: -322px;
+                            width: 100vw;
+                            &-itens{
+                                display: flex;
+                                flex-direction: column;
+                                .nav-subLinks-item{
+                                    margin-top: 15px;
+                                    display: block;
+                                    font-size: 20px;
+                                    font-weight: 500;
+                                    color:#373737;
+                                    margin-right: 24px;
                                 }
-
-                                &:hover .sub-menu{
-                                    max-height: unset;
-                                    padding-bottom: 25px;
-                                    padding-left: 5px;
-                                    padding-right: 5px;
-                                }
-                            }   
+                            }
                         }
                     }
-                }              
+                }
 
                 .nav-buttons{
                     display: flex;
@@ -233,6 +204,7 @@
                     }
                 }
             }
+ 
         }
 
         .header-nav-icon{

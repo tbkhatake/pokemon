@@ -1,6 +1,6 @@
 <?php $jobs = get_field('jobs')?>
 <?php $jobs_have = $jobs['section-title'] == "" ? "jobs-none" : "jobs"?>
-<section class=<?=$jobs_have?>>
+<section class=<?=$jobs_have?> id="vagas">
     <h2 class="section-title"><?=$jobs['section-title'];?></h2>
     <div class="jobs-mobile">
         <div class="jobs-select-wrapper">
