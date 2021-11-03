@@ -18,8 +18,9 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLFR9MS"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <header class="header">
-<?php $menuItens = get_field('header-links','options')?>
+<?php $menuItens = get_field('header-menu-links','options')?>
 <?php $forWhoLinks = get_field('header-forWhoLinks','options')?>
+
 
 	<div class="header-wrapper">
 		<?php $logo = get_field('header-logo','options')?>
@@ -54,10 +55,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</form>
 			</div>	
 			<div class="nav-down">
-				<?php wp_nav_menu(array(
-					'theme_location' => 'header-menu-desk',
-					'container_class' => 'menu-desk',
-				));?>
+				<div class="nav-mainlyLinks">
+					<?php foreach($menuItens as $menuItem):?>
+						<div class="nav-mainlyLinks-itens">
+							<a class="nav-mainlyLinks-item" href="<?= $menuItem['mainly-link']['url']?>"><?= $menuItem['mainly-link']['title']?></a>
+							<span class="nav-mainlyLinks-redLine"></span>
+							<div class="nav-subLinks">
+								<div class="nav-subLinks-itens">
+									<?php foreach($menuItem['sub-links'] as $subLinks):?>
+										<a class="nav-subLinks-item" href="<?= $subLinks['sub-link']['url']?>"><?= $subLinks['sub-link']['title']?></a>
+									<?php endforeach;?>
+								</div>
+							</div>
+						</div>
+					<?php endforeach;?>
+				</div>
+		
 				<div class="nav-buttons">
 					<button class="button search">
 						<img class="button-img" src="<?=get_template_directory_uri()?>/images/search.svg" alt="lupa de pesquisa">
