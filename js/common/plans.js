@@ -43,7 +43,8 @@ if(havePlans){
         cardsWrapper.innerHTML = ' ';
         plansSlider = document.createElement('div');
         plansSlider.classList.add('plans-slider');
-        fetchPlansData(plansSelect.value);
+        let plansSelectValue = plansSelect.value.toLowerCase().split('+').join('e')
+        fetchPlansData(plansSelectValue);
     })
     let plans = [];
     plansDeskOptions.forEach(el => {
@@ -55,7 +56,6 @@ if(havePlans){
             cardsWrapper.innerHTML = ' ';
             plansSlider = document.createElement('div');
             plansSlider.classList.add('plans-slider');
-            console.log(el.getAttribute("plan"))
             fetchPlansData(el.getAttribute("plan"));
             plans.forEach(el =>{
             el.classList.remove('desk-options-active')
@@ -72,7 +72,7 @@ if(havePlans){
         cardsWrapper.innerHTML = ' ';
         plansSlider = document.createElement('div');
         plansSlider.classList.add('plans-slider');
-        cityFetchPlansData("Internet")
+        cityFetchPlansData("internet")
         plans.forEach(el =>{
             el.classList.remove('desk-options-active');
         })
@@ -83,8 +83,8 @@ if(havePlans){
         cardsWrapper.innerHTML = ' ';
         plansSlider = document.createElement('div');
         plansSlider.classList.add('plans-slider');
-        plansSelect.selectedIndex = "Internet";
-        cityFetchPlansData("Internet")
+        plansSelect.selectedIndex = "internet";
+        cityFetchPlansData("internet")
     })
     let modalCity = document.querySelectorAll('.modal__city')
     modalCity.forEach(city=>{
@@ -94,7 +94,7 @@ if(havePlans){
             cardsWrapper.innerHTML = ' ';
             plansSlider = document.createElement('div');
             plansSlider.classList.add('plans-slider');
-            cityFetchPlansData("Internet")
+            cityFetchPlansData("internet")
         })
     })
 
@@ -108,18 +108,17 @@ if(havePlans){
             cardsWrapper.innerHTML = ' ';
             plansSlider = document.createElement('div');
             plansSlider.classList.add('plans-slider');
-            cityFetchPlansData("Internet")
+            cityFetchPlansData("internet")
         }
     })
 
     function fetchPlansData(planType){
-        //fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName)
-        fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
+        fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName)
+        //fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
         .then(data => {
             let response = data.json();
             response.then(resp => {
                 cards = resp.cards;
-                console.log(resp)
                 cards.forEach(function(el){
                     let cardOutside = document.createElement('div');
                     cardOutside.classList.add('card-outside');
@@ -290,14 +289,14 @@ if(havePlans){
         })
     } 
     function cityFetchPlansData(planType){
-        //fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&&plantype=' + planType + '&cityname=' + cityName)
-        fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
+        fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&&plantype=' + planType + '&cityname=' + cityName)
+        //fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
         .then(data => {
             let response = data.json();
             response.then(resp => {
                 if(resp == null){
                     cityName = 'sumare'
-                    cityFetchPlansData("Internet")
+                    cityFetchPlansData("internet")
                 }else{
                     cards = resp.cards;
                     cards.forEach(function(el){
