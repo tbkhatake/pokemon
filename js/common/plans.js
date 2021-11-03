@@ -113,8 +113,8 @@ if(havePlans){
     })
 
     function fetchPlansData(planType){
-        //fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName)
-        fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
+        fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName)
+        //fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
         .then(data => {
             let response = data.json();
             response.then(resp => {
@@ -289,8 +289,8 @@ if(havePlans){
         })
     } 
     function cityFetchPlansData(planType){
-        //fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&&plantype=' + planType + '&cityname=' + cityName)
-        fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
+        fetch('https://desktop.raccoon-stage.com/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&&plantype=' + planType + '&cityname=' + cityName)
+        //fetch('http://localhost/desktop/wp-admin/admin-ajax.php?action=raccoon_get_plans_data&plantype=' + planType + '&cityname=' + cityName) 
         .then(data => {
             let response = data.json();
             response.then(resp => {
