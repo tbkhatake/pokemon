@@ -1,11 +1,12 @@
 .modal{
     position: fixed;
-    height: 100%;
+    height: calc(100vh - 30px);
     width: 100%;
     background-color: transparent;
     transform: translateY(-100%);
     transition:0.5s;
     top: 30px;
+    overflow-x: scroll;
 
     &-active{
         transform: translateY(0);

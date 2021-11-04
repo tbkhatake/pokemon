@@ -59,40 +59,38 @@
         <img class="ffh-graphism" src="<?=get_template_directory_uri()?>/images/servicos-digitais/ffh-graphism.svg">
         <img class="sxth-graphism" src="<?=get_template_directory_uri()?>/images/servicos-digitais/sxth-graphism.svg">
         
-            <div class="steps-engine">
+        <div class="steps-engine">
             <?php foreach($step as $step2): ?>
-            
                 <div class="steps-wrapper">
                     <div class="steps-slider">
                         <div class="step-carousel-sd">
-                        <?php foreach($step2['section-itens'] as $key => $item):?>
-                            <div class="step-carousel-wrapper">
-                                <div class="items-wrapper">
-                                    <div class="item-img-wrapper">
-                                        <span class="item-background"></span>
-                                        <img class="item-img" src="<?=$item['step-image']['url']?>" alt="<?=$item['step-image']['title']?>">
-                                        <div class="item-img-title-wrapper">
-                                            <p class="item-img-title"><?=$item['cell-title']?></p>
+                            <?php foreach($step2['section-itens'] as $key => $item):?>
+                                <div class="step-carousel-wrapper">
+                                    <div class="items-wrapper">
+                                        <div class="item-img-wrapper">
+                                            <span class="item-background"></span>
+                                            <img class="item-img" src="<?=$item['step-image']['url']?>" alt="<?=$item['step-image']['title']?>">
+                                            <div class="item-img-title-wrapper">
+                                                <p class="item-img-title"><?=$item['cell-title']?></p>
+                                            </div>
+                                            <span class="red-ball">
+                                                <p class="red-ball-number"><?=$key+1?></p>
+                                            </span>
                                         </div>
-                                        <span class="red-ball">
-                                            <p class="red-ball-number"><?=$key+1?></p>
-                                        </span>
-                                    </div>
-                                    <div class="content-wrapper">
-                                        <p class="content-title"><?=$item['step-title']?></p>
-                                        <span class="content-redline"></span>
-                                        <p class="content-text"><?=$item['step-text']?></p>
+                                        <div class="content-wrapper">
+                                            <p class="content-title"><?=$item['step-title']?></p>
+                                            <span class="content-redline"></span>
+                                            <p class="content-text"><?=$item['step-text']?></p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        <?php endforeach;?>
+                            <?php endforeach;?>
                         </div>
                     </div>
                 </div>
             <?php endforeach;?>
-            </div>
+        </div>
         
-               
         <div class="step-slider-controls-wrapper">
             <div class="step-slider-controls" id="<?=$key?>" aria-label="Carousel Navigation" tabindex="0">
                 <img class="step-controls-btn" src="<?=get_template_directory_uri()?>/images/servicos-digitais/left-arrow.svg" alt="left-arrow">
