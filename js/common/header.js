@@ -24,22 +24,10 @@ window.addEventListener("click", function(event) {
     }
 });
 
-//Mobile sub-menu active
-
-modalItems = document.querySelectorAll('.modal-mainlyLinks-item');
-modalSubItems = document.querySelectorAll('.modal-subLinks');
-
-modalItems.forEach((item,key)=>{
-    item.addEventListener('click',()=>{
-        modalSubItems[key].classList.toggle('modal-subLinks-active')
-    })
-})
-
 //Desk sub-menu active
 
 mainlyItens = document.querySelectorAll('.nav-mainlyLinks-item');
 sublinks = document.querySelectorAll('.nav-subLinks');
-console.log(sublinks)
 
 for(let i = 1 ; i < mainlyItens.length ; i++){
     let t = i - 1;  

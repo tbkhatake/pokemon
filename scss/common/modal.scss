@@ -99,16 +99,13 @@
             }
 
             .modal-subLinks{
-                display: none;
-                &-active{
-                    display: flex;
-                }
+                display: flex;
                 &-itens{
                     display: flex;
                     flex-direction: column;
 
                     .modal-subLinks-item{
-                        padding-left: 24px;
+                        padding-left: 48px;
                         margin-top: 8px;
                         font-size: 18px;
                         font-weight: 500;
@@ -161,7 +158,7 @@
             font-weight: 300;
             color: #373737;
 
-            &:nth-child(odd){
+            &-active{
                 color: #C3000A;
             }
         }

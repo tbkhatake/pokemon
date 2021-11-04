@@ -11,12 +11,9 @@ if(haveTreatmentForms){
 
     let treatmentFormsButton = document.querySelector('.t-button-validation')
     let treatmentForm = document.querySelector('#treatment-form')
-    let confirmMsg = document.querySelector('.confirm-msg')
+    let treatmentConfirmMsg = document.querySelector('.t-confirm-msg')
 
-
-    console.log(treatmentFormsInputs[0].value);
-
-    let rd_station = function(event){
+    let t_rd_station = function(event){
         event.preventDefault()
         let tInputsEmailValue = treatmentFormsInputsEmail.value
         let tInputsTelValue = treatmentFormsInputsTel.value
@@ -33,11 +30,11 @@ if(haveTreatmentForms){
             "event_family": "CDP",
             "payload": {
             "conversion_identifier": "atendimento-forms",
-            "Nome": tInputsValue[0],
-            "Telefone*": tInputsTelValue,
+            "name": tInputsValue[0],
+            "personal_phone": tInputsTelValue,
             "email":  tInputsEmailValue,
-            "Assunto": tInputsValue[1],
-            "Dúvida":tInputsValue[2],
+            "cf_assunto": tInputsValue[1],
+            "cf_mensagem":tInputsValue[2],
             }
         });
         var requestOptions = {
@@ -49,26 +46,24 @@ if(haveTreatmentForms){
   
         fetch("https://api.rd.services/platform/conversions?api_key=ec2d9c83fe9a012aafe749c7975f796d", requestOptions)
             .then((resp) => {
-                console.log(resp.status);
                 treatmentFormsInputs[0].value = "";
                 treatmentFormsInputs[1].value = "";
                 treatmentFormsInputs[2].value = "";
                 treatmentFormsInputsEmail.value = ""
                 treatmentFormsInputsTel.value = ""
                 treatmentFormsButton.style.display = "block"
-                confirmMsg.innerHTML = "&#10003 Mensagem enviada com sucesso!"
-                confirmMsg.style.backgroundColor = "rgb(90, 177, 128)"
-                confirmMsg.style.display = "block"
+                treatmentConfirmMsg.innerHTML = "&#10003 Mensagem enviada com sucesso!"
+                treatmentConfirmMsg.style.backgroundColor = "rgb(90, 177, 128)"
+                treatmentConfirmMsg.style.display = "block"
             })
             .catch((error) => {
-                confirmMsg.innerHTML = "&#10006 Erro!"
-                confirmMsg.style.backgroundColor = "#800006" 
-                confirmMsg.style.display = "block"
+                treatmentConfirmMsg.innerHTML = "&#10006 Erro!"
+                treatmentConfirmMsg.style.backgroundColor = "#800006" 
+                treatmentConfirmMsg.style.display = "block"
             });
-
     }
 
-    treatmentForm.addEventListener('submit',rd_station);
+    treatmentForm.addEventListener('submit',t_rd_station);
     
 
     let inputRightAll = [];
@@ -115,6 +110,7 @@ if(haveTreatmentForms){
             treatmentFormsButton.style.display = "none";
         }else{
             treatmentFormsButton.style.display = "block";
+            treatmentConfirmMsg.style.display = "none"
         }
     })
 
@@ -135,6 +131,7 @@ if(haveTreatmentForms){
             treatmentFormsButton.style.display = "none";
         }else{
             treatmentFormsButton.style.display = "block";
+            treatmentConfirmMsg.style.display = "none"
         }
     })
 
@@ -151,12 +148,14 @@ if(haveTreatmentForms){
             treatmentFormsErrorTelMsg.style.display = "block"
             treatmentFormsErrorEmailMsg.innerText = "Preenchimento obrigatório*"
             treatmentFormsErrorTelMsg.innerText = "Preenchimento obrigatório*"
+            treatmentConfirmMsg.style.display = "none"
         }else if(!emailRegex.test(treatmentFormsInputsEmail.value)){
             treatmentFormsErrorEmailMsg.style.display = "block"
         }else if(!phoneRegex.test(treatmentFormsInputsTel.value)){
             treatmentFormsErrorTelMsg.style.display = "block"
         }else{
             treatmentFormsErrorEmailMsg.style.display = "none"
+
         }
     })
 }

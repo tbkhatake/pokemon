@@ -33,7 +33,7 @@
                 <input class="t-forms-button" type="submit" value="<?= $forms['forms-button']['title'];?>">
                 <span class="t-button-validation"><?= $forms['forms-button']['title'];?></span>
             </div>
-            <p class="confirm-msg">&#10003 Mensagem enviada com sucesso! </p>
+            <p class="t-confirm-msg">&#10003 Mensagem enviada com sucesso! </p>
         </form>
     </div>
 </section>
