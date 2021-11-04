@@ -75,6 +75,7 @@
             position: absolute;
             left: 0;
             display: flex;
+            z-index: 2;
 
             .card-outside{
                 .card{
@@ -188,7 +189,6 @@
                 
                     .services-wrapper{
                         position: relative;
-                        margin-top: 10px;
                         width: 184px;
                         padding:5px 15px;
                         max-height: 108px;
@@ -382,7 +382,7 @@
         }
 
         .cards-wrapper{
-            padding-top: 25px;
+            padding-top: 35px;
             height: 830px;
 
             .plans-slider{
@@ -474,7 +474,7 @@
                             cursor: pointer;
                           }
                         .services-wrapper{
-                            margin-top: 23px;
+                            margin-top: 10px;
                             width: 270px;
                             max-height: 170px;
                             padding:5px 2px;

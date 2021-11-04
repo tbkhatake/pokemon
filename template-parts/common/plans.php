@@ -55,7 +55,6 @@
                                     </div>
                                 <?php endforeach; ?>
                             </div>
-                            <p class="services-title">Serviços inclusos</p> 
                             <div class="services-wrapper"> 
                                 <div class="services-IS">
                                     <?php foreach($card['card2-IS'] as $servicesKey => $services):?>
@@ -101,7 +100,6 @@
                                     </div>
                                 <?php endforeach; ?>
                             </div>
-                            <p class="services-title">Serviços inclusos</p> 
                             <div class="services-wrapper"> 
                                 <div class="services-IS">
                                     <?php foreach($card['card2-IS'] as $servicesKey => $services):?>
