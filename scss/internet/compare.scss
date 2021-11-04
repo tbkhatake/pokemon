@@ -107,6 +107,8 @@
                                 height: 50px;
                                 width: 50px;
                                 margin:8px 8px;
+                                border-radius: 50%;
+                                box-shadow: 0px 3px 6px #C3000A33;
                             }
                         }
                     }
@@ -237,7 +239,11 @@
                             padding: 0 14px;
 
                             .card-icon{
-                                margin: 8px 8px;
+                                height: 50px;
+                                width: 50px;
+                                margin:8px 8px;
+                                border-radius: 50%;
+                                box-shadow: 0px 3px 6px #C3000A33;
                             }
                         }
                     }

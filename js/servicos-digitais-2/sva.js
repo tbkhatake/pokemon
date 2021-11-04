@@ -27,9 +27,9 @@ if(sva_slider){
         mouseDrag: true,
         navContainer: ".services__digital--slider"
     });
-    /*
-    let detailsSlider = tns({
-        container: '.details-engine',
+   
+    let stepsSlider = tns({
+        container: '.steps-engine',
         loop: false,
         preventScrollOnTouch: 'auto',
         items: 1,
@@ -37,6 +37,5 @@ if(sva_slider){
         mouseDrag: true,
         navContainer: ".services__digital--slider"
     });
-    */
+    
 }
-
