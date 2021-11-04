@@ -53,7 +53,7 @@
     <?php get_template_part("template-parts/common/plans");?>
     <?php $step = get_field('step-section')?>
     
-    <section class="step">
+    <section class="step-sd">
         <img class="trd-graphism" src="<?=get_template_directory_uri()?>/images/servicos-digitais/trd-graphism.svg">
         <img class="fth-graphism" src="<?=get_template_directory_uri()?>/images/servicos-digitais/fth-graphism.svg">
         <img class="ffh-graphism" src="<?=get_template_directory_uri()?>/images/servicos-digitais/ffh-graphism.svg">
