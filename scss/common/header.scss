@@ -124,24 +124,30 @@
                     display: flex;
                     align-items: center;
                     position: relative;
+                    width: 100%;
                     &-itens{
                         height: 49px;
                         position: relative;
                         overflow: hidden;
+                        min-width: max-content;
+                        transition: 0.3s;
                         &:hover{
                             overflow: unset;
+                            transform: scale(1.1,1.1);
                         }
                         .nav-mainlyLinks-item{
-                            display: block;
+                            display: inline;
                             font-size: 20px;
                             font-weight: 500;
                             color:#373737;
                             margin-right: 24px;
+                            min-width: min-content;
+                            
                             
                         }
                         &:hover>.nav-mainlyLinks-redLine{
-                            position: relative;
-                            bottom: -24px;
+                            position: absolute;
+                            bottom: 1px;
                             display: block;
                             background-color:#C3000A;
                             height: 5px;
@@ -149,11 +155,13 @@
                         }
                         .nav-subLinks{
                             position: absolute;
-                            top: 49px;
+                            top: 46px;
                             background-color: #FFFFFFF2;
                             padding-left: 322px;
                             left: -322px;
                             width: 100vw;
+                            padding-bottom: 5px;
+                            
                             &-itens{
                                 display: flex;
                                 flex-direction: column;
@@ -164,6 +172,10 @@
                                     font-weight: 500;
                                     color:#373737;
                                     margin-right: 24px;
+                                    &:hover{
+                                        transition: 0.3s;
+                                        color: #C3000A;
+                                    }
                                 }
                             }
                         }

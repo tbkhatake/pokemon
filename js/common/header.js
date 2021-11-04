@@ -26,27 +26,14 @@ window.addEventListener("click", function(event) {
 
 //Mobile sub-menu active
 
-// subMenuBtn.forEach(button => {
-//     button.addEventListener('click',function(){
-//         if(button.children[1].classList.contains('sub-menu-active')){
-//                 button.children[1].classList.remove('sub-menu-active') 
-//         }else{
-//             subMenuBtn.forEach(button =>{
-//                 button.children[1].classList.remove('sub-menu-active') 
-//         })        
-//         button.children[1].classList.add('sub-menu-active')
-//         }
+modalItems = document.querySelectorAll('.modal-mainlyLinks-item');
+modalSubItems = document.querySelectorAll('.modal-subLinks');
 
-//         if (button.children[1].classList.contains('sub-menu-active')){
-//             subMenuSpace.classList.add('sub-menu-space-active')
-//             menu.classList.add('menu-active');
-//         }else{
-//             subMenuSpace.classList.remove('sub-menu-space-active')
-//             menu.classList.remove('menu-active');
-//         }
-        
-//     });
-// });
+modalItems.forEach((item,key)=>{
+    item.addEventListener('click',()=>{
+        modalSubItems[key].classList.toggle('modal-subLinks-active')
+    })
+})
 
 //Desk sub-menu active
 
@@ -57,8 +44,8 @@ console.log(sublinks)
 for(let i = 1 ; i < mainlyItens.length ; i++){
     let t = i - 1;  
     mainlywidth = mainlyItens[t].clientWidth;
-    sublinks[i].style.paddingLeft = ((346*i) + mainlywidth)+"px"
-    sublinks[i].style.left = (-(346*i)- mainlywidth)+"px"
+    sublinks[i].style.paddingLeft = ((500*i) + mainlywidth)+"px"
+    sublinks[i].style.left = (-(500*i)- mainlywidth)+"px"
 }
 
 

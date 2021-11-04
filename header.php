@@ -82,7 +82,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						?>
 						<img class="button-img" src="<?=get_template_directory_uri()?>/images/login.svg" alt="login">
 						<a target="_blank" class="link-login" href="<?= $login_link['url']; ?>" ><?= $login_link['title']; ?></a>
-						
 					</button>
 				</div>
 			</div>
@@ -92,37 +91,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="modal">
 		<div class="modal-area">
 			<div class="container">
+				<div class="modal-cities">
+					<select class="cities-select" name="" id="">
+					<?php
+						$city_plans_args = array(
+							'post_type' => 'city',
+							'orderby' => 'name',
+							'order'   => 'ASC',
+						);
+
+						$city_plans_query = new WP_Query($city_plans_args);
+					?>
+
+					<?php if($city_plans_query->have_posts()) :while($city_plans_query->have_posts()):$city_plans_query->the_post()?>
+						<option value="<?= get_post_field( 'post_name', get_post() )?>"><?= the_title()?></option>
+					<?php endwhile; endif;?>
+					</select>
+					<?php wp_reset_postdata();?>
+					<img class="cities-image" src="<?=get_template_directory_uri()?>/images/down-arrow.svg" alt="seta para baixo">
+				</div>
 				<form class="modal-search" action="">
 					<input class="modal-input" type="text" placeholder="Buscar">
 					<input class="modal-button" type="image" src="<?=get_template_directory_uri()?>/images/search.svg" value="" alt="lupa de pesquisa">
 				</form>
-				<?php wp_nav_menu(array(
-					'theme_location' => 'header-menu-mobile',
-					'container_class' => 'menu-mobile'
-				));?>
+				<div class="modal-mainlyLinks">
+					<?php foreach($menuItens as $menuItem):?>
+						<div class="modal-mainlyLinks-itens">
+							<a class="modal-mainlyLinks-item" href="<?= $menuItem['mainly-link']['url']?>"><?= $menuItem['mainly-link']['title']?></a>
+							<div class="modal-subLinks">
+								<div class="modal-subLinks-itens">
+									<?php foreach($menuItem['sub-links'] as $subLinks):?>
+										<a class="modal-subLinks-item" href="<?= $subLinks['sub-link']['url']?>"><?= $subLinks['sub-link']['title']?></a>
+									<?php endforeach;?>
+								</div>
+							</div>
+						</div>
+					<?php endforeach;?>
+				</div>			
 				<div class="modal-space">
 					<span class="modal-redLine"></span>
 				</div>
 				<form class="modal-login" action="">
-					<div class="modal-cities">
-						<select class="cities-select" name="" id="">
-						<?php
-							$city_plans_args = array(
-								'post_type' => 'city',
-								'orderby' => 'name',
-								'order'   => 'ASC',
-							);
-
-							$city_plans_query = new WP_Query($city_plans_args);
-						?>
-
-						<?php if($city_plans_query->have_posts()) :while($city_plans_query->have_posts()):$city_plans_query->the_post()?>
-							<option value="<?= get_post_field( 'post_name', get_post() )?>"><?= the_title()?></option>
-						<?php endwhile; endif;?>
-						</select>
-						<?php wp_reset_postdata();?>
-						<img class="cities-image" src="<?=get_template_directory_uri()?>/images/down-arrow-mobile.svg" alt="seta para baixo">
-					</div>
 						<!--<input class="modal-login-button" type="button" value="Login">-->
 						<a target="_blank" class="modal-login-button" href="<?= $login_link['url']; ?>"><?= $login_link['title']; ?></a>
 				</form>
