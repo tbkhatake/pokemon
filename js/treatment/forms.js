@@ -10,6 +10,66 @@ if(haveTreatmentForms){
     let treatmentFormsErrorTelMsg = document.querySelector('.t-required-tel')
 
     let treatmentFormsButton = document.querySelector('.t-button-validation')
+    let treatmentForm = document.querySelector('#treatment-form')
+    let confirmMsg = document.querySelector('.confirm-msg')
+
+
+    console.log(treatmentFormsInputs[0].value);
+
+    let rd_station = function(event){
+        event.preventDefault()
+        let tInputsEmailValue = treatmentFormsInputsEmail.value
+        let tInputsTelValue = treatmentFormsInputsTel.value
+        let tInputsValue = []
+        treatmentFormsInputs.forEach((el,key)=>{
+            tInputsValue[key] = el.value;
+        })
+
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+
+        var raw = JSON.stringify({
+            "event_type": "CONVERSION",
+            "event_family": "CDP",
+            "payload": {
+            "conversion_identifier": "atendimento-forms",
+            "Nome": tInputsValue[0],
+            "Telefone*": tInputsTelValue,
+            "email":  tInputsEmailValue,
+            "Assunto": tInputsValue[1],
+            "Dúvida":tInputsValue[2],
+            }
+        });
+        var requestOptions = {
+            method: 'POST',
+            headers: myHeaders,
+            body: raw,
+            redirect: 'follow'
+        };
+  
+        fetch("https://api.rd.services/platform/conversions?api_key=ec2d9c83fe9a012aafe749c7975f796d", requestOptions)
+            .then((resp) => {
+                console.log(resp.status);
+                treatmentFormsInputs[0].value = "";
+                treatmentFormsInputs[1].value = "";
+                treatmentFormsInputs[2].value = "";
+                treatmentFormsInputsEmail.value = ""
+                treatmentFormsInputsTel.value = ""
+                treatmentFormsButton.style.display = "block"
+                confirmMsg.innerHTML = "&#10003 Mensagem enviada com sucesso!"
+                confirmMsg.style.backgroundColor = "rgb(90, 177, 128)"
+                confirmMsg.style.display = "block"
+            })
+            .catch((error) => {
+                confirmMsg.innerHTML = "&#10006 Erro!"
+                confirmMsg.style.backgroundColor = "#800006" 
+                confirmMsg.style.display = "block"
+            });
+
+    }
+
+    treatmentForm.addEventListener('submit',rd_station);
+    
 
     let inputRightAll = [];
     let inputRight;
