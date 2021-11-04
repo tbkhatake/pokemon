@@ -1,4 +1,9 @@
 .acordeon-tv {
+	width: 100%;
+	margin-top: 64px;
+	box-sizing: border-box;
+	text-align: center;
+
 	.accordion-section-title {
 		text-align: center;
 		width: 160px;
@@ -10,17 +15,150 @@
 		display: inline-block;
 		margin-bottom: 40px;
 	}
-    .accordion-list {
-        list-style: none;
-    }
+	.box-wrapper {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		text-align: left;
+		.box {
+			box-sizing: border-box;
+			height: 10%;
+			width: 100%;
+			overflow: hidden;
+			padding: 2em;
+			transition: all 0.5s ease-in-out;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.item-label {
+				text-align: center;
+				font-size: 26px;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+				color: #ffffff;
+				cursor: pointer;
+			}
+			.content {
+				box-sizing: border-box;
+				display: none;
+				pointer-events: none;
+				.item-title {
+					font-size: 20px;
+					color: #ffffff;
+					font-weight: 700;
+					margin-top: 16px;
+					margin-bottom: 16px;
+				}
+				.item-description {
+					font-size: 15px;
+					color: #ffffff;
+					font-weight: 300;
+					line-height: 20px;
+				}
+			}
+			&:nth-child(1) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/telecine.jpg') center no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(2) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/canais-adultos.jpg') center no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(3) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/canais-internacionais.jpg') center no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(4) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/premiere.jpg') center no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(5) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/combate.jpg') center no-repeat;
+				background-size: cover;
+			}
+		}
+		.active {
+			height: 80%;
+			overflow-y: scroll;
+			transition: all 0.5s ease-in-out;
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+			align-items: flex-start;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			.item-label {
+				text-align: left;
+			}
+
+			.content {
+				display: block;
+				pointer-events: auto;
+                
+			}
+		}
+	}
 }
 
 @media (min-width: 1200px) {
 	.acordeon-tv {
+		margin-top: 120px;
 		.accordion-section-title {
 			width: 100%;
 			font-size: 40px;
 			margin-bottom: 100px;
+		}
+		.box-wrapper {
+			flex-direction: row;
+			height: 600px;
+			width: 100%;
+            //background-color: #373737;
+            overflow: hidden;
+			.box {
+				box-sizing: border-box;
+				height: 130%;
+                margin-top: -70px;
+				width: 20%;
+				padding: 1em;
+                transform: rotate(-10deg);
+				.item-label {
+					font-size: 40px;
+                    transform: rotate(10deg);
+				}
+				.content {
+                    transform: rotate(10deg);
+					box-sizing: border-box;
+					opacity: 0;
+					pointer-events: none;
+					.item-title {
+						font-size: 24px;
+						margin-top: 70px;
+						margin-bottom: 22px;
+					}
+					.item-description {
+						font-size: 18px;
+
+						line-height: 24px;
+					}
+				}
+			}
+			.active {
+				width: 90%;
+				height: 130%;
+				.content {
+					opacity: 1;
+					pointer-events: auto;
+				}
+			}
 		}
 	}
 }
