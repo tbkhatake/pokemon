@@ -30,6 +30,7 @@
         </div>
     </div>
 </section>
-<div class="kos-graph">
+<?php $section3_title_have_graph = $section3_title == "" ? "kos-graph-none" : "kos-graph"?>
+<div class=<?=$section3_title_have_graph?>>
     <img class="kos-graph-img-1" src="<?=get_template_directory_uri()?>/images/internet/kos-graph1.svg" alt="graphismo">
 </div>
