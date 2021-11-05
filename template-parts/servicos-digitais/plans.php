@@ -12,8 +12,7 @@
 <?php $section2 = get_field('section2-category')?>
 <?php $section2_title = get_field('section2-title')?>
 <?php $section2_plansType = get_sub_field('categories')?>
-<section class="plans">
-<h2 class="section-title"><?php echo($section2_title); ?></h2>
+<section class="plans-sd">
     <form class="categories" action="">
         <input type="hidden" name="pageid" id="pageid" value="<?= get_the_ID()?>">
         <select class="categories-select" name="plans-categories">

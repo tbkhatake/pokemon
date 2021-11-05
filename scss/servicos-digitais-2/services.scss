@@ -11,6 +11,21 @@
 		padding-bottom: 50px;
 	}
 
+	.services-slider-controls{
+		position: absolute;
+		width: 100%;
+		top:110px;
+		display: flex;
+		justify-content: space-between;
+		.services-controls-btn{
+			position: relative;
+			z-index: 4;
+		}
+		@media (min-width: 1200px) {
+			display: none;
+		}
+	}
+
 	&__digital {
 		width: 100%;
 		margin: 0 auto 48px;
@@ -20,40 +35,6 @@
 			//margin: 0 calc((100% - 1072px) / 2) 96px calc((100% - 1072px) / 2);
 			margin: 0 auto 96px;
 		}
-		.tns-outer {
-			position: relative;
-			.tns-nav {
-				display: flex;
-				width: 100%;
-				position: absolute;
-				top: 50%;
-				transform: translateY(-50%);
-				z-index: 1;
-
-				button:nth-of-type(1) {
-					background-color: transparent;
-					border: 0;
-					background-image: url(../../images/servicos-digitais/left-arrow.svg);
-					width: 15px;
-					height: 15px;
-					background-repeat:no-repeat;
-					background-size: contain;
-					background-position: center;
-					margin-right: auto;
-					margin-left: 0px;
-				}
-				button:nth-of-type(2) {
-					background-color: transparent;
-					border: 0;
-					background-image: url(../../images/servicos-digitais/right-arrow.svg);
-					width: 20px;
-					height: 20px;
-					background-repeat:no-repeat;
-					background-size: contain;
-					background-position: center;
-				}
-			}
-		}
 
 		&--slider {
 			margin: 0 auto;
@@ -62,6 +43,8 @@
 			align-items: center;
 			height: 130px;
 			max-width: 1200px;
+			position: relative;
+			z-index: 2;
 		}
 		.fst-graphism{
 			display: none;
@@ -134,6 +117,8 @@
 		max-width: 54px;
 		border-radius: 50%;
 		cursor: pointer;
+		position: relative;
+		z-index: 3;
 
 		@media (min-width: 1200px) {
 			max-width: 100px;

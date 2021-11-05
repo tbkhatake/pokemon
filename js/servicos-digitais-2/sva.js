@@ -7,14 +7,14 @@ if(sva_slider){
         "items": 3,
         "mouseDrag":true,
         loop:false,
-        "controls":false,
+        "controls":true,
+        controlsContainer:".services-slider-controls",
+        "nav":false,
         preventScrollOnTouch: 'auto',
         "responsive": {
             "1200": {
                 "items": 5,
                 mouseDrag:true,
-                "nav":false,
-                
             }
         }
     });
@@ -34,7 +34,7 @@ if(sva_slider){
         preventScrollOnTouch: 'auto',
         items: 1,
         controls: false,
-        mouseDrag: true,
+        mouseDrag: false,
         navContainer: ".services__digital--slider"
     });
     

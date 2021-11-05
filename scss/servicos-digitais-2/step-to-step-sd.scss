@@ -4,310 +4,299 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    /*
-    .steps-wrapper:nth-of-type(1) {
-        display: none;
-    }
-    */
-    .section-title{
-        text-align: center;
-        width: 160px;
-		font-size: 24px;
-		line-height: 2.25rem;
-		font-weight: 300;
-		text-decoration: underline 2px #FFD700;
-        text-underline-position: under;
-		display: inline-block;
-    }
+    width: 100%;
 
-    .section-text{
-        display: none;
-    }
-    .tns-inner {
-        margin: 0 !important;
-        
-    }
-    .tns-outer{//pra fazer o slider ficar no centro
+    .steps-engine{
         width: 100%;
-
-        .tns-nav{
-            position: absolute;
-            bottom: 0;
+        .steps-wrapper{
             width: 100%;
-            display: flex;
-            justify-content: center;
-            z-index: 1;
-
-            button{
-                display: block;
-                margin-left:8px;
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                padding: 0;
-                border:none ;
-                background-color: #FFFFFF;
-                opacity: 0.75;
-            }
-    
-            .tns-nav-active{
-                background-color: #FFD700;
-            }
-        }
-    }
-    
-    .step-carousel-sd{
-        margin-top: 40px;
-        width: 100%;
-        overflow: hidden;
-        position: relative;
-        .step-carousel-wrapper{
-            .items-wrapper{
-                width: 100%;
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-        
-                .item-img-wrapper{
-                   
+            .steps-slider{
+                .tns-outer{
                     position: relative;
-                    width: 225px;
-                    height: 365px;
+                    bottom: 0;
+                    width: 100%;
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    &::after{
-                        content: "";
+                    justify-content: center;
+                    z-index: 1;
+            
+                    .tns-nav{
                         position: absolute;
-                        left: 35px;
-                        top: 40px;
-                        width: 168px;
-                        height: 290px;
-                        background-color: white;
-                        z-index: -1;
-                    }
-                    .item-img{
+                        bottom: -24px;
                         width: 100%;
-                        height: 100%;
-                       
-                    }
-        
-                    .item-img-title-wrapper{
-                        box-sizing: border-box;
-                        position: absolute;
-                        width: 100%;
-                        height: 100%;
-                        top:0;
-                        left: 0;
-                        padding: 35px 15px;
                         display: flex;
                         justify-content: center;
-                        align-items: center;
-                       
-                       
-                        .item-img-title{
-                            color: #C3000A;
-                            font-size:40px;
-                            font-weight: 700; 
-                            text-align: center;
-                            background-color: #ffffff;
-                            
+                        z-index: 1;
+                
+                        button{
+                            display: block;
+                            margin-left:8px;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            padding: 0;
+                            border:none ;
+                            background-color: #FFFFFF;
+                            opacity: 0.75;
                         }
-                    }
-                    .red-ball{
-                        position: absolute;
-                        bottom: 0;
-                        right: 0;
-                        display: flex;
-                        width: 58px;
-                        height: 58px;
-                        border-radius: 50%;
-                        justify-content: center;
-                        align-items: center;
-                        background-color: #FFD700;
-                        &-number{
-                            font-size: 27px;
-                            font-weight: 500;
-                            color: #373737;
+            
+                        .tns-nav-active{
+                            background-color: #FFD700;
                         }
                     }
                 }
-                .content-wrapper{
-                    margin-top: 24px;
-                    margin-bottom: 34px;
-                    padding: 20px 10px;
-                    width: 254px;
-                    box-shadow: 0px 3px 6px #C3000A33;
-                    box-sizing: border-box;
-                    
-        
-                    .content-title{
-                        font-size: 24px;
-                        font-weight: 700;
-                        line-height: 2.625rem;
-                        color: #ffffff !important;
-                    }
-        
-                    .content-redline{
-                        display: block;
-                        width: 100%;
-                        height: 2px;
-                        background-color: #FFD700 !important;
-                        
-                    }
-        
-                    .content-text{
-                        margin-top: 16px;
-                        font-size: 15px;
-                        font-weight: 300;
-                        line-height: 1.406rem;
-                        color: #ffffff !important;
-                    }
-                }
-            }
-        }
-    }
-
-    .step-slider-controls-wrapper{
-        position: absolute;
-        top: 205px;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding: 0 10px;
-        box-sizing: border-box;
-
-        .step-slider-controls{
-            display: flex;
-            justify-content: space-between;
-            width: 245px !important;
-            .step-controls-btn{
                 position: relative;
-                z-index: 2;
-                cursor: pointer;
-             
+                .step-carousel-sd{
+                    margin-top: 40px;
+                    position: relative;
+                    .step-carousel-wrapper{
+                        .items-wrapper{
+                            width: 100%;
+                            position: relative;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                    
+                            .item-img-wrapper{
+                                position: relative;
+                                width: 225px;
+                                height: 365px;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                &::after{
+                                    content: "";
+                                    position: absolute;
+                                    left: 35px;
+                                    top: 40px;
+                                    width: 168px;
+                                    height: 290px;
+                                    background-color: white;
+                                    z-index: -1;
+                                }
+                                .item-img{
+                                    width: 100%;
+                                    height: 100%;
+                                   
+                                }
+                    
+                                .item-img-title-wrapper{
+                                    box-sizing: border-box;
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    top:0;
+                                    left: 0;
+                                    padding: 35px 15px;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                   
+                                   
+                                    .item-img-title{
+                                        color: #C3000A;
+                                        font-size:40px;
+                                        font-weight: 700; 
+                                        text-align: center;
+                                        background-color: #ffffff;
+                                        
+                                    }
+                                }
+                                .red-ball{
+                                    position: absolute;
+                                    bottom: 0;
+                                    right: 0;
+                                    display: flex;
+                                    width: 58px;
+                                    height: 58px;
+                                    border-radius: 50%;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: #FFD700;
+                                    &-number{
+                                        font-size: 27px;
+                                        font-weight: 500;
+                                        color: #373737;
+                                    }
+                                }
+                            }
+                            .content-wrapper{
+                                margin-top: 24px;
+                                width: 254px;
+                                box-shadow: 0px 3px 6px #C3000A33;
+                                box-sizing: border-box;
+                                
+                    
+                                .content-title{
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                    line-height: 2.625rem;
+                                    color: #ffffff !important;
+                                }
+                    
+                                .content-redline{
+                                    display: block;
+                                    width: 100%;
+                                    height: 2px;
+                                    background-color: #FFD700 !important;
+                                    
+                                }
+                    
+                                .content-text{
+                                    margin-top: 16px;
+                                    font-size: 15px;
+                                    font-weight: 300;
+                                    line-height: 1.406rem;
+                                    color: #ffffff !important;
+                                }
+                            }
+                        }
+                    }
+                }
+            
+                .step-slider-controls-wrapper{
+                    position: relative;
+                    top: -325px;
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0 10px;
+                    box-sizing: border-box;
+            
+                    .step-slider-controls{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 290px;
+                        .step-controls-btn{
+                            display: block;
+                            position: relative;
+                            z-index: 2;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            
+               
             }
         }
     }
 
     @media(min-width:1200px){
         margin-top: 0px;
-
-        .section-title{
+        #tns4-mw{
+            min-height: 505px;
+        }
+        .steps-mainly-wrapper{
             width: 100%;
-            font-size: 40px;
         }
-        .section-text{
-            display: block;
-            margin-top: 40px;
-            font-size: 20px;
-            font-weight: 300;
-            line-height: 1.25rem;
-            width: 870px;
-        }
-
-        .tns-outer{
-
-            .tns-nav{
-                justify-content: flex-end;
-                box-sizing: border-box;
-                padding: 0 100px;
-                bottom: 11px;
-    
-                button{
-                    margin-left:16px;
-                    width: 46px;
-                    border-radius:8px;
-                }
-        
-            }
-        }
-        
-        .step-carousel-sd{
-            margin-right: 90px;
-            margin-top: 80px;
-            margin-bottom: 64px;
-            .step-carousel-wrapper{
-                .items-wrapper{
-                    flex-direction: row;
-                    justify-content: space-between;
-                    align-items: center;
-                    width: 550px;
-                    height: 410px;
-                    position: relative;
-
-                    .item-img-wrapper{
-                        position: relative;
-                        width: 250px;
-                        height: 410px;
-                        &::after{
-                            content: "";
+        .steps-engine{
+            .steps-wrapper{
+                .steps-slider{
+                    .tns-outer{
+                        .tns-nav{
                             position: absolute;
-                            left: 39px;
-                            top: 46px;
-                            width: 182px;
-                            height: 320px;
-                            background-color: white;
-                            z-index: -1;
-                        }
-            
-                        .red-ball{
-                            width: 64px;
-                            height: 64px;
-
-                            &-number{
-                                font-size: 32px;
+                            bottom: -42px;
+                            width: 100%;
+                            padding-right: 200px;
+                            justify-content: flex-end;
+                            z-index: 2;
+                            button{
+                                display: block;
+                                margin-left:16px;
+                                width: 46px;
+                                height: 10px;
+                                border-radius: 8px;
+                            }
+                            .tns-nav-active{
+                                background-color: #FFD700;
                             }
                         }
                     }
-                    .content-wrapper{
-                        margin-bottom:0;
-                        padding: 0;
-                        width: 275px;
-                        box-shadow: none;
+                    .step-carousel-sd{
+
+                        .step-carousel-wrapper{
+                            .items-wrapper{
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                width: 550px;
+                                height: 410px;
+                                position: relative;
             
-                        .content-title{
-                            font-weight: 300;
-                            line-height: 2rem;
-                            color: #373737;
-                        }
+                                .item-img-wrapper{
+                                    position: relative;
+                                    width: 250px;
+                                    height: 410px;
+                                    &::after{
+                                        content: "";
+                                        position: absolute;
+                                        left: 39px;
+                                        top: 46px;
+                                        width: 182px;
+                                        height: 320px;
+                                        background-color: white;
+                                        z-index: -1;
+                                    }
+                        
+                                    .red-ball{
+                                        width: 64px;
+                                        height: 64px;
             
-                        .content-redline{
-                            display: block;
-                            width: 100%;
-                            height: 2px;
-                            background-color: #c3000a;
-                        }
-            
-                        .content-text{
-                            margin-top: 24px;
-                            font-size: 18px;
-                            font-weight: 300;
-                            line-height: 1.375rem;
-                            color: #373737;
+                                        &-number{
+                                            font-size: 32px;
+                                        }
+                                    }
+                                }
+                                .content-wrapper{
+                                    margin-bottom:0;
+                                    padding: 0;
+                                    width: 275px;
+                                    box-shadow: none;
+                        
+                                    .content-title{
+                                        font-weight: 300;
+                                        line-height: 2rem;
+                                        color: #373737;
+                                    }
+                        
+                                    .content-redline{
+                                        display: block;
+                                        width: 100%;
+                                        height: 2px;
+                                        background-color: gold;
+                                    }
+                        
+                                    .content-text{
+                                        margin-top: 24px;
+                                        font-size: 18px;
+                                        font-weight: 300;
+                                        line-height: 1.375rem;
+                                        color: #373737;
+                                    }
+                                }
+                            }
                         }
                     }
-                }
-            }
-        }
-
-        .step-slider-controls-wrapper{
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            padding: 0 70px;
-            box-sizing: border-box;
-            top:560px !important;
-
-            .step-slider-controls{
-                display: flex;
-                justify-content: space-between;
-                width: unset;
-                .step-controls-btn{
-                    position: relative;
-                    z-index: 2;
-                    cursor: pointer;
+                    .step-slider-controls-wrapper{
+                        position: relative;
+                        top: 20px;
+                        width: 100%;
+                        display: flex ;
+                        justify-content: flex-end;
+                        padding-right: 70px;
+                        box-sizing: border-box;
+            
+                        .step-slider-controls{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 245px;
+                            .step-controls-btn{
+                                display: block ;
+                                position: relative;
+                                z-index: 2;
+                                cursor: pointer;
+                            }
+                        }
+                    }
                 }
             }
         }
