@@ -1,25 +1,26 @@
-<?php $section4 = get_field('section4-boxes');?>
-<?php $section4_title = get_field('section4-title');?>
-<?php $section4_title_have = $section4_title == "" ? "hire-us-none" : "hire-us"?>
-<section class=<?=$section4_title_have?>  id="contratar">
+<?php $ssTitle = get_field('titulo_contato','options');?>
+<?php $ssTitle_have = $ssTitle['section-title'] == "" ? "contact-none" : "contact"?>
+<section class=<?=$ssTitle_have?>  id="contratar">
     <div class="container">
-        <h2 class="section-title"><?= $section4_title; ?></h2>
+        <h2 class="section-title"><?= $ssTitle; ?></h2>
         <div class="box-grid">
-        <?php foreach($section4 as $box):?>
-            <?php
-                $buttonLink = $box['box-link'];
-                $icon = $box['box-icon'];
-                $info = $box['box-text'];
-            ?>
-            <?php if($icon || $info):?>
-                <a class="button-link" href="<?= $buttonLink; ?>"> 
-                    <button type="button" class="box-wrapper">
-                        <img class="box-icon" src="<?= $icon['url']; ?>" alt="<?= $icon['alt']; ?>">
-                        <p class="box-info"><?= $info; ?></p>
-                    </button>
-                </a>
+            <?php if(have_rows('box_contato','options')): ?>
+                <?php while(have_rows('box_contato','options')): the_row(); ?>
+                    <?php
+                        $buttonLink = get_sub_field('link_botao');
+                        $icon = get_sub_field('icone_contato');
+                        $info = get_sub_field('info_contato');
+                    ?>
+                <?php if($icon || $info):?>
+                    <a class="button-link" href="<?= $buttonLink; ?>"> 
+                        <button type="button" class="box-wrapper">
+                            <img class="box-icon" src="<?= $icon; ?>" alt="<?= $icon['alt']; ?>">
+                            <p class="box-info"><?= $info; ?></p>
+                        </button>
+                    </a>
+                <?php endif; ?>
+                <?php endwhile; ?>
             <?php endif; ?>
-            <?php endforeach; ?>
         </div>
     </div>
 </section>

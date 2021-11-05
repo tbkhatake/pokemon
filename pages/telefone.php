@@ -6,6 +6,6 @@
 <?php get_template_part("template-parts/telefone/user-path");?>
 <?php get_template_part("template-parts/telefone/know-our-services");?>
 <?php get_template_part("template-parts/telefone/text-block");?>
-<?php get_template_part("template-parts/telefone/contact");?>
+<?php get_template_part("template-parts/common/contact");?>
 
 <?php get_footer() ?>

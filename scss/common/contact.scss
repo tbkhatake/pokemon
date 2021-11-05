@@ -58,6 +58,69 @@
 				filter: grayscale(100%) invert(1);
 			}
 		}
+		.box-forms-wrapper{
+			display: none;
+			position: absolute;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			width: 100vw;
+			background-color: #3737379f;
+
+			&-active{
+				display: flex;
+			}
+			.box-forms{
+				background-color: white;
+				border: 5px solid #C3000A;
+				padding: 24px 23px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+
+				.title{
+					font-size: 28px;
+					font-weight: 700;
+					color: #373737;
+				}
+
+				.form-red-line{
+					margin-top: 6.5px;
+					display: block;
+					width:236px;
+					height: 5px;
+					background-color: #C3000A;
+				}
+
+				.desc{
+					margin-top: 24px;
+					font-size: 20px;
+					font-weight: 300;
+					color: #373737;
+				}
+
+				.form-input{
+					margin-top: 24px;
+					width: 200px;
+					height: 40px;
+					border: #C3000A 1px solid;
+					font-size: 18px;
+					font-weight: 300;
+					padding-left: 24px;
+					color: #373737;
+				}
+
+				.form-button{
+					margin-top: 24px;
+					font-size: 20px;
+					font-weight: 500;
+					color: white;
+					padding: 6px 20px;
+					background-color: #C3000A;
+					border: none;
+				}
+			}
+		}
 	}
 }
 @media (min-width: 1200px) {
@@ -92,6 +155,92 @@
 				.box-info {
 					font-size: 24px;
 					line-height: 32px;
+				}
+			}
+
+			.box-forms-wrapper{
+				.box-forms{
+					padding: 32px 46px;
+
+					.title{
+						font-size: 32px;
+					}
+
+					.form-input{
+						width: 406px;
+						height: 50px;
+					}
+
+					.form-button{
+						margin-top: 32px;
+						font-size: 20px;
+						padding: 12.5px 41.5px;
+
+					}
+				}
+			}
+
+			.box-painel-wrapper{
+				display: none;
+				position: absolute;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				width: 100vw;
+				background-color: #3737379f;
+
+				&-active{
+					display: flex;
+				}
+				.box-painel{
+					background-color: white;
+					border: 5px solid #C3000A;
+					padding: 24px 23px;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+
+					.title{
+						font-size: 32px;
+						font-weight: 700;
+						color: #373737;
+					}
+
+					.painel-red-line{
+						margin-top: 6.5px;
+						display: block;
+						width:236px;
+						height: 5px;
+						background-color: #C3000A;
+					}
+
+					.desc{
+						margin-top: 24px;
+						font-size: 20px;
+						font-weight: 300;
+						color: #373737;
+					}
+
+					.form-input{
+						margin-top: 24px;
+						width: 200px;
+						height: 40px;
+						border: #C3000A 1px solid;
+						font-size: 18px;
+						font-weight: 300;
+						padding-left: 24px;
+						color: #373737;
+					}
+
+					.form-button{
+						margin-top: 24px;
+						font-size: 20px;
+						font-weight: 500;
+						color: white;
+						padding: 6px 20px;
+						background-color: #C3000A;
+						border: none;
+					}
 				}
 			}
 		}

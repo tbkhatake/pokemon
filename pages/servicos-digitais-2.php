@@ -140,5 +140,5 @@
     <img class="img -bg3" src="<?=get_template_directory_uri()?>/images/servicos-digitais/svth-graphism.svg">    
 </div>
 
-    <?php get_template_part("template-parts/telefone/contact");?>
+    <?php get_template_part("template-parts/common/contact");?>
 <?php get_footer() ?>
