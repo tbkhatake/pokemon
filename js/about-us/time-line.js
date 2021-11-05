@@ -54,6 +54,12 @@ if(sectionTimeLine){
     timeLineImages[1].classList.add('card-image-active2')
     timeLineContentCard[0].classList.add('desk-card-content-active')
     
+    timeLineImages.forEach(el=>{
+        if(el.getAttribute("alt") == ""){
+            timeLineImageWrapper.style.display = "none"
+        }
+    })
+
     timeLineDeskBalls.forEach((ball,key)=>{
         ball.addEventListener('click',()=>{
             timeLineDeskBalls.forEach(el=>{

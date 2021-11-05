@@ -45,7 +45,6 @@ if(haveStepSd){
     
     if(screen.width >= 1200){
         let stepSliderControl = document.querySelectorAll('.step-slider-controls');
-        console.log(stepSliderControl)
         stepSliderControl.forEach((el,key)=>{
             itensCounter = Math.floor(el.id/2);
             el.style.width = (itensCounter*62)+106+"px"
