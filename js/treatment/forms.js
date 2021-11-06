@@ -145,8 +145,10 @@ if(haveTreatmentForms){
         })
         if(treatmentFormsInputsEmail.value == "") {
             treatmentFormsErrorEmailMsg.style.display = "block"
-            treatmentFormsErrorTelMsg.style.display = "block"
             treatmentFormsErrorEmailMsg.innerText = "Preenchimento obrigatório*"
+            treatmentConfirmMsg.style.display = "none"
+        }else if(treatmentFormsInputsTel.value == ""){
+            treatmentFormsErrorTelMsg.style.display = "block"
             treatmentFormsErrorTelMsg.innerText = "Preenchimento obrigatório*"
             treatmentConfirmMsg.style.display = "none"
         }else if(!emailRegex.test(treatmentFormsInputsEmail.value)){
@@ -155,7 +157,7 @@ if(haveTreatmentForms){
             treatmentFormsErrorTelMsg.style.display = "block"
         }else{
             treatmentFormsErrorEmailMsg.style.display = "none"
-
+            treatmentFormsErrorTelMsg.style.display = "none"
         }
     })
 }

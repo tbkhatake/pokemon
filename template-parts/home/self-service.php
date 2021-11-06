@@ -12,7 +12,7 @@
                         $info = get_sub_field('info_autoatendimento');
                     ?>
                     <?php if($icon || $info):?>
-                    <a class="button-link" href="<?= $buttonLink; ?>"> 
+                    <a class="button-link-ss" href="<?= $buttonLink; ?>"> 
                         <button type="button" class="box-wrapper">
                             <img class="box-icon" src="<?= $icon; ?>" alt="<?= $icon['alt']; ?>">
                             <p class="box-info"><?= $info; ?></p>
