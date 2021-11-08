@@ -1,0 +1,333 @@
+.acordeon-tv {
+	width: 100%;
+	margin-top: 64px;
+	box-sizing: border-box;
+	text-align: center;
+
+	.accordion-section-title {
+		text-align: center;
+		width: 160px;
+		font-size: 24px;
+		line-height: 2.25rem;
+		font-weight: 300;
+		text-decoration: underline 2px #c3000a;
+		text-underline-position: under;
+		display: inline-block;
+		margin-bottom: 40px;
+	}
+	.box-wrapper {
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		height: 100vh;
+		text-align: left;
+		.box {
+			box-sizing: border-box;
+			height: 10%;
+			width: 100%;
+			overflow: hidden;
+			padding: 2em;
+			transition: all 0.5s ease-in-out;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			.item-label {
+				text-align: center;
+				font-size: 26px;
+				font-weight: 500;
+				text-transform: uppercase;
+				letter-spacing: 3px;
+				color: #ffffff;
+				cursor: pointer;
+			}
+			.content {
+				box-sizing: border-box;
+				display: none;
+				pointer-events: none;
+				.item-title {
+					font-size: 20px;
+					color: #ffffff;
+					font-weight: 700;
+					margin-top: 16px;
+					margin-bottom: 16px;
+				}
+				.item-description {
+					font-size: 15px;
+					color: #ffffff;
+					font-weight: 300;
+					line-height: 20px;
+					width: 28%;
+				}
+				.cta-wrapper {
+					width: 28%;
+					text-align: center;
+					.package-link {
+						display: inline-block;
+						padding: 8px 15px;
+						background-color: #c3000a;
+						color: #ffffff;
+						font-size: 16px;
+						font-weight: 500;
+						text-decoration: none;
+						text-align: center;
+					}
+				}
+			}
+			&:nth-child(1) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/telecine.jpg') center no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(2) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/canais-adultos.jpg') center no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(3) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/canais-internacionais.jpg') center no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(4) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/premiere.jpg') center no-repeat;
+				background-size: cover;
+			}
+			&:nth-child(5) {
+				background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+					url('../../assets/tv-accordion/combate.jpg') center no-repeat;
+				background-size: cover;
+			}
+		}
+		.active {
+			height: 80%;
+			overflow-y: scroll;
+			transition: all 0.5s ease-in-out;
+			-ms-overflow-style: none;
+			scrollbar-width: none;
+			align-items: flex-start;
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			.item-label {
+				display: none;
+			}
+
+			.content {
+				width: 1034px;
+				display: block;
+				pointer-events: auto;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.acordeon-tv {
+		margin-top: 120px;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 1440px;
+		.accordion-section-title {
+			width: 100%;
+			font-size: 40px;
+			margin-bottom: 100px;
+		}
+		.box-wrapper {
+			flex-direction: row;
+			height: 650px;
+			width: 100%;
+			//background-color: #373737;
+			overflow: hidden;
+			.box {
+				box-sizing: border-box;
+				height: 130%;
+				margin-top: -70px;
+				width: 20%;
+				padding: 1em;
+				transform: rotate(-10deg);
+				.item-label {
+					margin-bottom: 70px;
+					margin-left: 22px;
+					font-size: 40px;
+					transform: rotate(10deg);
+				}
+				.content {
+					margin-left: 31px;
+					transform: rotate(10deg);
+					box-sizing: border-box;
+					opacity: 0;
+					pointer-events: none;
+					.item-title {
+						font-size: 30px;
+						//margin-top: 70px;
+						margin-bottom: 30px;
+					}
+					.item-description {
+						font-size: 18px;
+						width: 60%;
+						line-height: 24px;
+						padding-right: 50%;
+					}
+					.cta-wrapper {
+						margin-top: 50px;
+						width: 60%;
+						text-align: center;
+						.package-link {
+							display: inline-block;
+							padding: 10px 17px;
+							font-size: 20px;
+							&:hover {
+								background-color: rgba(195, 0, 10, 0.7);
+							}
+						}
+					}
+				}
+			}
+			.active {
+				width: 90%;
+				height: 130%;
+				.item-label {
+					display: none;
+				}
+				.content {
+					width: 916px;
+					opacity: 1;
+					pointer-events: auto;
+				}
+			}
+		}
+	}
+}
+
+/***************Pacotes-Canais****************/
+.channels-wrapper {
+	margin-top: 40px;
+	width: 100%;
+	.channels-telecine {
+		position: relative;
+		width: 100%;
+		&-title {
+			font-size: 20px;
+			font-weight: 500;
+			color: #ffffff;
+		}
+
+		.telecine-channels-wrapper {
+			display: flex;
+			margin-top: 24px;
+			margin-bottom: 24px;
+			.carousel-wrapper {
+				display: grid;
+				grid-gap: 0px 40px;
+				grid-auto-flow: column;
+				overflow-x: auto;
+				width: 25%;
+				&.carousel-wrapper::-webkit-scrollbar {
+					width: 0px;
+				}
+				&.carousel-wrapper::-webkit-scrollbar-thumb {
+					background-color: transparent;
+				}
+
+				.channel-wrapper {
+					display: flex;
+					position: relative;
+					width: 74px;
+					height: 110px;
+					flex-direction: column;
+
+					.d-icon-wrapper {
+						width: 74px;
+						height: 74px;
+						border-radius: 10%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+
+						.channel-icon {
+							max-width: 74px;
+							max-height: 74px;
+							border-radius: 10%;
+						}
+					}
+
+					.channel-name {
+						margin-top: 16px;
+						font-size: 13px;
+						font-weight: 500;
+						text-align: center;
+						color: #ffffff;
+					}
+				}
+			}
+		}
+	}
+}
+@media (min-width: 1200px) {
+	.channels-wrapper {
+		margin-top: 40px;
+		width: 100%;
+		.channels-telecine {
+			position: relative;
+			width: 100%;
+			&-title {
+				font-size: 20px;
+				font-weight: 500;
+				color: #ffffff;
+			}
+
+			.telecine-channels-wrapper {
+				display: flex;
+				margin-top: 24px;
+				margin-bottom: 24px;
+				.carousel-wrapper {
+					display: grid;
+					grid-gap: 0px 40px;
+					grid-auto-flow: column;
+					overflow-x: auto;
+					width: 55%;
+					&.carousel-wrapper::-webkit-scrollbar {
+						height: 5px;
+					}
+					&.carousel-wrapper::-webkit-scrollbar-thumb {
+						background-color: #c3000a;
+					}
+
+					.channel-wrapper {
+						display: flex;
+						position: relative;
+						width: 74px;
+						height: 110px;
+						flex-direction: column;
+
+						.d-icon-wrapper {
+							width: 74px;
+							height: 74px;
+							border-radius: 10%;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+
+							.channel-icon {
+								max-width: 74px;
+								max-height: 74px;
+								border-radius: 10%;
+							}
+						}
+
+						.channel-name {
+							margin-top: 16px;
+							font-size: 13px;
+							font-weight: 500;
+							text-align: center;
+							color: #ffffff;
+						}
+					}
+				}
+			}
+		}
+	}
+}
