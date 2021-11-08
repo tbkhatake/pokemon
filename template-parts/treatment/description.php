@@ -1,6 +1,6 @@
 <?php $desc_section = get_field('description-section')?>
 <?php $desc_section_have = $desc_section['section-title'] == "" ? "description-none" : "description"?>
-<section class=<?=$desc_section_have?>>
+<section class=<?=$desc_section_have?> id="faq">
     <h2 class="section-title"><?= $desc_section['section-title'];?></h2>
     <?php foreach($desc_section['section-blocks'] as $block):?>
         <div class="desc-wrapper">

@@ -154,12 +154,7 @@ if(havePlans){
 
                     let servicesWrapper = document.createElement('div');
                     servicesWrapper.classList.add('services-wrapper');
-
-                    let servicesTitle = document.createElement('p');
-                    servicesTitle.classList.add('services-title');
-                    if(el.services.icon[0]){
-                        servicesTitle.innerText = 'Serviços inclusos';
-                    }
+                    
                     let servicesIS = document.createElement('div');
                     servicesIS.classList.add('services-IS');
                     servicesWrapper.appendChild(servicesIS);
@@ -240,7 +235,6 @@ if(havePlans){
                     card.appendChild(redline);
                     card.appendChild(featuresWrapper);
                     if(el.services.icon[0]){
-                        card.appendChild(servicesTitle)
                         servicesWrapper.appendChild(servicesPlus)
                         card.appendChild(servicesWrapper);
                     }
@@ -337,11 +331,6 @@ if(havePlans){
                         let servicesWrapper = document.createElement('div');
                         servicesWrapper.classList.add('services-wrapper');
 
-                        let servicesTitle = document.createElement('p');
-                        servicesTitle.classList.add('services-title');
-                        if(el.services.icon[0]){
-                            servicesTitle.innerText = 'Serviços inclusos';
-                        }
                         let servicesIS = document.createElement('div');
                         servicesIS.classList.add('services-IS');
                         servicesWrapper.appendChild(servicesIS);
@@ -425,7 +414,7 @@ if(havePlans){
                         card.appendChild(redline);
                         card.appendChild(featuresWrapper);
                         if(el.services.icon[0]){
-                            card.appendChild(servicesTitle)
+
                             servicesWrapper.appendChild(servicesPlus)
                             card.appendChild(servicesWrapper);
                         }

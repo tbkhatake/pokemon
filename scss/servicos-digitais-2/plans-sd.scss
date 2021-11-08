@@ -1,9 +1,9 @@
-.plans{
-    margin-top: 64px;
+.plans-sd{
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-top: -40px;
     &-none{
         display: none;
     }
@@ -24,6 +24,7 @@
     }
 
     .categories{
+        display: none;
         margin-top: 24px;
         position: relative;
         padding:0 10px ;
@@ -331,7 +332,7 @@
             }
     
             .tns-nav-active{
-                background-color: #C3000A;
+                background-color: gold;
             }
         }
         .tns-horizontal.tns-subpixel>.tns-item{
@@ -340,39 +341,11 @@
     }
 
     @media(min-width:1200px){
-        margin-top: 160px;
-
+        margin-top: -64px;
         .section-title{
             width: 100%;
             margin-bottom: 80px;
             font-size: 40px;
-        }
-
-        .categories-desk{
-            display: block;
-
-            &-select{
-                display: flex;
-
-                .desk-options{
-                    font-size: 32px;
-                    font-weight: 300;
-                    padding: 0 40px;
-                    padding-bottom: 10px;
-                    border-bottom: 2px solid ;
-                    cursor: pointer;
-
-                    &-active{
-                        color: #C3000A;
-                        border-bottom:2px solid #C3000A ;
-
-                    } 
-                }
-            }
-        }
-
-        .categories{
-            display: none;
         }
 
         @keyframes lookAtMe{

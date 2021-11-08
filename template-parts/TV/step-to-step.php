@@ -33,6 +33,7 @@
         </div>
     </div>
 </section>
-<div class="step-to-step-graph">
+<?php $step_have_graph = $step['section-title'] == "" ? "step-to-step-graph-none" : "step-to-step-graph"?>
+<div class=<?=$step_have_graph?>>
     <img class="step-to-step-graph-img" src="<?=get_template_directory_uri()?>/images/TV/step-to-step-graph.svg" alt="graphismo">
 </div>

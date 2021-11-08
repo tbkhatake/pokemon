@@ -3,7 +3,7 @@
 <section class=<?=$forms_have?>>
     <h2 class="section-title"><?= $forms['section-title'];?></h2>
     <div class="forms-container">
-        <form class="forms-wrapper" action="">
+        <form class="forms-wrapper" action="" id="treatment-form">
             <p class="forms-desc"><?= $forms['forms-desc'];?></p>
             <?php foreach($forms['tiny-form'] as $tinyForm ): ?>
                 <?php if($tinyForm['form-text'] == "Email" || $tinyForm['form-text'] == "email" || $tinyForm['form-text'] == "email*"|| $tinyForm['form-text'] == "Email*"):?>
@@ -25,7 +25,7 @@
             <?php endforeach;?>
             <?php foreach($forms['text-area'] as $textArea ): ?>
                 <div class="fields-wrapper fields-wrapper-text">
-                    <textarea class="text-area" id="t-forms-input" type="text" name="<?= $tinyForm['form-text'];?>" placeholder="<?= $textArea['form-text'];?>"></textarea>
+                    <textarea class="text-area" id="t-forms-input" type="text" name="<?= $textArea['form-text'];?>" placeholder="<?= $textArea['form-text'];?>"></textarea>
                     <p class="t-required">Preenchimento obrigatório*</p>
                 </div>
             <?php endforeach;?>
@@ -33,6 +33,7 @@
                 <input class="t-forms-button" type="submit" value="<?= $forms['forms-button']['title'];?>">
                 <span class="t-button-validation"><?= $forms['forms-button']['title'];?></span>
             </div>
+            <p class="t-confirm-msg">&#10003 Mensagem enviada com sucesso! </p>
         </form>
     </div>
 </section>
