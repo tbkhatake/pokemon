@@ -5,28 +5,9 @@ function raccoon_enqueue_styles(){
 	wp_enqueue_style( 'theme-common',get_template_directory_uri().'/css/common/bundle.css' );
 
 	if(is_home() || is_front_page()){
-        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/home/bundle.css' );
-    }else if(is_page_template('pages/internet.php')){
-        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/internet/bundle.css' );
-	}else if(is_page_template('pages/tv.php')){
-		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/TV/bundle.css' );
-	}else if(is_page_template('pages/combos.php')){
-		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/combos/bundle.css' );
-	}else if(is_page_template('pages/about-us.php')){
-		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/about-us/bundle.css' );
-	}else if(is_page_template('pages/telefone.php')){
-        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/telefone/bundle.css' );
-	}else if(is_page_template('pages/politicas.php')){
-        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/politicas/bundle.css' );
-	}else if(is_page_template('pages/b2b.php')){
-		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/b2b/bundle.css' );
-	
-	}else if(is_page_template('pages/servicos-digitais-2.php')){
-		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/servicos-digitais-2/bundle.css' );
-
-	}else if(is_page_template('pages/atendimento.php')){
-		wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/treatment/bundle.css' );
-
+        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/common/bundle.css' );
+    }else if(is_page_template('pages/brasileiro.php')){
+        wp_enqueue_style( 'theme-home', get_template_directory_uri().'/css/brasileiro/bundle.css' );
 	}
 	wp_enqueue_script( 'theme-common-js', get_template_directory_uri().'/dist/bundle.js', array(), false, true);
 }

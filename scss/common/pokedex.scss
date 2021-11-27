@@ -1,0 +1,314 @@
+.pokedex-wrapper{
+    width: 280px;
+    height: 480px;
+    background-color: #DC0A2D;
+    margin: 24px auto;
+    border-radius: 5px;
+    border:1px solid black;
+    .top{
+        width: 100%;
+        height: 70px;
+        padding: 10px 20px;
+        display: flex;
+        .big-ball{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: white;
+            border:1px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            .blue-part{
+                position: relative;
+                width: 40px;
+                height: 40px;
+                background-color: #19699E;
+                border-radius: 50%;
+                border:1px solid black;
+                padding-top: 8px;
+                padding-left: 8px;
+                .light-blue-part{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 80%;
+                    border:1px solid black;
+                    background-color:#9ADCFF
+                }
+                &-off{
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgb(37, 37, 37);
+                    border-radius: 50%;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+        .little-ball{
+            position: relative;
+            width: 10px;
+            height: 10px;
+            margin-right: 5px;
+            border-radius: 50%;
+            border:1px solid black;
+            &-off{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgb(37, 37, 37);
+                border-radius: 50%;
+                top: 0;
+                left: 0;
+            }
+            &--red{
+                background-color: red;
+            }
+            &--yellow{
+                background-color: yellow;
+            }
+            &--green{
+                background-color: green;
+            }
+        }
+        .down-curve{
+            margin-top: 11px;
+            border-radius: 100% 0% 100% 0% / 100% 100% 0% 0% ;
+            border:1px solid black;
+            border-bottom:  none;
+            width: 130px;
+            height: 50px;
+        }
+    }
+    .bottom{
+        width: 100%;
+        padding: 0 20px 20px;
+        .up-line{
+            display: block;
+            height: 1px;
+            width: 108px;
+            margin-left:3px;
+            background-color: black;
+        }
+        &-inside{
+            padding-bottom: 20px;
+            border:1px solid black;
+            border-top: none;
+            border-radius: 5px 0 5px 5px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .white-part{
+                margin-top: 20px;
+                width: 200px;
+                height: 200px;
+                background-color: white;
+                border-radius: 0 0 0 20px;
+                border:1px solid black;
+
+                .up{
+                    width: 100%;
+                    height:20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &-ball{
+                        background-color: red;
+                        height: 8px;
+                        width: 8px;
+                        border-radius: 50%;
+                        margin-right: 3px;
+                        margin-left: 3px;
+                        border:1px solid black;
+                    }
+                }
+                .mid{
+                    position: relative;
+                    margin: 0 auto;
+                    width: 160px;
+                    height:150px;
+                    background-color: #98CB98;
+                    border:1px solid black;
+                    border-radius: 5px;
+                    &-off{
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgb(37, 37, 37);
+                        top: 0;
+                        left: 0;
+                        z-index: 1;
+                    }
+                    .pokemon-list{
+                        width: 100%;
+                        height: 100%;
+                        .poke-img{
+                            width: 100%;
+                            height: 150px;
+                        }
+                    }
+                }
+                .down{
+                    width: 100%;
+                    height:30px;
+                    padding: 0 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &-ball{
+                        height: 15px;
+                        width: 15px;
+                        border-radius: 50%;
+                        background-color: red;
+                        border:1px solid black;
+                    }
+                    &-lines{
+                        height: 15px;
+                        width: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .line{
+                            display: block;
+                            background-color: black;
+                            height: 2px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .red-part-up{
+                margin-top: 30px;
+                width: 100%;
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+                .gray-ball{
+                    width:30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    background-color: #585858;
+                    border:1px solid black;
+                    margin-right: 10px;
+                }
+                .button{
+                    width: 50px;
+                    height: 10px;
+                    border-radius: 10px;
+                    margin-right: 5px;
+                    margin-left: 5px;
+                    border:1px solid black;
+                    &--red{
+                        background-color: lightcoral;
+                        &:active{
+                            background-color:rgb(252, 101, 101) ;
+                        }
+                    }
+                    &--blue{
+                        background-color: lightblue;
+                        &:active{
+                            background-color:rgb(114, 196, 223) ;
+                        }
+                    }
+                }
+            }
+            .red-part-down{
+                margin-top: 30px;
+                width: 100%;
+                height: 50px;
+                padding: 0 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .green-part{
+                    height: 50px;
+                    width: 100px;
+                    border:1px solid black;
+                    border-radius: 5px;
+                    background: #32CB65;
+                    &:active{
+                        background-color:#289c4f ;
+                    }
+                }
+                .directions{
+                    height: 80px;
+                    width: 80px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .vert{
+                        width: 20px;
+                        height: 100%;
+                        background-color: #585858;
+                        border-radius: 5px;
+                        border:1px solid black;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .up{
+                            display: block;
+                            width: 100%;
+                            height: 30px;
+                            &:active{
+                                background-color:#414141 ;
+                            }
+                        }
+                        .down{
+                            display: block;
+                            width: 100%;
+                            height: 30px;
+                            &:active{
+                                background-color:#414141 ;
+                            }
+                        }
+                    }
+                    .horiz{
+                        position: absolute;
+                        width: 100%;
+                        height: 20px;
+                        background-color: #585858;
+                        border-radius: 5px;
+                        border:1px solid black;
+                        display: flex;
+                        justify-content: space-between;
+                        .left{
+                            display: block;
+                            width: 30px;
+                            height: 100%;
+                            &:active{
+                                background-color:#414141 ;
+                            }
+                        }
+                        .right{
+                            display: block;
+                            width: 30px;
+                            height: 100%;
+                            &:active{
+                                background-color:#414141 ;
+                            }
+                        }
+                    }
+                    .center{
+                        position: absolute;
+                        width: 20px;
+                        height: 20px;
+                        padding:5px;
+                        background-color: #585858;
+                        .gray-ball{
+                            height:10px;
+                            width: 10px;
+                            border:1px solid black;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
