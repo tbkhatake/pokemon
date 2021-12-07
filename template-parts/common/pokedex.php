@@ -1,4 +1,7 @@
 <section class="pokedex-wrapper">
+    <div class="white">
+        <img class="load-ball" src="<?=get_template_directory_uri()?>/images/ball.png" alt="ball">
+    </div>
     <div class="top">
         <div class="big-ball">
             <div class="blue-part">

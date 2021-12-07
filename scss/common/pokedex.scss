@@ -5,6 +5,29 @@
     margin: 24px auto;
     border-radius: 5px;
     border:1px solid black;
+    .white{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background-color: white;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .load-ball{
+            width: 100px;
+            height: 100px;
+            animation: spin 1s infinite linear;
+        }
+
+        @keyframes spin{
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+    }
+        
     .top{
         width: 100%;
         height: 70px;
@@ -231,6 +254,7 @@
                     border:1px solid black;
                     border-radius: 5px;
                     background: #32CB65;
+                    cursor: pointer;
                     &:active{
                         background-color:#289c4f ;
                     }
@@ -255,6 +279,7 @@
                             display: block;
                             width: 100%;
                             height: 30px;
+                            cursor: pointer;
                             &:active{
                                 background-color:#414141 ;
                             }
@@ -263,6 +288,7 @@
                             display: block;
                             width: 100%;
                             height: 30px;
+                            cursor: pointer;
                             &:active{
                                 background-color:#414141 ;
                             }
@@ -281,6 +307,7 @@
                             display: block;
                             width: 30px;
                             height: 100%;
+                            cursor: pointer;
                             &:active{
                                 background-color:#414141 ;
                             }
@@ -289,6 +316,7 @@
                             display: block;
                             width: 30px;
                             height: 100%;
+                            cursor: pointer;
                             &:active{
                                 background-color:#414141 ;
                             }

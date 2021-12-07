@@ -1,4 +1,4 @@
-let pokedex = document.querySelector('pokedex-wrapper')
+let pokedex = document.querySelector('.pokedex-wrapper')
 if(pokedex){
     let off = document.querySelectorAll('#off')
     let onButton = document.querySelector('.green-part')
@@ -32,4 +32,8 @@ if(pokedex){
             })
         }
     })
+    setTimeout(function(){
+        let load = document.querySelector('.white').style.display = "none"
+    },1000);
+
 }
